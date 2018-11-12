@@ -1,0 +1,8 @@
+baseURL = "https://kyktommy.github.io"
+languageCode = "en-us"
+title = "kyktommy"
+theme = "hyde"
+
+[params]
+  description = "Daily blog"
+  themeColor = "theme-base-08"
