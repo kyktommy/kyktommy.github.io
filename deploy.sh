@@ -4,14 +4,14 @@ echo -e "\033[0;32mDeploying core to GitHub...\033[0m"
 
 git add .
 
-git commit -m 'udpate blog setting'
+git commit -m "udpate blog setting `date`"
 
-git push origin core
+git push origin master:core
 
 echo -e "\033[0;32mDeploying posts to GitHub...\033[0m"
 
 # Build the project.
-hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
+hugo -t hyde
 
 # Go To Public folder
 cd public
