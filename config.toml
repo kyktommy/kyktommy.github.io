@@ -1,8 +1,9 @@
 baseURL = "https://kyktommy.github.io/"
 languageCode = "en-us"
-title = "kyktommy"
+title = "K's Blog"
 theme = "hyde"
 
 [params]
-  description = "Daily blog"
+  description = "@kyktommy"
   themeColor = "theme-base-08"
+  layoutReverse = true
