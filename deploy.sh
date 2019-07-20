@@ -9,7 +9,7 @@ git push origin master:core
 echo -e "\033[0;32mDeploying posts to GitHub...\033[0m"
 
 # Build the project.
-hugo -t hyde
+hugo -t cactus-plus
 cd public
 git add .
 
