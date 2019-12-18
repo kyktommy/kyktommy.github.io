@@ -4,7 +4,7 @@ echo -e "\033[0;32mDeploying core to GitHub...\033[0m"
 
 git add .
 git commit -m "update blog setting `date`"
-git push origin master:core
+git push origin core
 
 echo -e "\033[0;32mDeploying posts to GitHub...\033[0m"
 
