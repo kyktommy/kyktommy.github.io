@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rust on Kyk&#39;s Blog</title>
+    <link>https://kyktommy.github.io/categories/rust/</link>
+    <description>Recent content in rust on Kyk&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Dec 2019 23:29:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://kyktommy.github.io/categories/rust/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rust Json</title>
+      <link>https://kyktommy.github.io/posts/rust-json/</link>
+      <pubDate>Wed, 18 Dec 2019 23:29:48 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/posts/rust-json/</guid>
+      <description>Rust serialize, deserialize json use serde.
+cargo.toml
+[dependencies] serde = &amp;quot;0.9&amp;quot; serde_json = &amp;quot;0.9&amp;quot; serde_derive = &amp;quot;0.9&amp;quot;  main.rs
+extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&amp;lt;String&amp;gt;, } fn main() { let data = r#&amp;quot; { &amp;quot;code&amp;quot;: 200, &amp;quot;success&amp;quot;: true, &amp;quot;payload&amp;quot;: { &amp;quot;length&amp;quot;: 123, &amp;quot;items&amp;quot;: [&amp;quot;apple&amp;quot;, &amp;quot;orange&amp;quot;] } } &amp;quot;#; // deserialize let resp: Response = serde_json::from_str(&amp;amp;data).</description>
+    </item>
+    
+  </channel>
+</rss>
