@@ -4,31 +4,48 @@
   
   <url>
     <loc>https://kyktommy.github.io/categories/</loc>
-    <lastmod>2019-12-19T23:35:06+08:00</lastmod>
+    <lastmod>2019-12-22T18:41:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://kyktommy.github.io/posts/find-go-project/</loc>
+    <lastmod>2019-12-22T18:41:34+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kyktommy.github.io/</loc>
-    <lastmod>2019-12-19T23:35:06+08:00</lastmod>
+    <lastmod>2019-12-22T18:41:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kyktommy.github.io/posts/</loc>
-    <lastmod>2019-12-19T23:35:06+08:00</lastmod>
+    <lastmod>2019-12-22T18:41:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/tags/</loc>
+    <lastmod>2019-12-22T18:41:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/categories/go/</loc>
+    <lastmod>2019-12-22T18:41:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/tags/go/</loc>
+    <lastmod>2019-12-22T18:41:34+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kyktommy.github.io/posts/rust-read-write-file/</loc>
     <lastmod>2019-12-19T23:35:06+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kyktommy.github.io/tags/</loc>
-    <lastmod>2019-12-19T23:35:06+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go on Kyk&#39;s Blog</title>
+    <link>https://kyktommy.github.io/categories/go/</link>
+    <description>Recent content in go on Kyk&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Dec 2019 18:41:34 +0800</lastBuildDate>
+    
+	<atom:link href="https://kyktommy.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Find Go Project</title>
+      <link>https://kyktommy.github.io/posts/find-go-project/</link>
+      <pubDate>Sun, 22 Dec 2019 18:41:34 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/posts/find-go-project/</guid>
+      <description>I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to $GOPATH and cd to that package name.
+Here is my script for current solution. Assume your target project is in 3 depth of src.
+function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &amp;quot;{}&amp;quot; \; | grep $1 | awk &#39;{ print $9 }&#39; }  outputs:</description>
+    </item>
+    
+  </channel>
+</rss>
