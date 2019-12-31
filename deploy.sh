@@ -13,11 +13,11 @@ if [ $# -eq 1 ]
   then msg="$1"
 fi
 git commit -m "$msg"
-git push origin master
+git push -f origin master
 cd ..
 
 echo -e "\033[0;32mDeploying core to GitHub...\033[0m"
 
 git add .
 git commit -m "update blog setting `date`"
-git push origin core
+git push -f origin core
