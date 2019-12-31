@@ -12,23 +12,41 @@ Here is my script for current solution. Assume your target project is in 3 depth
 
 ```bash
 function findgo() {
-  find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld "{}" \; | grep $1 | awk '{ print $9 }'
+  find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld "{}" \; | grep $1 | awk '{ print $9 }' | nl
 }
 ```
 
-outputs:
-
 ```console
-
-$ findgo proto
-
-/Users/tommy/go-workspace/src/google.golang.org/genproto/internal
-/Users/tommy/go-workspace/src/google.golang.org/genproto/googleapis
-/Users/tommy/go-workspace/src/google.golang.org/genproto/.git
-/Users/tommy/go-workspace/src/google.golang.org/genproto/protobuf
-/Users/tommy/go-workspace/src/github.com/golang/protobuf
-/Users/tommy/go-workspace/src/github.com/gogo/protobuf
-
+➜  ~ findgo proto
+     1	/Users/tommy/go-workspace/src/google.golang.org/genproto/internal
+     2	/Users/tommy/go-workspace/src/google.golang.org/genproto/googleapis
+     3	/Users/tommy/go-workspace/src/google.golang.org/genproto/.git
+     4	/Users/tommy/go-workspace/src/google.golang.org/genproto/protobuf
+     5	/Users/tommy/go-workspace/src/github.com/golang/protobuf
+     6	/Users/tommy/go-workspace/src/github.com/gogo/protobuf
 ```
 
-TODO: cd to that directory...
+And also, you can cd to that directory by choosing line number
+
+```bash
+function cdgo() {
+  r=$(findgo $1)
+  echo $r
+  printf 'cd to ? > '
+  read cdto
+  p=$(echo $r | sed -n "${cdto}p" | awk '{ print $2 }')
+  cd $p
+}
+```
+
+```console
+➜  protobuf git:(master) cdgo proto
+     1	/Users/tommy/go-workspace/src/google.golang.org/genproto/internal
+     2	/Users/tommy/go-workspace/src/google.golang.org/genproto/googleapis
+     3	/Users/tommy/go-workspace/src/google.golang.org/genproto/.git
+     4	/Users/tommy/go-workspace/src/google.golang.org/genproto/protobuf
+     5	/Users/tommy/go-workspace/src/github.com/golang/protobuf
+     6	/Users/tommy/go-workspace/src/github.com/gogo/protobuf
+cd to ? > 1
+➜  internal git:(master)
+```
