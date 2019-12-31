@@ -46,7 +46,7 @@
                     </h1>
                     <h2 class="headline">
                     Dec 22, 2019 18:41
-                    · 88 words
+                    · 158 words
                     · 1 minute read
                       <span class="tags">
                       
@@ -66,25 +66,41 @@
 <p>Here is my script for current solution. Assume your target project is in 3 depth of src.</p>
 
 <pre><code class="language-bash">function findgo() {
-  find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &quot;{}&quot; \; | grep $1 | awk '{ print $9 }'
+  find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &quot;{}&quot; \; | grep $1 | awk '{ print $9 }' | nl
 }
 </code></pre>
 
-<p>outputs:</p>
-
-<pre><code class="language-console">
-$ findgo proto
-
-/Users/tommy/go-workspace/src/google.golang.org/genproto/internal
-/Users/tommy/go-workspace/src/google.golang.org/genproto/googleapis
-/Users/tommy/go-workspace/src/google.golang.org/genproto/.git
-/Users/tommy/go-workspace/src/google.golang.org/genproto/protobuf
-/Users/tommy/go-workspace/src/github.com/golang/protobuf
-/Users/tommy/go-workspace/src/github.com/gogo/protobuf
-
+<pre><code class="language-console">➜  ~ findgo proto
+     1	/Users/tommy/go-workspace/src/google.golang.org/genproto/internal
+     2	/Users/tommy/go-workspace/src/google.golang.org/genproto/googleapis
+     3	/Users/tommy/go-workspace/src/google.golang.org/genproto/.git
+     4	/Users/tommy/go-workspace/src/google.golang.org/genproto/protobuf
+     5	/Users/tommy/go-workspace/src/github.com/golang/protobuf
+     6	/Users/tommy/go-workspace/src/github.com/gogo/protobuf
 </code></pre>
 
-<p>TODO: cd to that directory&hellip;</p>
+<p>And also, you can cd to that directory by choosing line number</p>
+
+<pre><code class="language-bash">function cdgo() {
+  r=$(findgo $1)
+  echo $r
+  printf 'cd to ? &gt; '
+  read cdto
+  p=$(echo $r | sed -n &quot;${cdto}p&quot; | awk '{ print $2 }')
+  cd $p
+}
+</code></pre>
+
+<pre><code class="language-console">➜  protobuf git:(master) cdgo proto
+     1	/Users/tommy/go-workspace/src/google.golang.org/genproto/internal
+     2	/Users/tommy/go-workspace/src/google.golang.org/genproto/googleapis
+     3	/Users/tommy/go-workspace/src/google.golang.org/genproto/.git
+     4	/Users/tommy/go-workspace/src/google.golang.org/genproto/protobuf
+     5	/Users/tommy/go-workspace/src/github.com/golang/protobuf
+     6	/Users/tommy/go-workspace/src/github.com/gogo/protobuf
+cd to ? &gt; 1
+➜  internal git:(master)
+</code></pre>
 
                 </section>
             </article>
