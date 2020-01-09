@@ -6,10 +6,23 @@
     <description>Recent content in Posts on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Dec 2019 19:21:43 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jan 2020 23:59:01 +0800</lastBuildDate>
     
 	<atom:link href="https://kyktommy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go Cap Problem</title>
+      <link>https://kyktommy.github.io/posts/go-cap-problem/</link>
+      <pubDate>Thu, 09 Jan 2020 23:59:01 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/posts/go-cap-problem/</guid>
+      <description>golang cap
+ The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
+ If we append item to a slice that over the capacity, it will return the new array. But if we append item to a slice within capacity, it will change the orginal one.
+The following code shows underCap changes the input array.
+func overCap(a []int) []int { fmt.</description>
+    </item>
     
     <item>
       <title>Go Http Log</title>

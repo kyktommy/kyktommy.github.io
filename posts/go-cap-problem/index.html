@@ -8,7 +8,7 @@
 		
 		<meta name="description" content="@kyktommy">
 		<meta name="generator" content="Hugo 0.55.6" />
-		<title>Rust Json &middot; Kyk&#39;s Blog</title>
+		<title>Go Cap Problem &middot; Kyk&#39;s Blog</title>
 		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/highlight.css">
@@ -42,17 +42,17 @@
             <article>
                 <header>
                     <h1>
-                        Rust Json
+                        Go Cap Problem
                     </h1>
                     <h2 class="headline">
-                    Dec 18, 2019 23:29
-                    · 114 words
+                    Jan 9, 2020 23:59
+                    · 176 words
                     · 1 minute read
                       <span class="tags">
                       
                       
                           
-                              <a href="https://kyktommy.github.io/tags/rust">rust</a>
+                              <a href="https://kyktommy.github.io/tags/go">go</a>
                           
                       
                       
@@ -61,64 +61,57 @@
                 </header>
                 
                 <section id="post-body">
-                    <p>Rust serialize, deserialize json use <a href="https://serde.rs">serde</a>.</p>
+                    <p>golang cap</p>
+
+<blockquote>
+<p>The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.</p>
+</blockquote>
+
+<p>If we append item to a slice that over the capacity, it will return the new array. But if we append item to a slice within capacity, it will change the orginal one.</p>
+
+<p>The following code shows underCap changes the input array.</p>
 
 <hr />
 
-<p>cargo.toml</p>
+<pre><code class="language-go">
+func overCap(a []int) []int {
+	fmt.Printf(&quot;before over cap addr: %p\n&quot;, a)
+	a = append(a[:0], 7, 7, 7, 7)
+	fmt.Printf(&quot;after over cap addr: %p\n&quot;, a)
+	return a
+}
 
-<pre><code>[dependencies]
-serde = &quot;0.9&quot;
-serde_json = &quot;0.9&quot;
-serde_derive = &quot;0.9&quot;
+func underCap(a []int) []int {
+	fmt.Printf(&quot;before under cap addr: %p\n&quot;, a)
+	a = append(a[:0], 7, 7)
+	fmt.Printf(&quot;after under cap addr: %p\n&quot;, a)
+	return a
+}
+
+func main() {
+	a := []int{1, 2, 3}
+
+	b := overCap(a)
+	fmt.Println(a, &quot;-&gt;&quot;, b)
+
+	fmt.Println(&quot;---&quot;)
+
+
+	c := underCap(a)
+	fmt.Println(a, &quot;-&gt;&quot;, c)
+}
+
 </code></pre>
 
-<p>main.rs</p>
+<p>outputs:</p>
 
-<pre><code class="language-rust">extern crate serde;
-extern crate serde_json;
-
-#[macro_use] extern crate serde_derive;
-
-#[derive(Serialize, Deserialize, Debug)]
-struct Response {
-  code: u32,
-  success: bool,
-  payload: Payload,
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-struct Payload {
-  length: u32,
-  items: Vec&lt;String&gt;,
-}
-
-fn main() {
-  let data = r#&quot;
-  {
-      &quot;code&quot;: 200,
-      &quot;success&quot;: true,
-      &quot;payload&quot;: {
-          &quot;length&quot;: 123,
-          &quot;items&quot;: [&quot;apple&quot;, &quot;orange&quot;]
-      }
-  }
-  &quot;#;
-
-  // deserialize
-  let resp: Response = serde_json::from_str(&amp;data).unwrap();
-  println!(&quot;resp: {:?}&quot;, resp);
-
-  // serialize
-  let resp_json = serde_json::to_string(&amp;resp).unwrap();
-  println!(&quot;json: {}&quot;, resp_json);
-}
-</code></pre>
-
-<p>output</p>
-
-<pre><code>resp: Response { code: 200, success: true, payload: Payload { length: 123, items: [&quot;apple&quot;, &quot;orange&quot;] } }
-json: {&quot;code&quot;:200,&quot;success&quot;:true,&quot;payload&quot;:{&quot;length&quot;:123,&quot;items&quot;:[&quot;apple&quot;,&quot;orange&quot;]}}
+<pre><code>before over cap addr: 0x40e020
+after over cap addr: 0x456020
+[1 2 3] -&gt; [7 7 7 7]
+---
+before under cap addr: 0x40e020
+after under cap addr: 0x40e020
+[7 7 3] -&gt; [7 7]
 </code></pre>
 
                 </section>
