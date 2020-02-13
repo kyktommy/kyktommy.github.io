@@ -6,13 +6,13 @@ categories = ["git"]
 draft = false
 +++
 
-1. clone the project from old repo url
+1. Clone the project from old repo url
 
     ```bash
     git clone <old_repo_url>
     ```
 
-2. pull all branches
+2. Pull all branches
 
     ```bash
     git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
@@ -20,13 +20,13 @@ draft = false
     git pull --all
     ```
 
-3. change remote to new repo url
+3. Change remote to new repo url
 
     ```
     git remote set-url origin <new_repo>
     ```
 
-4. push all to new repo url
+4. Push all to new repo url
 
     ```
     git push --all
