@@ -24,7 +24,7 @@ func main() {
   go func() {
     defer func() {
       if err := recover(); err != nil {
-      fmt.Println("recover", err)
+        fmt.Println("recover", err)
       }
     }()
     panic("panic here")
