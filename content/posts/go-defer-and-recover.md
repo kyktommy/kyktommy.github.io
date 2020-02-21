@@ -12,8 +12,8 @@ Go defer is LIFO. `defer` function will be executed even after `panic`. So put `
 package main
 
 import (
-	"fmt"
-	"time"
+  "fmt"
+  "time"
 )
 
 func main() {
@@ -21,16 +21,16 @@ func main() {
     fmt.Println("main defer")
   }()
 
-	go func() {
-		defer func() {
-			if err := recover(); err != nil {
-        fmt.Println("recover", err)
-			}
-		}()
-		panic("panic here")
-	}()
+  go func() {
+    defer func() {
+      if err := recover(); err != nil {
+      fmt.Println("recover", err)
+      }
+    }()
+    panic("panic here")
+  }()
 
-  time.Sleep(1 * time.Second)
+  time.Sleep(1 \* time.Second)
   fmt.Println("end")
 }
 ```
