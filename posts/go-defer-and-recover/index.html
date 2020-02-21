@@ -78,7 +78,7 @@ func main() {
   go func() {
     defer func() {
       if err := recover(); err != nil {
-      fmt.Println(&quot;recover&quot;, err)
+        fmt.Println(&quot;recover&quot;, err)
       }
     }()
     panic(&quot;panic here&quot;)
