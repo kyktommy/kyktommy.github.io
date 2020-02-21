@@ -6,10 +6,33 @@
     <description>Recent content in Posts on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jan 2020 23:59:01 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 Feb 2020 21:55:25 +0800</lastBuildDate>
     
 	<atom:link href="https://kyktommy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go Defer And Recover</title>
+      <link>https://kyktommy.github.io/posts/go-defer-and-recover/</link>
+      <pubDate>Fri, 21 Feb 2020 21:55:25 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/posts/go-defer-and-recover/</guid>
+      <description>Go defer is LIFO. defer function will be executed even after panic. So put recover inside defer.
+package main import ( &amp;quot;fmt&amp;quot; &amp;quot;time&amp;quot; ) func main() { defer func() { fmt.Println(&amp;quot;main defer&amp;quot;) }() go func() { defer func() { if err := recover(); err != nil { fmt.Println(&amp;quot;recover&amp;quot;, err) } }() panic(&amp;quot;panic here&amp;quot;) }() time.Sleep(1 * time.Second) fmt.Println(&amp;quot;end&amp;quot;) }  output:
+recover panic here end main defer  </description>
+    </item>
+    
+    <item>
+      <title>Git Move Repo</title>
+      <link>https://kyktommy.github.io/posts/git-move-repo/</link>
+      <pubDate>Thu, 13 Feb 2020 17:38:52 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/posts/git-move-repo/</guid>
+      <description> Clone the project from old repo url
+git clone &amp;lt;old_repo_url&amp;gt;   Pull all branches  git branch -r | grep -v &#39;\-&amp;gt;&#39; | while read remote; do git branch --track &amp;quot;${remote#origin/}&amp;quot; &amp;quot;$remote&amp;quot;; done git fetch --all git pull --all  Change remote to new repo url
+git remote set-url origin &amp;lt;new_repo&amp;gt;  Push all to new repo url
+git push --all git push --tags   </description>
+    </item>
     
     <item>
       <title>Go Cap Problem</title>

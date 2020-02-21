@@ -4,43 +4,65 @@
   
   <url>
     <loc>https://kyktommy.github.io/categories/</loc>
-    <lastmod>2020-01-09T23:59:01+08:00</lastmod>
+    <lastmod>2020-02-21T21:55:25+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/posts/go-defer-and-recover/</loc>
+    <lastmod>2020-02-21T21:55:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/</loc>
+    <lastmod>2020-02-21T21:55:25+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/posts/</loc>
+    <lastmod>2020-02-21T21:55:25+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/tags/</loc>
+    <lastmod>2020-02-21T21:55:25+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/categories/go/</loc>
+    <lastmod>2020-02-21T21:55:25+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/tags/go/</loc>
+    <lastmod>2020-02-21T21:55:25+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/posts/git-move-repo/</loc>
+    <lastmod>2020-02-13T17:38:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/categories/git/</loc>
+    <lastmod>2020-02-13T17:38:52+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/tags/git/</loc>
+    <lastmod>2020-02-13T17:38:52+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kyktommy.github.io/posts/go-cap-problem/</loc>
     <lastmod>2020-01-09T23:59:01+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kyktommy.github.io/</loc>
-    <lastmod>2020-01-09T23:59:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kyktommy.github.io/posts/</loc>
-    <lastmod>2020-01-09T23:59:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kyktommy.github.io/tags/</loc>
-    <lastmod>2020-01-09T23:59:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kyktommy.github.io/categories/go/</loc>
-    <lastmod>2020-01-09T23:59:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kyktommy.github.io/tags/go/</loc>
-    <lastmod>2020-01-09T23:59:01+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -73,6 +95,11 @@
   <url>
     <loc>https://kyktommy.github.io/posts/rust-json/</loc>
     <lastmod>2019-12-18T23:29:48+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/about/</loc>
+    <lastmod>2019-11-16T19:16:33+08:00</lastmod>
   </url>
   
 </urlset>

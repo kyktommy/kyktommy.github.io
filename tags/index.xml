@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jan 2020 23:59:01 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 Feb 2020 21:55:25 +0800</lastBuildDate>
     
 	<atom:link href="https://kyktommy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>go</title>
       <link>https://kyktommy.github.io/tags/go/</link>
-      <pubDate>Thu, 09 Jan 2020 23:59:01 +0800</pubDate>
+      <pubDate>Fri, 21 Feb 2020 21:55:25 +0800</pubDate>
       
       <guid>https://kyktommy.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://kyktommy.github.io/tags/git/</link>
+      <pubDate>Thu, 13 Feb 2020 17:38:52 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/tags/git/</guid>
       <description></description>
     </item>
     
