@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<meta name="description" content="@kyktommy">
+		<meta name="generator" content="Hugo 0.55.6" />
+		<title>Youtube Dl Helper &middot; Kyk&#39;s Blog</title>
+		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
+		<link rel="stylesheet" href="https://kyktommy.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://kyktommy.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://kyktommy.github.io/posts'>Archive</a>
+	<a href='https://kyktommy.github.io/tags'>Tags</a>
+	<a href='https://kyktommy.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Youtube Dl Helper
+                    </h1>
+                    <h2 class="headline">
+                    Apr 12, 2020 00:03
+                    · 61 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://kyktommy.github.io/tags/youtube-dl">youtube-dl</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p><a href="https://github.com/ytdl-org/youtube-dl">youtube-dl</a> is a great tool to download youtube stuff.</p>
+
+<p>Here is some helper script I used.</p>
+
+<pre><code class="language-bash">
+# download as mp4, playlist also
+function youtube-dl-mp4() {
+  youtube-dl -f &quot;[height &lt;=? 720][tbr&gt;500]&quot; --yes-playlist $1
+}
+
+# download as mp3
+function youtube-dl-mp3() {
+  youtube-dl -x --audio-format mp3 --add-metadata $1
+}
+
+# download subtitle en
+function youtube-dl-sub() {
+  youtube-dl --write-sub --sub-lang en --skip-download $1
+}
+
+</code></pre>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2020 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://kyktommy.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://kyktommy.github.io/js/main.js"></script>
+<script src="https://kyktommy.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
