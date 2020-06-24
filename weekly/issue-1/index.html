@@ -8,7 +8,7 @@
 		
 		<meta name="description" content="@kyktommy">
 		<meta name="generator" content="Hugo 0.55.6" />
-		<title>Find Go Project &middot; Kyk&#39;s Blog</title>
+		<title>Issue 1 &middot; Kyk&#39;s Blog</title>
 		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/highlight.css">
@@ -43,17 +43,17 @@
             <article>
                 <header>
                     <h1>
-                        Find Go Project
+                        Issue 1
                     </h1>
                     <h2 class="headline">
-                    Dec 22, 2019 18:41
-                    · 158 words
+                    Jun 24, 2020 22:35
+                    · 16 words
                     · 1 minute read
                       <span class="tags">
                       
                       
                           
-                              <a href="https://kyktommy.github.io/tags/go">go</a>
+                              <a href="https://kyktommy.github.io/tags/"></a>
                           
                       
                       
@@ -62,46 +62,28 @@
                 </header>
                 
                 <section id="post-body">
-                    <p>I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to <code>$GOPATH</code> and cd to that package name.</p>
+                    
 
-<p>Here is my script for current solution. Assume your target project is in 3 depth of src.</p>
+<h3 id="quotes">Quotes</h3>
 
-<pre><code class="language-bash">function findgo() {
-  find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &quot;{}&quot; \; | grep $1 | awk '{ print $9 }' | nl
-}
-</code></pre>
+<ol>
+<li><blockquote>
+<p>初学者眼里有很多可能性，专家眼里只有很少可能性。<br />
+&ndash; 铃木俊隆（Shunryu Suzuki），日本禅宗僧人</p>
+</blockquote></li>
 
-<pre><code class="language-console">➜  ~ findgo proto
-     1	/Users/tommy/go-workspace/src/google.golang.org/genproto/internal
-     2	/Users/tommy/go-workspace/src/google.golang.org/genproto/googleapis
-     3	/Users/tommy/go-workspace/src/google.golang.org/genproto/.git
-     4	/Users/tommy/go-workspace/src/google.golang.org/genproto/protobuf
-     5	/Users/tommy/go-workspace/src/github.com/golang/protobuf
-     6	/Users/tommy/go-workspace/src/github.com/gogo/protobuf
-</code></pre>
+<li><blockquote>
+<p>输入要保持开放，输出要保持保守。<br />
+&ndash; Jon Postel 谈如何设计接口</p>
+</blockquote></li>
 
-<p>And also, you can cd to that directory by choosing line number</p>
-
-<pre><code class="language-bash">function cdgo() {
-  r=$(findgo $1)
-  echo $r
-  printf 'cd to ? &gt; '
-  read cdto
-  p=$(echo $r | sed -n &quot;${cdto}p&quot; | awk '{ print $2 }')
-  cd $p
-}
-</code></pre>
-
-<pre><code class="language-console">➜  protobuf git:(master) cdgo proto
-     1	/Users/tommy/go-workspace/src/google.golang.org/genproto/internal
-     2	/Users/tommy/go-workspace/src/google.golang.org/genproto/googleapis
-     3	/Users/tommy/go-workspace/src/google.golang.org/genproto/.git
-     4	/Users/tommy/go-workspace/src/google.golang.org/genproto/protobuf
-     5	/Users/tommy/go-workspace/src/github.com/golang/protobuf
-     6	/Users/tommy/go-workspace/src/github.com/gogo/protobuf
-cd to ? &gt; 1
-➜  internal git:(master)
-</code></pre>
+<li><blockquote>
+<p>数学家理查德·汉明（Richard Hamming）<br />
+总是问其他领域的科学家：“你的领域中最重要的问题是什么？”，<br />
+然后问第二个问题：“你为什么不研究它们？”。<br />
+&ndash; 《汉明问题》</p>
+</blockquote></li>
+</ol>
 
                 </section>
             </article>

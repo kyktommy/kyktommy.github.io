@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Weeklies on Kyk&#39;s Blog</title>
+    <link>https://kyktommy.github.io/weekly/</link>
+    <description>Recent content in Weeklies on Kyk&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 24 Jun 2020 22:35:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://kyktommy.github.io/weekly/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Issue 1</title>
+      <link>https://kyktommy.github.io/weekly/issue-1/</link>
+      <pubDate>Wed, 24 Jun 2020 22:35:24 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/weekly/issue-1/</guid>
+      <description> Quotes   初学者眼里有很多可能性，专家眼里只有很少可能性。
+&amp;ndash; 铃木俊隆（Shunryu Suzuki），日本禅宗僧人
+  输入要保持开放，输出要保持保守。
+&amp;ndash; Jon Postel 谈如何设计接口
+  数学家理查德·汉明（Richard Hamming）
+总是问其他领域的科学家：“你的领域中最重要的问题是什么？”，
+然后问第二个问题：“你为什么不研究它们？”。
+&amp;ndash; 《汉明问题》
+  </description>
+    </item>
+    
+  </channel>
+</rss>

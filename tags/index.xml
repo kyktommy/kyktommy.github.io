@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Apr 2020 00:03:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2020 22:35:24 +0800</lastBuildDate>
     
 	<atom:link href="https://kyktommy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>https://kyktommy.github.io/tags/</link>
+      <pubDate>Wed, 24 Jun 2020 22:35:24 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/tags/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>youtube-dl</title>
