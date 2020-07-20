@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<meta name="description" content="@kyktommy">
+		<meta name="generator" content="Hugo 0.55.6" />
+		<title>Redux Typescript &middot; Kyk&#39;s Blog</title>
+		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
+		<link rel="stylesheet" href="https://kyktommy.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://kyktommy.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://kyktommy.github.io/posts'>Archive</a>
+	
+	<a href='https://kyktommy.github.io/weekly'>Weekly</a>
+	<a href='https://kyktommy.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Redux Typescript
+                    </h1>
+                    <h2 class="headline">
+                    Jul 20, 2020 19:46
+                    · 59 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://kyktommy.github.io/tags/react">react</a>
+                          
+                              <a href="https://kyktommy.github.io/tags/redux">redux</a>
+                          
+                              <a href="https://kyktommy.github.io/tags/typescript">typescript</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p>There are two library for redux,</p>
+
+<ol>
+<li><a href="https://github.com/reduxjs/redux-toolkit">redux-toolkit</a>
+
+<ol>
+<li>create a slice for reducer, action = reducer key name</li>
+</ol></li>
+<li><a href="https://github.com/jkeam/reduxsauce">reduxsauce</a>
+
+<ol>
+<li>normal createActions, createReducer</li>
+</ol></li>
+</ol>
+
+<p>I recommend redux-toolkit, because it has better support for typescript.<br />
+It restrict <code>PayloadAction&lt;SOMETHING&gt;</code> for action creator and reducer.<br />
+But the downside is action must be binded to reducer.<br />
+Must need to create new action for dispatch two actions.</p>
+
+<script type="application/javascript" src="//gist.github.com/kyktommy/9e6fea3fd3c4d26464f477156b1500a6.js"></script>
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2020 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://kyktommy.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://kyktommy.github.io/js/main.js"></script>
+<script src="https://kyktommy.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

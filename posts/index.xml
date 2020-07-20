@@ -6,10 +6,24 @@
     <description>Recent content in Posts on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Apr 2020 00:03:11 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2020 19:46:45 +0800</lastBuildDate>
     
 	<atom:link href="https://kyktommy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Redux Typescript</title>
+      <link>https://kyktommy.github.io/posts/redux-typescript/</link>
+      <pubDate>Mon, 20 Jul 2020 19:46:45 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/posts/redux-typescript/</guid>
+      <description>There are two library for redux,
+ redux-toolkit  create a slice for reducer, action = reducer key name  reduxsauce  normal createActions, createReducer   I recommend redux-toolkit, because it has better support for typescript.
+It restrict PayloadAction&amp;lt;SOMETHING&amp;gt; for action creator and reducer.
+But the downside is action must be binded to reducer.
+Must need to create new action for dispatch two actions.
+ </description>
+    </item>
     
     <item>
       <title>Youtube Dl Helper</title>
