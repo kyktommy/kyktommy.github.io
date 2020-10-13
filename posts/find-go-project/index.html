@@ -7,7 +7,7 @@
 		
 		
 		<meta name="description" content="@kyktommy">
-		<meta name="generator" content="Hugo 0.55.6" />
+		<meta name="generator" content="Hugo 0.76.4" />
 		<title>Find Go Project &middot; Kyk&#39;s Blog</title>
 		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
@@ -29,8 +29,7 @@
 		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
 	
 	<a href='https://kyktommy.github.io/posts'>Archive</a>
-	
-	<a href='https://kyktommy.github.io/weekly'>Weekly</a>
+	<a href='https://kyktommy.github.io/tags'>Tags</a>
 	<a href='https://kyktommy.github.io/about'>About</a>
 
 	
@@ -63,36 +62,27 @@
                 
                 <section id="post-body">
                     <p>I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to <code>$GOPATH</code> and cd to that package name.</p>
-
 <p>Here is my script for current solution. Assume your target project is in 3 depth of src.</p>
-
-<pre><code class="language-bash">function findgo() {
-  find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &quot;{}&quot; \; | grep $1 | awk '{ print $9 }' | nl
-}
-</code></pre>
-
-<pre><code class="language-console">➜  ~ findgo proto
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span> findgo<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  find $GOPATH/src -mindepth <span style="color:#ae81ff">3</span> -maxdepth <span style="color:#ae81ff">3</span> -type d -exec ls -ld <span style="color:#e6db74">&#34;{}&#34;</span> <span style="color:#ae81ff">\;</span> | grep $1 | awk <span style="color:#e6db74">&#39;{ print $9 }&#39;</span> | nl
+<span style="color:#f92672">}</span>
+</code></pre></div><pre><code class="language-console" data-lang="console">➜  ~ findgo proto
      1	/Users/tommy/go-workspace/src/google.golang.org/genproto/internal
      2	/Users/tommy/go-workspace/src/google.golang.org/genproto/googleapis
      3	/Users/tommy/go-workspace/src/google.golang.org/genproto/.git
      4	/Users/tommy/go-workspace/src/google.golang.org/genproto/protobuf
      5	/Users/tommy/go-workspace/src/github.com/golang/protobuf
      6	/Users/tommy/go-workspace/src/github.com/gogo/protobuf
-</code></pre>
-
-<p>And also, you can cd to that directory by choosing line number</p>
-
-<pre><code class="language-bash">function cdgo() {
-  r=$(findgo $1)
+</code></pre><p>And also, you can cd to that directory by choosing line number</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span> cdgo<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  r<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>findgo $1<span style="color:#66d9ef">)</span>
   echo $r
-  printf 'cd to ? &gt; '
+  printf <span style="color:#e6db74">&#39;cd to ? &gt; &#39;</span>
   read cdto
-  p=$(echo $r | sed -n &quot;${cdto}p&quot; | awk '{ print $2 }')
+  p<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>echo $r | sed -n <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>cdto<span style="color:#e6db74">}</span><span style="color:#e6db74">p&#34;</span> | awk <span style="color:#e6db74">&#39;{ print $2 }&#39;</span><span style="color:#66d9ef">)</span>
   cd $p
-}
-</code></pre>
-
-<pre><code class="language-console">➜  protobuf git:(master) cdgo proto
+<span style="color:#f92672">}</span>
+</code></pre></div><pre><code class="language-console" data-lang="console">➜  protobuf git:(master) cdgo proto
      1	/Users/tommy/go-workspace/src/google.golang.org/genproto/internal
      2	/Users/tommy/go-workspace/src/google.golang.org/genproto/googleapis
      3	/Users/tommy/go-workspace/src/google.golang.org/genproto/.git
@@ -102,7 +92,6 @@
 cd to ? &gt; 1
 ➜  internal git:(master)
 </code></pre>
-
                 </section>
             </article>
 

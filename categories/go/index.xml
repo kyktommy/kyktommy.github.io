@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>go on Kyk&#39;s Blog</title>
@@ -6,11 +6,7 @@
     <description>Recent content in go on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Feb 2020 21:55:25 +0800</lastBuildDate>
-    
-	<atom:link href="https://kyktommy.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 21 Feb 2020 21:55:25 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go Defer And Recover</title>
       <link>https://kyktommy.github.io/posts/go-defer-and-recover/</link>
@@ -18,8 +14,8 @@
       
       <guid>https://kyktommy.github.io/posts/go-defer-and-recover/</guid>
       <description>Go defer is LIFO. defer function will be executed even after panic. So put recover inside defer.
-package main import ( &amp;quot;fmt&amp;quot; &amp;quot;time&amp;quot; ) func main() { defer func() { fmt.Println(&amp;quot;main defer&amp;quot;) }() go func() { defer func() { if err := recover(); err != nil { fmt.Println(&amp;quot;recover&amp;quot;, err) } }() panic(&amp;quot;panic here&amp;quot;) }() time.Sleep(1 \* time.Second) fmt.Println(&amp;quot;end&amp;quot;) }  output:
-recover panic here end main defer  </description>
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;time&amp;#34; ) func main() { defer func() { fmt.Println(&amp;#34;main defer&amp;#34;) }() go func() { defer func() { if err := recover(); err != nil { fmt.Println(&amp;#34;recover&amp;#34;, err) } }() panic(&amp;#34;panic here&amp;#34;) }() time.Sleep(1 \* time.Second) fmt.Println(&amp;#34;end&amp;#34;) } output:
+recover panic here end main defer </description>
     </item>
     
     <item>
@@ -32,7 +28,7 @@ recover panic here end main defer  </description>
  The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
  If we append item to a slice that over the capacity, it will return the new array. But if we append item to a slice within capacity, it will change the orginal one.
 The following code shows underCap changes the input array.
-func overCap(a []int) []int { fmt.</description>
+ func overCap(a []int) []int { fmt.</description>
     </item>
     
     <item>
@@ -42,7 +38,7 @@ func overCap(a []int) []int { fmt.</description>
       
       <guid>https://kyktommy.github.io/posts/go-http-log/</guid>
       <description>We need a logger for every routes, so made a simple http log middleware. Need to replace writer to custom one, and also take care of reading body.
-package main import ( &amp;quot;bytes&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;io&amp;quot; &amp;quot;io/ioutil&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;strings&amp;quot; ) type bodyLogWriter struct { http.ResponseWriter body *bytes.Buffer } func (w bodyLogWriter) Write(b []byte) (int, error) { w.body.Write(b) return w.ResponseWriter.Write(b) } func main() { httpLog := func(next http.Handler) http.Handler { return http.HandlerFunc(func(w http.</description>
+package main import ( &amp;#34;bytes&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;io&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;strings&amp;#34; ) type bodyLogWriter struct { http.ResponseWriter body *bytes.Buffer } func (w bodyLogWriter) Write(b []byte) (int, error) { w.body.Write(b) return w.ResponseWriter.Write(b) } func main() { httpLog := func(next http.Handler) http.Handler { return http.HandlerFunc(func(w http.</description>
     </item>
     
     <item>
@@ -53,7 +49,7 @@ package main import ( &amp;quot;bytes&amp;quot; &amp;quot;fmt&amp;quot; &amp;quo
       <guid>https://kyktommy.github.io/posts/find-go-project/</guid>
       <description>I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to $GOPATH and cd to that package name.
 Here is my script for current solution. Assume your target project is in 3 depth of src.
-function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &amp;quot;{}&amp;quot; \; | grep $1 | awk &#39;{ print $9 }&#39; | nl }  ➜ ~ findgo proto 1	/Users/tommy/go-workspace/src/google.</description>
+function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &amp;#34;{}&amp;#34; \; | grep $1 | awk &amp;#39;{ print $9 }&amp;#39; | nl } ➜ ~ findgo proto 1	/Users/tommy/go-workspace/src/google.</description>
     </item>
     
   </channel>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mac on Kyk&#39;s Blog</title>
+    <link>https://kyktommy.github.io/categories/mac/</link>
+    <description>Recent content in mac on Kyk&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Oct 2020 13:00:39 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/categories/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac Imageoptim Auto</title>
+      <link>https://kyktommy.github.io/posts/mac-imageoptim-auto/</link>
+      <pubDate>Tue, 13 Oct 2020 13:00:39 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/posts/mac-imageoptim-auto/</guid>
+      <description>I want to automatically convert pdf to jpg, and compress jpg.
+First, need to install ImageOptim, and put in Application folder.
+Then install ImageOptim-CLI to run ImageOptim in command line.
+ # convert pdf to jpg sips --resampleWidth 1024 -s format jpeg *.pdf --out dist/ # compress all jpg in dist folder imageoptim dist </description>
+    </item>
+    
+  </channel>
+</rss>

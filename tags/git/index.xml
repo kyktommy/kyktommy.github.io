@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on Kyk&#39;s Blog</title>
@@ -6,20 +6,17 @@
     <description>Recent content in git on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Feb 2020 17:38:52 +0800</lastBuildDate>
-    
-	<atom:link href="https://kyktommy.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 13 Feb 2020 17:38:52 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git Move Repo</title>
       <link>https://kyktommy.github.io/posts/git-move-repo/</link>
       <pubDate>Thu, 13 Feb 2020 17:38:52 +0800</pubDate>
       
       <guid>https://kyktommy.github.io/posts/git-move-repo/</guid>
-      <description> Clone the project from old repo url
-git clone &amp;lt;old_repo_url&amp;gt;   Pull all branches  git branch -r | grep -v &#39;\-&amp;gt;&#39; | while read remote; do git branch --track &amp;quot;${remote#origin/}&amp;quot; &amp;quot;$remote&amp;quot;; done git fetch --all git pull --all  Change remote to new repo url
-git remote set-url origin &amp;lt;new_repo&amp;gt;  Push all to new repo url
+      <description>  Clone the project from old repo url
+git clone &amp;lt;old_repo_url&amp;gt;   Pull all branches
+git branch -r | grep -v &amp;#39;\-&amp;gt;&amp;#39; | while read remote; do git branch --track &amp;#34;${remote#origin/}&amp;#34; &amp;#34;$remote&amp;#34;; done git fetch --all git pull --all   Change remote to new repo url
+git remote set-url origin &amp;lt;new_repo&amp;gt;   Push all to new repo url
 git push --all git push --tags   </description>
     </item>
     

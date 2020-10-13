@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kyk&#39;s Blog</title>
@@ -6,17 +6,13 @@
     <description>Recent content in Tags on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2020 19:46:45 +0800</lastBuildDate>
-    
-	<atom:link href="https://kyktommy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 13 Oct 2020 13:00:39 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>https://kyktommy.github.io/tags/</link>
-      <pubDate>Mon, 20 Jul 2020 19:46:45 +0800</pubDate>
+      <title>mac</title>
+      <link>https://kyktommy.github.io/tags/mac/</link>
+      <pubDate>Tue, 13 Oct 2020 13:00:39 +0800</pubDate>
       
-      <guid>https://kyktommy.github.io/tags/</guid>
+      <guid>https://kyktommy.github.io/tags/mac/</guid>
       <description></description>
     </item>
     

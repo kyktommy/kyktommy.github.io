@@ -8,7 +8,7 @@
 		
 		<meta name="description" content="@kyktommy">
 		<meta name="generator" content="Hugo 0.76.4" />
-		<title>about &middot; Kyk&#39;s Blog</title>
+		<title>Mac Imageoptim Auto &middot; Kyk&#39;s Blog</title>
 		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/highlight.css">
@@ -42,21 +42,36 @@
             <article>
                 <header>
                     <h1>
-                        about
+                        Mac Imageoptim Auto
                     </h1>
                     <h2 class="headline">
-                    Nov 16, 2019 19:16
-                    · 6 words
+                    Oct 13, 2020 13:00
+                    · 53 words
                     · 1 minute read
                       <span class="tags">
+                      
+                      
+                          
+                              <a href="https://kyktommy.github.io/tags/mac">mac</a>
+                          
+                      
                       
                       </span>
                     </h2>
                 </header>
                 
                 <section id="post-body">
-                    <p>kyk&rsquo;s blog is about Programming :)</p>
+                    <p>I want to automatically convert pdf to jpg, and compress jpg.</p>
+<p>First, need to install <a href="https://imageoptim.com/mac">ImageOptim</a>, and put in <code>Application</code> folder.</p>
+<p>Then install <a href="https://github.com/JamieMason/ImageOptim-CLI">ImageOptim-CLI</a> to run ImageOptim in command line.</p>
+<pre><code>
+# convert pdf to jpg
+sips --resampleWidth 1024 -s format jpeg *.pdf --out dist/
 
+# compress all jpg in dist folder
+imageoptim dist
+
+</code></pre>
                 </section>
             </article>
 

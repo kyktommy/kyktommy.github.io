@@ -7,7 +7,7 @@
 		
 		
 		<meta name="description" content="@kyktommy">
-		<meta name="generator" content="Hugo 0.55.6" />
+		<meta name="generator" content="Hugo 0.76.4" />
 		<title>Git Move Repo &middot; Kyk&#39;s Blog</title>
 		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
@@ -29,8 +29,7 @@
 		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
 	
 	<a href='https://kyktommy.github.io/posts'>Archive</a>
-	
-	<a href='https://kyktommy.github.io/weekly'>Weekly</a>
+	<a href='https://kyktommy.github.io/tags'>Tags</a>
 	<a href='https://kyktommy.github.io/about'>About</a>
 
 	
@@ -63,27 +62,22 @@
                 
                 <section id="post-body">
                     <ol>
-<li><p>Clone the project from old repo url</p>
-
-<pre><code class="language-bash">git clone &lt;old_repo_url&gt;
-</code></pre>
-
-<ol>
-<li>Pull all branches</li>
-</ol>
-
-<pre><code class="language-bash">git branch -r | grep -v '\-&gt;' | while read remote; do git branch --track &quot;${remote#origin/}&quot; &quot;$remote&quot;; done
+<li>
+<p>Clone the project from old repo url</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone &lt;old_repo_url&gt;
+</code></pre></div></li>
+<li>
+<p>Pull all branches</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -r | grep -v <span style="color:#e6db74">&#39;\-&gt;&#39;</span> | <span style="color:#66d9ef">while</span> read remote; <span style="color:#66d9ef">do</span> git branch --track <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>remote#origin/<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span>$remote<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">done</span>
 git fetch --all
 git pull --all
-</code></pre></li>
-
-<li><p>Change remote to new repo url</p>
-
+</code></pre></div></li>
+<li>
+<p>Change remote to new repo url</p>
 <pre><code>git remote set-url origin &lt;new_repo&gt;
 </code></pre></li>
-
-<li><p>Push all to new repo url</p>
-
+<li>
+<p>Push all to new repo url</p>
 <pre><code>git push --all
 git push --tags
 </code></pre></li>

@@ -7,7 +7,7 @@
 		
 		
 		<meta name="description" content="@kyktommy">
-		<meta name="generator" content="Hugo 0.55.6" />
+		<meta name="generator" content="Hugo 0.76.4" />
 		<title>Rust Read Write File &middot; Kyk&#39;s Blog</title>
 		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
@@ -29,8 +29,7 @@
 		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
 	
 	<a href='https://kyktommy.github.io/posts'>Archive</a>
-	
-	<a href='https://kyktommy.github.io/weekly'>Weekly</a>
+	<a href='https://kyktommy.github.io/tags'>Tags</a>
 	<a href='https://kyktommy.github.io/about'>About</a>
 
 	
@@ -62,28 +61,27 @@
                 </header>
                 
                 <section id="post-body">
-                    <pre><code class="language-rust">use std::fs;
+                    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">use</span> std::fs;
 
-fn main() {
-  let data = &quot;test data&quot;;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+  <span style="color:#66d9ef">let</span> data <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test data&#34;</span>;
 
-  // write file
-  let w = fs::write(&quot;tmp.txt&quot;, data);
-  match w {
-    Ok(()) =&gt; println!(&quot;write success&quot;),
-    Err(err) =&gt; panic!(&quot;write fail {:?}&quot;, err),
+  <span style="color:#75715e">// write file
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> w <span style="color:#f92672">=</span> fs::write(<span style="color:#e6db74">&#34;tmp.txt&#34;</span>, data);
+  <span style="color:#66d9ef">match</span> w {
+    Ok(()) <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;write success&#34;</span>),
+    Err(err) <span style="color:#f92672">=&gt;</span> panic<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;write fail {:?}&#34;</span>, err),
   };
 
-  // read file
-  let r = fs::read_to_string(&quot;tmp.txt&quot;);
-  let r = match r {
-    Ok(content) =&gt; content,
-    Err(err) =&gt; panic!(&quot;read fail {:?}&quot;, err),
+  <span style="color:#75715e">// read file
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> r <span style="color:#f92672">=</span> fs::read_to_string(<span style="color:#e6db74">&#34;tmp.txt&#34;</span>);
+  <span style="color:#66d9ef">let</span> r <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> r {
+    Ok(content) <span style="color:#f92672">=&gt;</span> content,
+    Err(err) <span style="color:#f92672">=&gt;</span> panic<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;read fail {:?}&#34;</span>, err),
   };
-  println!(&quot;{}&quot;, r);
+  println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, r);
 }
-</code></pre>
-
+</code></pre></div>
                 </section>
             </article>
 

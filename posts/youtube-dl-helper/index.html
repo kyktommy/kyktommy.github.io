@@ -7,7 +7,7 @@
 		
 		
 		<meta name="description" content="@kyktommy">
-		<meta name="generator" content="Hugo 0.55.6" />
+		<meta name="generator" content="Hugo 0.76.4" />
 		<title>Youtube Dl Helper &middot; Kyk&#39;s Blog</title>
 		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
@@ -29,8 +29,7 @@
 		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
 	
 	<a href='https://kyktommy.github.io/posts'>Archive</a>
-	
-	<a href='https://kyktommy.github.io/weekly'>Weekly</a>
+	<a href='https://kyktommy.github.io/tags'>Tags</a>
 	<a href='https://kyktommy.github.io/about'>About</a>
 
 	
@@ -63,27 +62,24 @@
                 
                 <section id="post-body">
                     <p><a href="https://github.com/ytdl-org/youtube-dl">youtube-dl</a> is a great tool to download youtube stuff.</p>
-
 <p>Here is some helper script I used.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<span style="color:#75715e"># download as mp4, playlist also</span>
+<span style="color:#66d9ef">function</span> youtube-dl-mp4<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  youtube-dl -f <span style="color:#e6db74">&#34;[height &lt;=? 720][tbr&gt;500]&#34;</span> --yes-playlist $1
+<span style="color:#f92672">}</span>
 
-<pre><code class="language-bash">
-# download as mp4, playlist also
-function youtube-dl-mp4() {
-  youtube-dl -f &quot;[height &lt;=? 720][tbr&gt;500]&quot; --yes-playlist $1
-}
-
-# download as mp3
-function youtube-dl-mp3() {
+<span style="color:#75715e"># download as mp3</span>
+<span style="color:#66d9ef">function</span> youtube-dl-mp3<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
   youtube-dl -x --audio-format mp3 --add-metadata $1
-}
+<span style="color:#f92672">}</span>
 
-# download subtitle en
-function youtube-dl-sub() {
+<span style="color:#75715e"># download subtitle en</span>
+<span style="color:#66d9ef">function</span> youtube-dl-sub<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
   youtube-dl --write-sub --sub-lang en --skip-download $1
-}
+<span style="color:#f92672">}</span>
 
-</code></pre>
-
+</code></pre></div>
                 </section>
             </article>
 

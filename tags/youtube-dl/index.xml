@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>youtube-dl on Kyk&#39;s Blog</title>
@@ -6,11 +6,7 @@
     <description>Recent content in youtube-dl on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Apr 2020 00:03:11 +0800</lastBuildDate>
-    
-	<atom:link href="https://kyktommy.github.io/tags/youtube-dl/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 12 Apr 2020 00:03:11 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/tags/youtube-dl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Youtube Dl Helper</title>
       <link>https://kyktommy.github.io/posts/youtube-dl-helper/</link>
@@ -19,7 +15,7 @@
       <guid>https://kyktommy.github.io/posts/youtube-dl-helper/</guid>
       <description>youtube-dl is a great tool to download youtube stuff.
 Here is some helper script I used.
-# download as mp4, playlist also function youtube-dl-mp4() { youtube-dl -f &amp;quot;[height &amp;lt;=? 720][tbr&amp;gt;500]&amp;quot; --yes-playlist $1 } # download as mp3 function youtube-dl-mp3() { youtube-dl -x --audio-format mp3 --add-metadata $1 } # download subtitle en function youtube-dl-sub() { youtube-dl --write-sub --sub-lang en --skip-download $1 }  </description>
+# download as mp4, playlist also function youtube-dl-mp4() { youtube-dl -f &amp;#34;[height &amp;lt;=? 720][tbr&amp;gt;500]&amp;#34; --yes-playlist $1 } # download as mp3 function youtube-dl-mp3() { youtube-dl -x --audio-format mp3 --add-metadata $1 } # download subtitle en function youtube-dl-sub() { youtube-dl --write-sub --sub-lang en --skip-download $1 } </description>
     </item>
     
   </channel>

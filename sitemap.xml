@@ -1,35 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://kyktommy.github.io/categories/</loc>
-    <lastmod>2020-07-20T19:46:45+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kyktommy.github.io/tags/</loc>
-    <lastmod>2020-07-20T19:46:45+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kyktommy.github.io/categories/</loc>
-    <lastmod>2020-07-20T19:46:45+08:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-10-13T13:00:39+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kyktommy.github.io/</loc>
-    <lastmod>2020-07-20T19:46:45+08:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2020-10-13T13:00:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/tags/mac/</loc>
+    <lastmod>2020-10-13T13:00:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/categories/mac/</loc>
+    <lastmod>2020-10-13T13:00:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/posts/mac-imageoptim-auto/</loc>
+    <lastmod>2020-10-13T13:00:39+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kyktommy.github.io/posts/</loc>
+    <lastmod>2020-10-13T13:00:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/tags/</loc>
+    <lastmod>2020-10-13T13:00:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/tags/react/</loc>
     <lastmod>2020-07-20T19:46:45+08:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/tags/redux/</loc>
+    <lastmod>2020-07-20T19:46:45+08:00</lastmod>
   </url>
   
   <url>
@@ -38,27 +53,8 @@
   </url>
   
   <url>
-    <loc>https://kyktommy.github.io/tags/</loc>
-    <lastmod>2020-07-20T19:46:45+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kyktommy.github.io/tags/react/</loc>
-    <lastmod>2020-07-20T19:46:45+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kyktommy.github.io/tags/redux/</loc>
-    <lastmod>2020-07-20T19:46:45+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://kyktommy.github.io/tags/typescript/</loc>
     <lastmod>2020-07-20T19:46:45+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -69,13 +65,16 @@
   <url>
     <loc>https://kyktommy.github.io/weekly/</loc>
     <lastmod>2020-06-24T22:35:24+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kyktommy.github.io/categories/weekly/</loc>
     <lastmod>2020-06-24T22:35:24+08:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/categories/script/</loc>
+    <lastmod>2020-04-12T00:03:11+08:00</lastmod>
   </url>
   
   <url>
@@ -84,15 +83,18 @@
   </url>
   
   <url>
-    <loc>https://kyktommy.github.io/categories/script/</loc>
+    <loc>https://kyktommy.github.io/tags/youtube-dl/</loc>
     <lastmod>2020-04-12T00:03:11+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kyktommy.github.io/tags/youtube-dl/</loc>
-    <lastmod>2020-04-12T00:03:11+08:00</lastmod>
-    <priority>0</priority>
+    <loc>https://kyktommy.github.io/tags/go/</loc>
+    <lastmod>2020-02-21T21:55:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/categories/go/</loc>
+    <lastmod>2020-02-21T21:55:25+08:00</lastmod>
   </url>
   
   <url>
@@ -101,32 +103,18 @@
   </url>
   
   <url>
-    <loc>https://kyktommy.github.io/categories/go/</loc>
-    <lastmod>2020-02-21T21:55:25+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kyktommy.github.io/tags/go/</loc>
-    <lastmod>2020-02-21T21:55:25+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kyktommy.github.io/posts/git-move-repo/</loc>
+    <loc>https://kyktommy.github.io/tags/git/</loc>
     <lastmod>2020-02-13T17:38:52+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kyktommy.github.io/categories/git/</loc>
     <lastmod>2020-02-13T17:38:52+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kyktommy.github.io/tags/git/</loc>
+    <loc>https://kyktommy.github.io/posts/git-move-repo/</loc>
     <lastmod>2020-02-13T17:38:52+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -145,20 +133,18 @@
   </url>
   
   <url>
-    <loc>https://kyktommy.github.io/posts/rust-read-write-file/</loc>
+    <loc>https://kyktommy.github.io/tags/rust/</loc>
     <lastmod>2019-12-19T23:35:06+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kyktommy.github.io/categories/rust/</loc>
     <lastmod>2019-12-19T23:35:06+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kyktommy.github.io/tags/rust/</loc>
+    <loc>https://kyktommy.github.io/posts/rust-read-write-file/</loc>
     <lastmod>2019-12-19T23:35:06+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

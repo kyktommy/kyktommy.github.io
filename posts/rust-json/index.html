@@ -7,7 +7,7 @@
 		
 		
 		<meta name="description" content="@kyktommy">
-		<meta name="generator" content="Hugo 0.55.6" />
+		<meta name="generator" content="Hugo 0.76.4" />
 		<title>Rust Json &middot; Kyk&#39;s Blog</title>
 		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
@@ -29,8 +29,7 @@
 		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
 	
 	<a href='https://kyktommy.github.io/posts'>Archive</a>
-	
-	<a href='https://kyktommy.github.io/weekly'>Weekly</a>
+	<a href='https://kyktommy.github.io/tags'>Tags</a>
 	<a href='https://kyktommy.github.io/about'>About</a>
 
 	
@@ -63,65 +62,55 @@
                 
                 <section id="post-body">
                     <p>Rust serialize, deserialize json use <a href="https://serde.rs">serde</a>.</p>
-
-<hr />
-
+<hr>
 <p>cargo.toml</p>
-
 <pre><code>[dependencies]
 serde = &quot;0.9&quot;
 serde_json = &quot;0.9&quot;
 serde_derive = &quot;0.9&quot;
-</code></pre>
+</code></pre><p>main.rs</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">crate</span> serde;
+<span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">crate</span> serde_json;
 
-<p>main.rs</p>
+<span style="color:#75715e">#[macro_use]</span> <span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">crate</span> serde_derive;
 
-<pre><code class="language-rust">extern crate serde;
-extern crate serde_json;
-
-#[macro_use] extern crate serde_derive;
-
-#[derive(Serialize, Deserialize, Debug)]
-struct Response {
-  code: u32,
-  success: bool,
-  payload: Payload,
+<span style="color:#75715e">#[derive(Serialize, Deserialize, Debug)]</span>
+<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Response</span> {
+  code: <span style="color:#66d9ef">u32</span>,
+  success: <span style="color:#66d9ef">bool</span>,
+  payload: <span style="color:#a6e22e">Payload</span>,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
-struct Payload {
-  length: u32,
-  items: Vec&lt;String&gt;,
+<span style="color:#75715e">#[derive(Serialize, Deserialize, Debug)]</span>
+<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Payload</span> {
+  length: <span style="color:#66d9ef">u32</span>,
+  items: Vec<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span>,
 }
 
-fn main() {
-  let data = r#&quot;
+<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
+  <span style="color:#66d9ef">let</span> data <span style="color:#f92672">=</span> r<span style="color:#960050;background-color:#1e0010">#&#34;</span>
   {
-      &quot;code&quot;: 200,
-      &quot;success&quot;: true,
-      &quot;payload&quot;: {
-          &quot;length&quot;: 123,
-          &quot;items&quot;: [&quot;apple&quot;, &quot;orange&quot;]
+      <span style="color:#e6db74">&#34;code&#34;</span>: <span style="color:#ae81ff">200</span>,
+      <span style="color:#e6db74">&#34;success&#34;</span>: <span style="color:#a6e22e">true</span>,
+      <span style="color:#e6db74">&#34;payload&#34;</span>: {
+          <span style="color:#e6db74">&#34;length&#34;</span>: <span style="color:#ae81ff">123</span>,
+          <span style="color:#e6db74">&#34;items&#34;</span>: [<span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;orange&#34;</span>]
       }
   }
-  &quot;#;
+  <span style="color:#960050;background-color:#1e0010">&#34;#</span>;
 
-  // deserialize
-  let resp: Response = serde_json::from_str(&amp;data).unwrap();
-  println!(&quot;resp: {:?}&quot;, resp);
+  <span style="color:#75715e">// deserialize
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> resp: <span style="color:#a6e22e">Response</span> <span style="color:#f92672">=</span> serde_json::from_str(<span style="color:#f92672">&amp;</span>data).unwrap();
+  println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;resp: {:?}&#34;</span>, resp);
 
-  // serialize
-  let resp_json = serde_json::to_string(&amp;resp).unwrap();
-  println!(&quot;json: {}&quot;, resp_json);
+  <span style="color:#75715e">// serialize
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> resp_json <span style="color:#f92672">=</span> serde_json::to_string(<span style="color:#f92672">&amp;</span>resp).unwrap();
+  println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;json: {}&#34;</span>, resp_json);
 }
-</code></pre>
-
-<p>output</p>
-
+</code></pre></div><p>output</p>
 <pre><code>resp: Response { code: 200, success: true, payload: Payload { length: 123, items: [&quot;apple&quot;, &quot;orange&quot;] } }
 json: {&quot;code&quot;:200,&quot;success&quot;:true,&quot;payload&quot;:{&quot;length&quot;:123,&quot;items&quot;:[&quot;apple&quot;,&quot;orange&quot;]}}
 </code></pre>
-
                 </section>
             </article>
 

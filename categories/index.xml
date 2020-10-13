@@ -1,32 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kyk&#39;s Blog</title>
+    <title>Categories on Kyk&#39;s Blog</title>
     <link>https://kyktommy.github.io/categories/</link>
-    <description>Recent content on Kyk&#39;s Blog</description>
+    <description>Recent content in Categories on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2020 19:46:45 +0800</lastBuildDate>
-    
-	<atom:link href="https://kyktommy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 13 Oct 2020 13:00:39 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Redux Typescript</title>
-      <link>https://kyktommy.github.io/posts/redux-typescript/</link>
-      <pubDate>Mon, 20 Jul 2020 19:46:45 +0800</pubDate>
+      <title>mac</title>
+      <link>https://kyktommy.github.io/categories/mac/</link>
+      <pubDate>Tue, 13 Oct 2020 13:00:39 +0800</pubDate>
       
-      <guid>https://kyktommy.github.io/posts/redux-typescript/</guid>
-      <description>There are two library for redux,
- redux-toolkit  create a slice for reducer, action = reducer key name  reduxsauce  normal createActions, createReducer   I recommend redux-toolkit, because it has better support for typescript.
-It restrict PayloadAction&amp;lt;SOMETHING&amp;gt; for action creator and reducer.
-But the downside is action must be binded to reducer.
-Must need to create new action for dispatch two actions.
- </description>
+      <guid>https://kyktommy.github.io/categories/mac/</guid>
+      <description></description>
     </item>
     
-  </channel>
-</rss>     <guid>https://kyktommy.github.io/categories/script/</guid>
+    <item>
+      <title>weekly</title>
+      <link>https://kyktommy.github.io/categories/weekly/</link>
+      <pubDate>Wed, 24 Jun 2020 22:35:24 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/categories/weekly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>script</title>
+      <link>https://kyktommy.github.io/categories/script/</link>
+      <pubDate>Sun, 12 Apr 2020 00:03:11 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/categories/script/</guid>
       <description></description>
     </item>
     

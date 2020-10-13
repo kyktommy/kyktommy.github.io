@@ -7,7 +7,7 @@
 		
 		
 		<meta name="description" content="@kyktommy">
-		<meta name="generator" content="Hugo 0.55.6" />
+		<meta name="generator" content="Hugo 0.76.4" />
 		<title>Redux Typescript &middot; Kyk&#39;s Blog</title>
 		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
@@ -29,8 +29,7 @@
 		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
 	
 	<a href='https://kyktommy.github.io/posts'>Archive</a>
-	
-	<a href='https://kyktommy.github.io/weekly'>Weekly</a>
+	<a href='https://kyktommy.github.io/tags'>Tags</a>
 	<a href='https://kyktommy.github.io/about'>About</a>
 
 	
@@ -67,26 +66,18 @@
                 
                 <section id="post-body">
                     <p>There are two library for redux,</p>
-
 <ol>
-<li><a href="https://github.com/reduxjs/redux-toolkit">redux-toolkit</a>
-
-<ol>
+<li><a href="https://github.com/reduxjs/redux-toolkit">redux-toolkit</a></li>
 <li>create a slice for reducer, action = reducer key name</li>
-</ol></li>
-<li><a href="https://github.com/jkeam/reduxsauce">reduxsauce</a>
-
-<ol>
+<li><a href="https://github.com/jkeam/reduxsauce">reduxsauce</a></li>
 <li>normal createActions, createReducer</li>
-</ol></li>
 </ol>
-
-<p>I recommend redux-toolkit, because it has better support for typescript.<br />
-It restrict <code>PayloadAction&lt;SOMETHING&gt;</code> for action creator and reducer.<br />
-But the downside is action must be binded to reducer.<br />
+<p>I recommend redux-toolkit, because it has better support for typescript.<br>
+It restrict <code>PayloadAction&lt;SOMETHING&gt;</code> for action creator and reducer.<br>
+But the downside is action must be binded to reducer.<br>
 Must need to create new action for dispatch two actions.</p>
+<script type="application/javascript" src="https://gist.github.com/kyktommy/9e6fea3fd3c4d26464f477156b1500a6.js"></script>
 
-<script type="application/javascript" src="//gist.github.com/kyktommy/9e6fea3fd3c4d26464f477156b1500a6.js"></script>
 
                 </section>
             </article>

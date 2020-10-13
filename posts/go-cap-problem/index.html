@@ -7,7 +7,7 @@
 		
 		
 		<meta name="description" content="@kyktommy">
-		<meta name="generator" content="Hugo 0.55.6" />
+		<meta name="generator" content="Hugo 0.76.4" />
 		<title>Go Cap Problem &middot; Kyk&#39;s Blog</title>
 		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
@@ -29,8 +29,7 @@
 		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
 	
 	<a href='https://kyktommy.github.io/posts'>Archive</a>
-	
-	<a href='https://kyktommy.github.io/weekly'>Weekly</a>
+	<a href='https://kyktommy.github.io/tags'>Tags</a>
 	<a href='https://kyktommy.github.io/about'>About</a>
 
 	
@@ -63,49 +62,41 @@
                 
                 <section id="post-body">
                     <p>golang cap</p>
-
 <blockquote>
 <p>The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.</p>
 </blockquote>
-
 <p>If we append item to a slice that over the capacity, it will return the new array. But if we append item to a slice within capacity, it will change the orginal one.</p>
-
 <p>The following code shows underCap changes the input array.</p>
-
-<hr />
-
-<pre><code class="language-go">
-func overCap(a []int) []int {
-	fmt.Printf(&quot;before over cap addr: %p\n&quot;, a)
-	a = append(a[:0], 7, 7, 7, 7)
-	fmt.Printf(&quot;after over cap addr: %p\n&quot;, a)
-	return a
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">overCap</span>(<span style="color:#a6e22e">a</span> []<span style="color:#66d9ef">int</span>) []<span style="color:#66d9ef">int</span> {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;before over cap addr: %p\n&#34;</span>, <span style="color:#a6e22e">a</span>)
+	<span style="color:#a6e22e">a</span> = append(<span style="color:#a6e22e">a</span>[:<span style="color:#ae81ff">0</span>], <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">7</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;after over cap addr: %p\n&#34;</span>, <span style="color:#a6e22e">a</span>)
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>
 }
 
-func underCap(a []int) []int {
-	fmt.Printf(&quot;before under cap addr: %p\n&quot;, a)
-	a = append(a[:0], 7, 7)
-	fmt.Printf(&quot;after under cap addr: %p\n&quot;, a)
-	return a
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">underCap</span>(<span style="color:#a6e22e">a</span> []<span style="color:#66d9ef">int</span>) []<span style="color:#66d9ef">int</span> {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;before under cap addr: %p\n&#34;</span>, <span style="color:#a6e22e">a</span>)
+	<span style="color:#a6e22e">a</span> = append(<span style="color:#a6e22e">a</span>[:<span style="color:#ae81ff">0</span>], <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">7</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;after under cap addr: %p\n&#34;</span>, <span style="color:#a6e22e">a</span>)
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span>
 }
 
-func main() {
-	a := []int{1, 2, 3}
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">a</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}
 
-	b := overCap(a)
-	fmt.Println(a, &quot;-&gt;&quot;, b)
+	<span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">overCap</span>(<span style="color:#a6e22e">a</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>, <span style="color:#e6db74">&#34;-&gt;&#34;</span>, <span style="color:#a6e22e">b</span>)
 
-	fmt.Println(&quot;---&quot;)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;---&#34;</span>)
 
 
-	c := underCap(a)
-	fmt.Println(a, &quot;-&gt;&quot;, c)
+	<span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">underCap</span>(<span style="color:#a6e22e">a</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">a</span>, <span style="color:#e6db74">&#34;-&gt;&#34;</span>, <span style="color:#a6e22e">c</span>)
 }
 
-</code></pre>
-
-<p>outputs:</p>
-
+</code></pre></div><p>outputs:</p>
 <pre><code>before over cap addr: 0x40e020
 after over cap addr: 0x456020
 [1 2 3] -&gt; [7 7 7 7]
@@ -114,7 +105,6 @@ before under cap addr: 0x40e020
 after under cap addr: 0x40e020
 [7 7 3] -&gt; [7 7]
 </code></pre>
-
                 </section>
             </article>
 

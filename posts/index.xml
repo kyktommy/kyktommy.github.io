@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Kyk&#39;s Blog</title>
@@ -6,10 +6,18 @@
     <description>Recent content in Posts on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2020 19:46:45 +0800</lastBuildDate>
-    
-	<atom:link href="https://kyktommy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 13 Oct 2020 13:00:39 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac Imageoptim Auto</title>
+      <link>https://kyktommy.github.io/posts/mac-imageoptim-auto/</link>
+      <pubDate>Tue, 13 Oct 2020 13:00:39 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/posts/mac-imageoptim-auto/</guid>
+      <description>I want to automatically convert pdf to jpg, and compress jpg.
+First, need to install ImageOptim, and put in Application folder.
+Then install ImageOptim-CLI to run ImageOptim in command line.
+ # convert pdf to jpg sips --resampleWidth 1024 -s format jpeg *.pdf --out dist/ # compress all jpg in dist folder imageoptim dist </description>
+    </item>
     
     <item>
       <title>Redux Typescript</title>
@@ -18,7 +26,7 @@
       
       <guid>https://kyktommy.github.io/posts/redux-typescript/</guid>
       <description>There are two library for redux,
- redux-toolkit  create a slice for reducer, action = reducer key name  reduxsauce  normal createActions, createReducer   I recommend redux-toolkit, because it has better support for typescript.
+ redux-toolkit create a slice for reducer, action = reducer key name reduxsauce normal createActions, createReducer  I recommend redux-toolkit, because it has better support for typescript.
 It restrict PayloadAction&amp;lt;SOMETHING&amp;gt; for action creator and reducer.
 But the downside is action must be binded to reducer.
 Must need to create new action for dispatch two actions.
@@ -33,7 +41,7 @@ Must need to create new action for dispatch two actions.
       <guid>https://kyktommy.github.io/posts/youtube-dl-helper/</guid>
       <description>youtube-dl is a great tool to download youtube stuff.
 Here is some helper script I used.
-# download as mp4, playlist also function youtube-dl-mp4() { youtube-dl -f &amp;quot;[height &amp;lt;=? 720][tbr&amp;gt;500]&amp;quot; --yes-playlist $1 } # download as mp3 function youtube-dl-mp3() { youtube-dl -x --audio-format mp3 --add-metadata $1 } # download subtitle en function youtube-dl-sub() { youtube-dl --write-sub --sub-lang en --skip-download $1 }  </description>
+# download as mp4, playlist also function youtube-dl-mp4() { youtube-dl -f &amp;#34;[height &amp;lt;=? 720][tbr&amp;gt;500]&amp;#34; --yes-playlist $1 } # download as mp3 function youtube-dl-mp3() { youtube-dl -x --audio-format mp3 --add-metadata $1 } # download subtitle en function youtube-dl-sub() { youtube-dl --write-sub --sub-lang en --skip-download $1 } </description>
     </item>
     
     <item>
@@ -43,8 +51,8 @@ Here is some helper script I used.
       
       <guid>https://kyktommy.github.io/posts/go-defer-and-recover/</guid>
       <description>Go defer is LIFO. defer function will be executed even after panic. So put recover inside defer.
-package main import ( &amp;quot;fmt&amp;quot; &amp;quot;time&amp;quot; ) func main() { defer func() { fmt.Println(&amp;quot;main defer&amp;quot;) }() go func() { defer func() { if err := recover(); err != nil { fmt.Println(&amp;quot;recover&amp;quot;, err) } }() panic(&amp;quot;panic here&amp;quot;) }() time.Sleep(1 \* time.Second) fmt.Println(&amp;quot;end&amp;quot;) }  output:
-recover panic here end main defer  </description>
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;time&amp;#34; ) func main() { defer func() { fmt.Println(&amp;#34;main defer&amp;#34;) }() go func() { defer func() { if err := recover(); err != nil { fmt.Println(&amp;#34;recover&amp;#34;, err) } }() panic(&amp;#34;panic here&amp;#34;) }() time.Sleep(1 \* time.Second) fmt.Println(&amp;#34;end&amp;#34;) } output:
+recover panic here end main defer </description>
     </item>
     
     <item>
@@ -53,9 +61,10 @@ recover panic here end main defer  </description>
       <pubDate>Thu, 13 Feb 2020 17:38:52 +0800</pubDate>
       
       <guid>https://kyktommy.github.io/posts/git-move-repo/</guid>
-      <description> Clone the project from old repo url
-git clone &amp;lt;old_repo_url&amp;gt;   Pull all branches  git branch -r | grep -v &#39;\-&amp;gt;&#39; | while read remote; do git branch --track &amp;quot;${remote#origin/}&amp;quot; &amp;quot;$remote&amp;quot;; done git fetch --all git pull --all  Change remote to new repo url
-git remote set-url origin &amp;lt;new_repo&amp;gt;  Push all to new repo url
+      <description>  Clone the project from old repo url
+git clone &amp;lt;old_repo_url&amp;gt;   Pull all branches
+git branch -r | grep -v &amp;#39;\-&amp;gt;&amp;#39; | while read remote; do git branch --track &amp;#34;${remote#origin/}&amp;#34; &amp;#34;$remote&amp;#34;; done git fetch --all git pull --all   Change remote to new repo url
+git remote set-url origin &amp;lt;new_repo&amp;gt;   Push all to new repo url
 git push --all git push --tags   </description>
     </item>
     
@@ -69,7 +78,7 @@ git push --all git push --tags   </description>
  The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
  If we append item to a slice that over the capacity, it will return the new array. But if we append item to a slice within capacity, it will change the orginal one.
 The following code shows underCap changes the input array.
-func overCap(a []int) []int { fmt.</description>
+ func overCap(a []int) []int { fmt.</description>
     </item>
     
     <item>
@@ -79,7 +88,7 @@ func overCap(a []int) []int { fmt.</description>
       
       <guid>https://kyktommy.github.io/posts/go-http-log/</guid>
       <description>We need a logger for every routes, so made a simple http log middleware. Need to replace writer to custom one, and also take care of reading body.
-package main import ( &amp;quot;bytes&amp;quot; &amp;quot;fmt&amp;quot; &amp;quot;io&amp;quot; &amp;quot;io/ioutil&amp;quot; &amp;quot;net/http&amp;quot; &amp;quot;strings&amp;quot; ) type bodyLogWriter struct { http.ResponseWriter body *bytes.Buffer } func (w bodyLogWriter) Write(b []byte) (int, error) { w.body.Write(b) return w.ResponseWriter.Write(b) } func main() { httpLog := func(next http.Handler) http.Handler { return http.HandlerFunc(func(w http.</description>
+package main import ( &amp;#34;bytes&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;io&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;strings&amp;#34; ) type bodyLogWriter struct { http.ResponseWriter body *bytes.Buffer } func (w bodyLogWriter) Write(b []byte) (int, error) { w.body.Write(b) return w.ResponseWriter.Write(b) } func main() { httpLog := func(next http.Handler) http.Handler { return http.HandlerFunc(func(w http.</description>
     </item>
     
     <item>
@@ -90,7 +99,7 @@ package main import ( &amp;quot;bytes&amp;quot; &amp;quot;fmt&amp;quot; &amp;quo
       <guid>https://kyktommy.github.io/posts/find-go-project/</guid>
       <description>I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to $GOPATH and cd to that package name.
 Here is my script for current solution. Assume your target project is in 3 depth of src.
-function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &amp;quot;{}&amp;quot; \; | grep $1 | awk &#39;{ print $9 }&#39; | nl }  ➜ ~ findgo proto 1	/Users/tommy/go-workspace/src/google.</description>
+function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &amp;#34;{}&amp;#34; \; | grep $1 | awk &amp;#39;{ print $9 }&amp;#39; | nl } ➜ ~ findgo proto 1	/Users/tommy/go-workspace/src/google.</description>
     </item>
     
     <item>
@@ -99,7 +108,7 @@ function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -l
       <pubDate>Thu, 19 Dec 2019 23:35:06 +0800</pubDate>
       
       <guid>https://kyktommy.github.io/posts/rust-read-write-file/</guid>
-      <description>use std::fs; fn main() { let data = &amp;quot;test data&amp;quot;; // write file let w = fs::write(&amp;quot;tmp.txt&amp;quot;, data); match w { Ok(()) =&amp;gt; println!(&amp;quot;write success&amp;quot;), Err(err) =&amp;gt; panic!(&amp;quot;write fail {:?}&amp;quot;, err), }; // read file let r = fs::read_to_string(&amp;quot;tmp.txt&amp;quot;); let r = match r { Ok(content) =&amp;gt; content, Err(err) =&amp;gt; panic!(&amp;quot;read fail {:?}&amp;quot;, err), }; println!(&amp;quot;{}&amp;quot;, r); }  </description>
+      <description>use std::fs; fn main() { let data = &amp;#34;test data&amp;#34;; // write file  let w = fs::write(&amp;#34;tmp.txt&amp;#34;, data); match w { Ok(()) =&amp;gt; println!(&amp;#34;write success&amp;#34;), Err(err) =&amp;gt; panic!(&amp;#34;write fail {:?}&amp;#34;, err), }; // read file  let r = fs::read_to_string(&amp;#34;tmp.txt&amp;#34;); let r = match r { Ok(content) =&amp;gt; content, Err(err) =&amp;gt; panic!(&amp;#34;read fail {:?}&amp;#34;, err), }; println!(&amp;#34;{}&amp;#34;, r); } </description>
     </item>
     
     <item>
@@ -109,9 +118,9 @@ function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -l
       
       <guid>https://kyktommy.github.io/posts/rust-json/</guid>
       <description>Rust serialize, deserialize json use serde.
-cargo.toml
-[dependencies] serde = &amp;quot;0.9&amp;quot; serde_json = &amp;quot;0.9&amp;quot; serde_derive = &amp;quot;0.9&amp;quot;  main.rs
-extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&amp;lt;String&amp;gt;, } fn main() { let data = r#&amp;quot; { &amp;quot;code&amp;quot;: 200, &amp;quot;success&amp;quot;: true, &amp;quot;payload&amp;quot;: { &amp;quot;length&amp;quot;: 123, &amp;quot;items&amp;quot;: [&amp;quot;apple&amp;quot;, &amp;quot;orange&amp;quot;] } } &amp;quot;#; // deserialize let resp: Response = serde_json::from_str(&amp;amp;data).</description>
+ cargo.toml
+[dependencies] serde = &amp;quot;0.9&amp;quot; serde_json = &amp;quot;0.9&amp;quot; serde_derive = &amp;quot;0.9&amp;quot; main.rs
+extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&amp;lt;String&amp;gt;, } fn main() { let data = r#&amp;#34; { &amp;#34;code&amp;#34;: 200, &amp;#34;success&amp;#34;: true, &amp;#34;payload&amp;#34;: { &amp;#34;length&amp;#34;: 123, &amp;#34;items&amp;#34;: [&amp;#34;apple&amp;#34;, &amp;#34;orange&amp;#34;] } } &amp;#34;#; // deserialize  let resp: Response = serde_json::from_str(&amp;amp;data).</description>
     </item>
     
   </channel>
