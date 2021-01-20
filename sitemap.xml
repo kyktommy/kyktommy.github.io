@@ -3,12 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kyktommy.github.io/categories/</loc>
-    <lastmod>2020-10-13T13:00:39+08:00</lastmod>
+    <loc>https://kyktommy.github.io/posts/aes-cbc-pkcs7/</loc>
+    <lastmod>2021-01-20T22:24:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/tags/golang/</loc>
+    <lastmod>2021-01-20T22:24:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/tags/js/</loc>
+    <lastmod>2021-01-20T22:24:28+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://kyktommy.github.io/</loc>
+    <lastmod>2021-01-20T22:24:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/posts/</loc>
+    <lastmod>2021-01-20T22:24:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/tags/</loc>
+    <lastmod>2021-01-20T22:24:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyktommy.github.io/categories/</loc>
     <lastmod>2020-10-13T13:00:39+08:00</lastmod>
   </url>
   
@@ -24,16 +49,6 @@
   
   <url>
     <loc>https://kyktommy.github.io/posts/mac-imageoptim-auto/</loc>
-    <lastmod>2020-10-13T13:00:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kyktommy.github.io/posts/</loc>
-    <lastmod>2020-10-13T13:00:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kyktommy.github.io/tags/</loc>
     <lastmod>2020-10-13T13:00:39+08:00</lastmod>
   </url>
   
