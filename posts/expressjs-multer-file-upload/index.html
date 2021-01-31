@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<meta name="description" content="@kyktommy">
+		<meta name="generator" content="Hugo 0.76.4" />
+		<title>Expressjs Multer File Upload &middot; Kyk&#39;s Blog</title>
+		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
+		<link rel="stylesheet" href="https://kyktommy.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://kyktommy.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	<a href='https://kyktommy.github.io/posts'>Archive</a>
+	<a href='https://kyktommy.github.io/tags'>Tags</a>
+	<a href='https://kyktommy.github.io/about'>About</a>
+
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Expressjs Multer File Upload
+                    </h1>
+                    <h2 class="headline">
+                    Jan 31, 2021 21:08
+                    · 71 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://kyktommy.github.io/tags/js">js</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <p><a href="https://github.com/expressjs/express">Expressjs</a> + <a href="https://github.com/expressjs/multer">Multer</a> for file upload.</p>
+<h3 id="usages">Usages:</h3>
+<p><code>multer({ limits, fileFilter, storage })</code> creates Multer object for reusable in different requset handlers.</p>
+<ul>
+<li><code>limits</code> limit fileSize, fieldName, etc&hellip;</li>
+<li><code>fileFilter</code> custom file validation</li>
+<li><code>storage</code> disk / memory / custom storage transform ([s3)</li>
+</ul>
+<p><code>multer().array('photos', 2)</code> creates request handler for different routes.</p>
+<ul>
+<li><code>single</code> one file upload, get by <code>req.file</code></li>
+<li><code>array</code> multiple files upload, get by <code>req.files</code></li>
+<li><code>fields</code> multiple field for files upload, get by <code>req.files[&lt;fieldName&gt;][0]</code></li>
+</ul>
+<h3 id="example">Example</h3>
+<script type="application/javascript" src="https://gist.github.com/kyktommy/ccbd0b2b8dd00f2ace5e7585bf80fe94.js"></script>
+
+
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2021 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://kyktommy.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://kyktommy.github.io/js/main.js"></script>
+<script src="https://kyktommy.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>

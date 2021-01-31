@@ -6,7 +6,19 @@
     <description>Recent content in js on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Jan 2021 22:24:28 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Jan 2021 21:08:24 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Expressjs Multer File Upload</title>
+      <link>https://kyktommy.github.io/posts/expressjs-multer-file-upload/</link>
+      <pubDate>Sun, 31 Jan 2021 21:08:24 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/posts/expressjs-multer-file-upload/</guid>
+      <description>Expressjs + Multer for file upload.
+Usages: multer({ limits, fileFilter, storage }) creates Multer object for reusable in different requset handlers.
+ limits limit fileSize, fieldName, etc&amp;hellip; fileFilter custom file validation storage disk / memory / custom storage transform ([s3)  multer().array(&#39;photos&#39;, 2) creates request handler for different routes.
+ single one file upload, get by req.file array multiple files upload, get by req.files fields multiple field for files upload, get by req.</description>
+    </item>
+    
     <item>
       <title>Aes Cbc Pkcs7</title>
       <link>https://kyktommy.github.io/posts/aes-cbc-pkcs7/</link>
