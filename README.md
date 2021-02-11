@@ -5,7 +5,8 @@ brew install hugo
 git submodule update --init --recursive
 
 # new posts
-hugo new posts/new-post-name.md
+- hugo new posts/new-post-name.md
+- or, ./new-post.sh new-post-name
 
 # start test server
 ./start.sh
