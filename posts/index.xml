@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Jan 2021 21:08:24 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Feb 2021 20:32:28 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rainbow Border</title>
+      <link>https://kyktommy.github.io/posts/rainbow-border/</link>
+      <pubDate>Thu, 11 Feb 2021 20:32:28 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/posts/rainbow-border/</guid>
+      <description>https://codepen.io/kyktommy/pen/bGBBBZL
+ Outside box fill with rainbow gradient background Inside box fill with solid background color  /* .box &amp;gt; .inner */ .box { width: 100px; height: 100px; padding: 3px; box-sizing: border-box; background-image: linear-gradient( to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100% ); } .inner { width: 100%; height: 100%; background: black; }  New css version (safari not supporting)
+https://codepen.io/unnegative/pen/dVwYBq</description>
+    </item>
+    
     <item>
       <title>Expressjs Multer File Upload</title>
       <link>https://kyktommy.github.io/posts/expressjs-multer-file-upload/</link>
