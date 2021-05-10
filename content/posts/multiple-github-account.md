@@ -49,3 +49,9 @@ Change local repo setting
 $ git config user.name "kyktommy"
 $ git config user.email "kyktommy@gmail.com"
 ```
+
+Update remote url
+
+```
+$ git remote set-url origin git@github.com-kyktommy:kyktommy/<repo_name>.git
+```
