@@ -8,7 +8,7 @@
 		
 		<meta name="description" content="@kyktommy">
 		<meta name="generator" content="Hugo 0.83.1" />
-		<title>Git Move Repo &middot; Kyk&#39;s Blog</title>
+		<title>Multiple Github Account &middot; Kyk&#39;s Blog</title>
 		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/highlight.css">
@@ -42,11 +42,11 @@
             <article>
                 <header>
                     <h1>
-                        Git Move Repo
+                        Multiple Github Account
                     </h1>
                     <h2 class="headline">
-                    Feb 13, 2020 17:38
-                    · 60 words
+                    May 10, 2021 14:50
+                    · 76 words
                     · 1 minute read
                       <span class="tags">
                       
@@ -61,28 +61,30 @@
                 </header>
                 
                 <section id="post-body">
-                    <ol>
-<li>
-<p>Clone the project from old repo url</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone &lt;old_repo_url&gt;
-</code></pre></div></li>
-<li>
-<p>Pull all branches</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch -r | grep -v <span style="color:#e6db74">&#39;\-&gt;&#39;</span> | <span style="color:#66d9ef">while</span> read remote; <span style="color:#66d9ef">do</span> git branch --track <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>remote#origin/<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span>$remote<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">done</span>
-git fetch --all
-git pull --all
-</code></pre></div></li>
-<li>
-<p>Change remote to new repo url</p>
-<pre><code>git remote set-url origin &lt;new_repo&gt;
-</code></pre></li>
-<li>
-<p>Push all to new repo url</p>
-<pre><code>git push --all
-git push --tags
-</code></pre></li>
-</ol>
-
+                    <p>Generate new ssh key for github account</p>
+<pre><code>$ ssh-keygen -t rsa -C &quot;kyktommy@gmail.com&quot; -f &quot;id_rsa_kyktommy&quot;
+$ ssh-add ~/.ssh/id_rsa_kyktommy
+</code></pre><p>Edit <code>.ssh/config</code></p>
+<pre><code># Account 1
+Host github.com
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa
+   
+# New Account 2
+Host github.com-kyktommy
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa_kyktommy
+</code></pre><p>Add to ssh-agent</p>
+<pre><code>$ ssh-add ~/.ssh/id_rsa_kyktommy
+</code></pre><p>Set public key in github setting</p>
+<p>Clone github repo</p>
+<pre><code>$ git clone git@github.com-kyktommy:kyktommy/&lt;repo_name&gt;.git
+</code></pre><p>Change local repo setting</p>
+<pre><code>$ git config user.name &quot;kyktommy&quot;
+$ git config user.email &quot;kyktommy@gmail.com&quot;
+</code></pre>
                 </section>
             </article>
 

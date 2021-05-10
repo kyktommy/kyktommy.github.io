@@ -7,7 +7,7 @@
 		
 		
 		<meta name="description" content="@kyktommy">
-		<meta name="generator" content="Hugo 0.76.4" />
+		<meta name="generator" content="Hugo 0.83.1" />
 		<title>Rust Json &middot; Kyk&#39;s Blog</title>
 		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
@@ -88,16 +88,16 @@ serde_derive = &quot;0.9&quot;
 }
 
 <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-  <span style="color:#66d9ef">let</span> data <span style="color:#f92672">=</span> r<span style="color:#960050;background-color:#1e0010">#&#34;</span>
-  {
-      <span style="color:#e6db74">&#34;code&#34;</span>: <span style="color:#ae81ff">200</span>,
-      <span style="color:#e6db74">&#34;success&#34;</span>: <span style="color:#a6e22e">true</span>,
-      <span style="color:#e6db74">&#34;payload&#34;</span>: {
-          <span style="color:#e6db74">&#34;length&#34;</span>: <span style="color:#ae81ff">123</span>,
-          <span style="color:#e6db74">&#34;items&#34;</span>: [<span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;orange&#34;</span>]
-      }
-  }
-  <span style="color:#960050;background-color:#1e0010">&#34;#</span>;
+  <span style="color:#66d9ef">let</span> data <span style="color:#f92672">=</span> <span style="color:#e6db74">r#&#34;
+</span><span style="color:#e6db74">  {
+</span><span style="color:#e6db74">      &#34;code&#34;: 200,
+</span><span style="color:#e6db74">      &#34;success&#34;: true,
+</span><span style="color:#e6db74">      &#34;payload&#34;: {
+</span><span style="color:#e6db74">          &#34;length&#34;: 123,
+</span><span style="color:#e6db74">          &#34;items&#34;: [&#34;apple&#34;, &#34;orange&#34;]
+</span><span style="color:#e6db74">      }
+</span><span style="color:#e6db74">  }
+</span><span style="color:#e6db74">  &#34;#</span>;
 
   <span style="color:#75715e">// deserialize
 </span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> resp: <span style="color:#a6e22e">Response</span> <span style="color:#f92672">=</span> serde_json::from_str(<span style="color:#f92672">&amp;</span>data).unwrap();
