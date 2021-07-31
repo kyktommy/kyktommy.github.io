@@ -14,7 +14,7 @@ draft = false
 
 ### Result
 
-```
+``` javascript
 // sort import
 import React, { useEffect, useState } from 'react'
 
@@ -35,7 +35,7 @@ craco.config.js
 
 - map @ to all folder in src
 
-```
+``` javascript
 const path = require('path')
 
 module.exports = {
@@ -53,7 +53,7 @@ eslintrc.js
 - import plugin
 - the rule is used for auto fix and error highlight in editor
 
-```
+``` javascript
 {
   plugins: ['simple-import-sort', 'react', 'prettier'],
   rules: {
@@ -75,7 +75,7 @@ jsonconfig.json
 
 - vscode can find reference in alias path and jsx
 
-```
+``` json
 {
   "compilerOptions": {
     "jsx": "react",

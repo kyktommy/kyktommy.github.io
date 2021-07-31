@@ -3,5 +3,9 @@ languageCode = "en-us"
 title = "Kyk's Blog"
 theme = "hugo-theme-cactus-plus"
 
+pygmentsUseClasses = true
+
 [params]
   description = "@kyktommy"
+  [params.links]
+    Awesomes = "https://github.com/kyktommy/awesomes"
