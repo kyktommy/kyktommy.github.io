@@ -28,10 +28,12 @@
 	
 		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
 	
-	<a href='https://kyktommy.github.io/posts'>Archive</a>
-	<a href='https://kyktommy.github.io/tags'>Tags</a>
-	<a href='https://kyktommy.github.io/about'>About</a>
+	
+	
+	
 
+	
+		<a href="https://github.com/kyktommy/awesomes">awesomes</a>
 	
 
 	
@@ -63,9 +65,9 @@
                 <section id="post-body">
                     <p>I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to <code>$GOPATH</code> and cd to that package name.</p>
 <p>Here is my script for current solution. Assume your target project is in 3 depth of src.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span> findgo<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  find $GOPATH/src -mindepth <span style="color:#ae81ff">3</span> -maxdepth <span style="color:#ae81ff">3</span> -type d -exec ls -ld <span style="color:#e6db74">&#34;{}&#34;</span> <span style="color:#ae81ff">\;</span> | grep $1 | awk <span style="color:#e6db74">&#39;{ print $9 }&#39;</span> | nl
-<span style="color:#f92672">}</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">function</span> findgo<span class="o">()</span> <span class="o">{</span>
+  find <span class="nv">$GOPATH</span>/src -mindepth <span class="m">3</span> -maxdepth <span class="m">3</span> -type d -exec ls -ld <span class="s2">&#34;{}&#34;</span> <span class="se">\;</span> <span class="p">|</span> grep <span class="nv">$1</span> <span class="p">|</span> awk <span class="s1">&#39;{ print $9 }&#39;</span> <span class="p">|</span> nl
+<span class="o">}</span>
 </code></pre></div><pre><code class="language-console" data-lang="console">➜  ~ findgo proto
      1	/Users/tommy/go-workspace/src/google.golang.org/genproto/internal
      2	/Users/tommy/go-workspace/src/google.golang.org/genproto/googleapis
@@ -74,14 +76,14 @@
      5	/Users/tommy/go-workspace/src/github.com/golang/protobuf
      6	/Users/tommy/go-workspace/src/github.com/gogo/protobuf
 </code></pre><p>And also, you can cd to that directory by choosing line number</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span> cdgo<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-  r<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>findgo $1<span style="color:#66d9ef">)</span>
-  echo $r
-  printf <span style="color:#e6db74">&#39;cd to ? &gt; &#39;</span>
-  read cdto
-  p<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>echo $r | sed -n <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>cdto<span style="color:#e6db74">}</span><span style="color:#e6db74">p&#34;</span> | awk <span style="color:#e6db74">&#39;{ print $2 }&#39;</span><span style="color:#66d9ef">)</span>
-  cd $p
-<span style="color:#f92672">}</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">function</span> cdgo<span class="o">()</span> <span class="o">{</span>
+  <span class="nv">r</span><span class="o">=</span><span class="k">$(</span>findgo <span class="nv">$1</span><span class="k">)</span>
+  <span class="nb">echo</span> <span class="nv">$r</span>
+  <span class="nb">printf</span> <span class="s1">&#39;cd to ? &gt; &#39;</span>
+  <span class="nb">read</span> cdto
+  <span class="nv">p</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$r</span> <span class="p">|</span> sed -n <span class="s2">&#34;</span><span class="si">${</span><span class="nv">cdto</span><span class="si">}</span><span class="s2">p&#34;</span> <span class="p">|</span> awk <span class="s1">&#39;{ print $2 }&#39;</span><span class="k">)</span>
+  <span class="nb">cd</span> <span class="nv">$p</span>
+<span class="o">}</span>
 </code></pre></div><pre><code class="language-console" data-lang="console">➜  protobuf git:(master) cdgo proto
      1	/Users/tommy/go-workspace/src/google.golang.org/genproto/internal
      2	/Users/tommy/go-workspace/src/google.golang.org/genproto/googleapis

@@ -13,7 +13,7 @@
       <pubDate>Thu, 19 Dec 2019 23:35:06 +0800</pubDate>
       
       <guid>https://kyktommy.github.io/posts/rust-read-write-file/</guid>
-      <description>use std::fs; fn main() { let data = &amp;#34;test data&amp;#34;; // write file  let w = fs::write(&amp;#34;tmp.txt&amp;#34;, data); match w { Ok(()) =&amp;gt; println!(&amp;#34;write success&amp;#34;), Err(err) =&amp;gt; panic!(&amp;#34;write fail {:?}&amp;#34;, err), }; // read file  let r = fs::read_to_string(&amp;#34;tmp.txt&amp;#34;); let r = match r { Ok(content) =&amp;gt; content, Err(err) =&amp;gt; panic!(&amp;#34;read fail {:?}&amp;#34;, err), }; println!(&amp;#34;{}&amp;#34;, r); } </description>
+      <description>usestd::fs;fn main(){letdata=&amp;#34;test data&amp;#34;;// write file letw=fs::write(&amp;#34;tmp.txt&amp;#34;,data);matchw{Ok(())=&amp;gt;println!(&amp;#34;write success&amp;#34;),Err(err)=&amp;gt;panic!(&amp;#34;write fail {:?}&amp;#34;,err),};// read file letr=fs::read_to_string(&amp;#34;tmp.txt&amp;#34;);letr=matchr{Ok(content)=&amp;gt;content,Err(err)=&amp;gt;panic!(&amp;#34;read fail {:?</description>
     </item>
     
     <item>
@@ -25,7 +25,8 @@
       <description>Rust serialize, deserialize json use serde.
  cargo.toml
 [dependencies] serde = &amp;quot;0.9&amp;quot; serde_json = &amp;quot;0.9&amp;quot; serde_derive = &amp;quot;0.9&amp;quot; main.rs
-extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&amp;lt;String&amp;gt;, } fn main() { let data = r#&amp;#34; { &amp;#34;code&amp;#34;: 200, &amp;#34;success&amp;#34;: true, &amp;#34;payload&amp;#34;: { &amp;#34;length&amp;#34;: 123, &amp;#34;items&amp;#34;: [&amp;#34;apple&amp;#34;, &amp;#34;orange&amp;#34;] } } &amp;#34;#; // deserialize  let resp: Response = serde_json::from_str(&amp;amp;data).</description>
+externcrateserde;externcrateserde_json;#[macro_use]externcrateserde_derive;#[derive(Serialize, Deserialize, Debug)]struct Response{code: u32,success: bool,payload: Payload,}#[derive(Serialize, Deserialize, Debug)]struct Payload{length: u32,items: Vec&amp;lt;String&amp;gt;,}fn main(){letdata=r#&amp;#34; { &amp;#34;code&amp;#34;: 200, &amp;#34;success&amp;#34;: true, &amp;#34;payload&amp;#34;: { &amp;#34;length&amp;#34;: 123, &amp;#34;items&amp;#34;: [&amp;#34;apple&amp;#34;, &amp;#34;orange&amp;#34;] } } &amp;#34;#;// deserialize letresp: Response=serde_json::from_str(&amp;amp;data).unwrap();println!(&amp;#34;resp: {:?}&amp;#34;,resp);// serialize letresp_json=serde_json::to_string(&amp;amp;resp).unwrap();println!(&amp;#34;json: {}&amp;#34;,resp_json);}output
+resp: Response { code: 200, success: true, payload: Payload { length: 123, items: [&amp;quot;apple&amp;quot;, &amp;quot;orange&amp;quot;] } } json: {&amp;quot;code&amp;quot;:200,&amp;quot;success&amp;quot;:true,&amp;quot;payload&amp;quot;:{&amp;quot;length&amp;quot;:123,&amp;quot;items&amp;quot;:[&amp;quot;apple&amp;quot;,&amp;quot;orange&amp;quot;]}} </description>
     </item>
     
   </channel>

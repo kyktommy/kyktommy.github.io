@@ -28,10 +28,12 @@
 	
 		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
 	
-	<a href='https://kyktommy.github.io/posts'>Archive</a>
-	<a href='https://kyktommy.github.io/tags'>Tags</a>
-	<a href='https://kyktommy.github.io/about'>About</a>
+	
+	
+	
 
+	
+		<a href="https://github.com/kyktommy/awesomes">awesomes</a>
 	
 
 	
@@ -46,7 +48,7 @@
                     </h1>
                     <h2 class="headline">
                     Dec 19, 2019 23:35
-                    · 58 words
+                    · 14 words
                     · 1 minute read
                       <span class="tags">
                       
@@ -61,27 +63,27 @@
                 </header>
                 
                 <section id="post-body">
-                    <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">use</span> std::fs;
-
-<span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">main</span>() {
-  <span style="color:#66d9ef">let</span> data <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;test data&#34;</span>;
-
-  <span style="color:#75715e">// write file
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> w <span style="color:#f92672">=</span> fs::write(<span style="color:#e6db74">&#34;tmp.txt&#34;</span>, data);
-  <span style="color:#66d9ef">match</span> w {
-    Ok(()) <span style="color:#f92672">=&gt;</span> println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;write success&#34;</span>),
-    Err(err) <span style="color:#f92672">=&gt;</span> panic<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;write fail {:?}&#34;</span>, err),
-  };
-
-  <span style="color:#75715e">// read file
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> r <span style="color:#f92672">=</span> fs::read_to_string(<span style="color:#e6db74">&#34;tmp.txt&#34;</span>);
-  <span style="color:#66d9ef">let</span> r <span style="color:#f92672">=</span> <span style="color:#66d9ef">match</span> r {
-    Ok(content) <span style="color:#f92672">=&gt;</span> content,
-    Err(err) <span style="color:#f92672">=&gt;</span> panic<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;read fail {:?}&#34;</span>, err),
-  };
-  println<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;{}&#34;</span>, r);
-}
-</code></pre></div>
+                    <div class="highlight"><pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">fs</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;test data&#34;</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="c1">// write file
+</span><span class="c1"></span><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fs</span>::<span class="n">write</span><span class="p">(</span><span class="s">&#34;tmp.txt&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span><span class="w">
+</span><span class="w">  </span><span class="k">match</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="w">    </span><span class="nb">Ok</span><span class="p">(())</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;write success&#34;</span><span class="p">),</span><span class="w">
+</span><span class="w">    </span><span class="nb">Err</span><span class="p">(</span><span class="n">err</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">panic</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;write fail {:?}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="p">),</span><span class="w">
+</span><span class="w">  </span><span class="p">};</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="c1">// read file
+</span><span class="c1"></span><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fs</span>::<span class="n">read_to_string</span><span class="p">(</span><span class="s">&#34;tmp.txt&#34;</span><span class="p">);</span><span class="w">
+</span><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="w">    </span><span class="nb">Ok</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">content</span><span class="p">,</span><span class="w">
+</span><span class="w">    </span><span class="nb">Err</span><span class="p">(</span><span class="n">err</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">panic</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;read fail {:?}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="p">),</span><span class="w">
+</span><span class="w">  </span><span class="p">};</span><span class="w">
+</span><span class="w">  </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;{}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span><span class="w">
+</span><span class="w"></span><span class="p">}</span><span class="w">
+</span></code></pre></div>
                 </section>
             </article>
 

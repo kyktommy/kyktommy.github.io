@@ -28,10 +28,12 @@
 	
 		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
 	
-	<a href='https://kyktommy.github.io/posts'>Archive</a>
-	<a href='https://kyktommy.github.io/tags'>Tags</a>
-	<a href='https://kyktommy.github.io/about'>About</a>
+	
+	
+	
 
+	
+		<a href="https://github.com/kyktommy/awesomes">awesomes</a>
 	
 
 	
@@ -62,30 +64,30 @@
                 
                 <section id="post-body">
                     <p>Go defer is LIFO. <code>defer</code> function will be executed even after <code>panic</code>. So put <code>recover</code> inside <code>defer</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<span style="color:#f92672">import</span> (
-  <span style="color:#e6db74">&#34;fmt&#34;</span>
-  <span style="color:#e6db74">&#34;time&#34;</span>
-)
+<span class="kn">import</span> <span class="p">(</span>
+  <span class="s">&#34;fmt&#34;</span>
+  <span class="s">&#34;time&#34;</span>
+<span class="p">)</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-  <span style="color:#66d9ef">defer</span> <span style="color:#66d9ef">func</span>() {
-    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;main defer&#34;</span>)
-  }()
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">defer</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;main defer&#34;</span><span class="p">)</span>
+  <span class="p">}()</span>
 
-  <span style="color:#66d9ef">go</span> <span style="color:#66d9ef">func</span>() {
-    <span style="color:#66d9ef">defer</span> <span style="color:#66d9ef">func</span>() {
-      <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> recover(); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;recover&#34;</span>, <span style="color:#a6e22e">err</span>)
-      }
-    }()
-    panic(<span style="color:#e6db74">&#34;panic here&#34;</span>)
-  }()
+  <span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">defer</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nb">recover</span><span class="p">();</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;recover&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">}()</span>
+    <span class="nb">panic</span><span class="p">(</span><span class="s">&#34;panic here&#34;</span><span class="p">)</span>
+  <span class="p">}()</span>
 
-  <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#ae81ff">1</span> <span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>)
-  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;end&#34;</span>)
-}
+  <span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="mi">1</span> <span class="err">\</span><span class="o">*</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
+  <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;end&#34;</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div><p>output:</p>
 <pre><code>recover panic here
 end

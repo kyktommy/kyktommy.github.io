@@ -28,10 +28,12 @@
 	
 		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
 	
-	<a href='https://kyktommy.github.io/posts'>Archive</a>
-	<a href='https://kyktommy.github.io/tags'>Tags</a>
-	<a href='https://kyktommy.github.io/about'>About</a>
+	
+	
+	
 
+	
+		<a href="https://github.com/kyktommy/awesomes">awesomes</a>
 	
 
 	
@@ -62,64 +64,64 @@
                 
                 <section id="post-body">
                     <p>We need a logger for every routes, so made a simple http log middleware. Need to replace writer to custom one, and also take care of reading body.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;bytes&#34;</span>
-	<span style="color:#e6db74">&#34;fmt&#34;</span>
-	<span style="color:#e6db74">&#34;io&#34;</span>
-	<span style="color:#e6db74">&#34;io/ioutil&#34;</span>
-	<span style="color:#e6db74">&#34;net/http&#34;</span>
-	<span style="color:#e6db74">&#34;strings&#34;</span>
-)
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;bytes&#34;</span>
+	<span class="s">&#34;fmt&#34;</span>
+	<span class="s">&#34;io&#34;</span>
+	<span class="s">&#34;io/ioutil&#34;</span>
+	<span class="s">&#34;net/http&#34;</span>
+	<span class="s">&#34;strings&#34;</span>
+<span class="p">)</span>
 
-<span style="color:#66d9ef">type</span> <span style="color:#a6e22e">bodyLogWriter</span> <span style="color:#66d9ef">struct</span> {
-	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>
-	<span style="color:#a6e22e">body</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>
-}
+<span class="kd">type</span> <span class="nx">bodyLogWriter</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span>
+	<span class="nx">body</span> <span class="o">*</span><span class="nx">bytes</span><span class="p">.</span><span class="nx">Buffer</span>
+<span class="p">}</span>
 
-<span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">bodyLogWriter</span>) <span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">b</span> []<span style="color:#66d9ef">byte</span>) (<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">error</span>) {
-	<span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">b</span>)
-	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">ResponseWriter</span>.<span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">b</span>)
-}
+<span class="kd">func</span> <span class="p">(</span><span class="nx">w</span> <span class="nx">bodyLogWriter</span><span class="p">)</span> <span class="nf">Write</span><span class="p">(</span><span class="nx">b</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">)</span> <span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">w</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+	<span class="k">return</span> <span class="nx">w</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span>
+<span class="p">}</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 
-	<span style="color:#a6e22e">httpLog</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">next</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Handler</span>) <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Handler</span> {
-		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">HandlerFunc</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>) {
-			<span style="color:#75715e">// copy buffer from request
-</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sb</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>
-			<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">sb</span>, <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Body</span>)
+	<span class="nx">httpLog</span> <span class="o">:=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">next</span> <span class="nx">http</span><span class="p">.</span><span class="nx">Handler</span><span class="p">)</span> <span class="nx">http</span><span class="p">.</span><span class="nx">Handler</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="nx">http</span><span class="p">.</span><span class="nf">HandlerFunc</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span> <span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span> <span class="nx">r</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span> <span class="p">{</span>
+			<span class="c1">// copy buffer from request
+</span><span class="c1"></span>			<span class="kd">var</span> <span class="nx">sb</span> <span class="nx">bytes</span><span class="p">.</span><span class="nx">Buffer</span>
+			<span class="nx">io</span><span class="p">.</span><span class="nf">Copy</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">sb</span><span class="p">,</span> <span class="nx">r</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
 
-			<span style="color:#75715e">// assign back to request body
-</span><span style="color:#75715e"></span>			<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Body</span> = <span style="color:#a6e22e">ioutil</span>.<span style="color:#a6e22e">NopCloser</span>(<span style="color:#a6e22e">strings</span>.<span style="color:#a6e22e">NewReader</span>(<span style="color:#a6e22e">sb</span>.<span style="color:#a6e22e">String</span>()))
+			<span class="c1">// assign back to request body
+</span><span class="c1"></span>			<span class="nx">r</span><span class="p">.</span><span class="nx">Body</span> <span class="p">=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nf">NopCloser</span><span class="p">(</span><span class="nx">strings</span><span class="p">.</span><span class="nf">NewReader</span><span class="p">(</span><span class="nx">sb</span><span class="p">.</span><span class="nf">String</span><span class="p">()))</span>
 
-			<span style="color:#75715e">// create logger writer
-</span><span style="color:#75715e"></span>			<span style="color:#a6e22e">blw</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">bodyLogWriter</span>{
-				<span style="color:#a6e22e">body</span>:           <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">NewBufferString</span>(<span style="color:#e6db74">&#34;&#34;</span>),
-				<span style="color:#a6e22e">ResponseWriter</span>: <span style="color:#a6e22e">w</span>,
-			}
+			<span class="c1">// create logger writer
+</span><span class="c1"></span>			<span class="nx">blw</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">bodyLogWriter</span><span class="p">{</span>
+				<span class="nx">body</span><span class="p">:</span>           <span class="nx">bytes</span><span class="p">.</span><span class="nf">NewBufferString</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">),</span>
+				<span class="nx">ResponseWriter</span><span class="p">:</span> <span class="nx">w</span><span class="p">,</span>
+			<span class="p">}</span>
 
-			<span style="color:#75715e">// call next route
-</span><span style="color:#75715e"></span>			<span style="color:#a6e22e">next</span>.<span style="color:#a6e22e">ServeHTTP</span>(<span style="color:#a6e22e">blw</span>, <span style="color:#a6e22e">r</span>)
+			<span class="c1">// call next route
+</span><span class="c1"></span>			<span class="nx">next</span><span class="p">.</span><span class="nf">ServeHTTP</span><span class="p">(</span><span class="nx">blw</span><span class="p">,</span> <span class="nx">r</span><span class="p">)</span>
 
-			<span style="color:#75715e">// print out
-</span><span style="color:#75715e"></span>			<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;url: %s\nrequest params: %s \nresponse data: %s\n\n&#34;</span>, <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">URL</span>, <span style="color:#a6e22e">sb</span>.<span style="color:#a6e22e">String</span>(), <span style="color:#a6e22e">blw</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">String</span>())
-		})
-	}
+			<span class="c1">// print out
+</span><span class="c1"></span>			<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;url: %s\nrequest params: %s \nresponse data: %s\n\n&#34;</span><span class="p">,</span> <span class="nx">r</span><span class="p">.</span><span class="nx">URL</span><span class="p">,</span> <span class="nx">sb</span><span class="p">.</span><span class="nf">String</span><span class="p">(),</span> <span class="nx">blw</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nf">String</span><span class="p">())</span>
+		<span class="p">})</span>
+	<span class="p">}</span>
 
-	<span style="color:#75715e">// route return what body has
-</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">route</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">HandlerFunc</span>(<span style="color:#66d9ef">func</span>(<span style="color:#a6e22e">w</span> <span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ResponseWriter</span>, <span style="color:#a6e22e">r</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Request</span>) {
-		<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sb</span> <span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>
-		<span style="color:#a6e22e">io</span>.<span style="color:#a6e22e">Copy</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">sb</span>, <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Body</span>)
-		<span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">Header</span>().<span style="color:#a6e22e">Set</span>(<span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#e6db74">&#34;world&#34;</span>)
-		<span style="color:#a6e22e">w</span>.<span style="color:#a6e22e">Write</span>(<span style="color:#a6e22e">sb</span>.<span style="color:#a6e22e">Bytes</span>())
-	})
+	<span class="c1">// route return what body has
+</span><span class="c1"></span>	<span class="nx">route</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">HandlerFunc</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span> <span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span> <span class="nx">r</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">sb</span> <span class="nx">bytes</span><span class="p">.</span><span class="nx">Buffer</span>
+		<span class="nx">io</span><span class="p">.</span><span class="nf">Copy</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">sb</span><span class="p">,</span> <span class="nx">r</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
+		<span class="nx">w</span><span class="p">.</span><span class="nf">Header</span><span class="p">().</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">,</span> <span class="s">&#34;world&#34;</span><span class="p">)</span>
+		<span class="nx">w</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="nx">sb</span><span class="p">.</span><span class="nf">Bytes</span><span class="p">())</span>
+	<span class="p">})</span>
 
-	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">Handle</span>(<span style="color:#e6db74">&#34;/foo&#34;</span>, <span style="color:#a6e22e">httpLog</span>(<span style="color:#a6e22e">route</span>))
+	<span class="nx">http</span><span class="p">.</span><span class="nf">Handle</span><span class="p">(</span><span class="s">&#34;/foo&#34;</span><span class="p">,</span> <span class="nf">httpLog</span><span class="p">(</span><span class="nx">route</span><span class="p">))</span>
 
-	<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#e6db74">&#34;:8080&#34;</span>, <span style="color:#66d9ef">nil</span>)
-}
+	<span class="nx">http</span><span class="p">.</span><span class="nf">ListenAndServe</span><span class="p">(</span><span class="s">&#34;:8080&#34;</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre></div><p>outputs</p>
 <pre><code class="language-console" data-lang="console">
 server:

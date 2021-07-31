@@ -13,8 +13,8 @@
       <pubDate>Sat, 31 Jul 2021 15:33:29 +0800</pubDate>
       
       <guid>https://kyktommy.github.io/posts/cra-import-sort/</guid>
-      <description>Target  import path alias, relative path is not good for refactoring import sorting across the team, everyone got same import order eslint fix, vscode intelligence fix  Result // sort import import React, { useEffect, useState } from &#39;react&#39; // alias import path import MyButton from &#39;@/components/MyButton&#39; Install  craco eslint-plugin-simple-import-sort eslint-import-resolver-alias  Setup craco.config.js
- map @ to all folder in src  const path = require(&#39;path&#39;) module.exports = { webpack: { alias: { &#39;@&#39;: path.</description>
+      <description>Target  import path alias, relative path is not good for refactoring import sorting across the team, everyone got same import order eslint fix, vscode intelligence fix  Result // sort import import React, { useEffect, useState } from &amp;#39;react&amp;#39; // alias import path import MyButton from &amp;#39;@/components/MyButton&amp;#39; Install  craco eslint-plugin-simple-import-sort eslint-import-resolver-alias  Setup craco.config.js
+ map @ to all folder in src  const path = require(&amp;#39;path&amp;#39;) module.exports = { webpack: { alias: { &amp;#39;@&amp;#39;: path.</description>
     </item>
     
   </channel>
