@@ -3,7 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kyktommy.github.io/categories/</loc>
-    <lastmod>2021-05-10T14:50:58+08:00</lastmod>
+    <lastmod>2021-07-31T15:33:29+08:00</lastmod>
+  </url><url>
+    <loc>https://kyktommy.github.io/posts/cra-import-sort/</loc>
+    <lastmod>2021-07-31T15:33:29+08:00</lastmod>
+  </url><url>
+    <loc>https://kyktommy.github.io/</loc>
+    <lastmod>2021-07-31T15:33:29+08:00</lastmod>
+  </url><url>
+    <loc>https://kyktommy.github.io/posts/</loc>
+    <lastmod>2021-07-31T15:33:29+08:00</lastmod>
+  </url><url>
+    <loc>https://kyktommy.github.io/tags/react/</loc>
+    <lastmod>2021-07-31T15:33:29+08:00</lastmod>
+  </url><url>
+    <loc>https://kyktommy.github.io/categories/react/</loc>
+    <lastmod>2021-07-31T15:33:29+08:00</lastmod>
+  </url><url>
+    <loc>https://kyktommy.github.io/tags/</loc>
+    <lastmod>2021-07-31T15:33:29+08:00</lastmod>
   </url><url>
     <loc>https://kyktommy.github.io/tags/git/</loc>
     <lastmod>2021-05-10T14:50:58+08:00</lastmod>
@@ -11,16 +29,7 @@
     <loc>https://kyktommy.github.io/categories/git/</loc>
     <lastmod>2021-05-10T14:50:58+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/</loc>
-    <lastmod>2021-05-10T14:50:58+08:00</lastmod>
-  </url><url>
     <loc>https://kyktommy.github.io/posts/multiple-github-account/</loc>
-    <lastmod>2021-05-10T14:50:58+08:00</lastmod>
-  </url><url>
-    <loc>https://kyktommy.github.io/posts/</loc>
-    <lastmod>2021-05-10T14:50:58+08:00</lastmod>
-  </url><url>
-    <loc>https://kyktommy.github.io/tags/</loc>
     <lastmod>2021-05-10T14:50:58+08:00</lastmod>
   </url><url>
     <loc>https://kyktommy.github.io/tags/css/</loc>
@@ -55,9 +64,6 @@
   </url><url>
     <loc>https://kyktommy.github.io/posts/mac-imageoptim-auto/</loc>
     <lastmod>2020-10-13T13:00:39+08:00</lastmod>
-  </url><url>
-    <loc>https://kyktommy.github.io/tags/react/</loc>
-    <lastmod>2020-07-20T19:46:45+08:00</lastmod>
   </url><url>
     <loc>https://kyktommy.github.io/tags/redux/</loc>
     <lastmod>2020-07-20T19:46:45+08:00</lastmod>
