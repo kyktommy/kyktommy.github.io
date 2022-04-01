@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Jul 2021 15:33:29 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Apr 2022 11:58:58 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup https for react development</title>
+      <link>https://kyktommy.github.io/posts/setup-https-for-react-dev/</link>
+      <pubDate>Fri, 01 Apr 2022 11:58:58 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/posts/setup-https-for-react-dev/</guid>
+      <description>Installation $ brew install mkcert $ brew install nss Generate cert $ cd ~ $ mkcert -install $ mkcert localhost 127.0.0.1 Use cert in .bashrc define
+export SSL_CRT_FILE=~/localhost+1.pem export SSL_KEY_FILE=~/localhost+1-key.pem start react with
+HTTPS=true yarn start </description>
+    </item>
+    
     <item>
       <title>Cra Import Sort</title>
       <link>https://kyktommy.github.io/posts/cra-import-sort/</link>
