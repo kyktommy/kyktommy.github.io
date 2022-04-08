@@ -6,14 +6,21 @@ categories = ["git"]
 draft = false
 +++
 
-Generate new ssh key for github account
+### Target
+
+1. Setup multiple github accounts
+2. Push to different account's remote repo automatically
+
+### Setup
+
+First, generate new ssh key for new github account.
 
 ```
 $ ssh-keygen -t rsa -C "kyktommy@gmail.com" -f "id_rsa_kyktommy"
 $ ssh-add ~/.ssh/id_rsa_kyktommy
 ```
 
-Edit `.ssh/config`
+Second, edit `.ssh/config`, there are 2 github account, which has different `Host`, they uses different rsa key for github.com.
 
 ```
 # Account 1
@@ -22,36 +29,30 @@ Host github.com
    User git
    IdentityFile ~/.ssh/id_rsa
    
-# New Account 2
+# Account 2
 Host github.com-kyktommy
    HostName github.com
    User git
    IdentityFile ~/.ssh/id_rsa_kyktommy
 ```
 
-Add to ssh-agent
+### Github operation
 
-```
-$ ssh-add ~/.ssh/id_rsa_kyktommy
-```
-
-Set public key in github setting
-
-Clone github repo
+Remember clone github repo with self-defined `Host` instead of just `github.com`.
 
 ```
 $ git clone git@github.com-kyktommy:kyktommy/<repo_name>.git
 ```
 
-Change local repo setting
+or, update remote url in existing project.
+
+```
+$ git remote set-url origin git@github.com-kyktommy:kyktommy/<repo_name>.git
+```
+
+Besides, you can update the gitconfig for git commit author.
 
 ```
 $ git config user.name "kyktommy"
 $ git config user.email "kyktommy@gmail.com"
-```
-
-Update remote url
-
-```
-$ git remote set-url origin git@github.com-kyktommy:kyktommy/<repo_name>.git
 ```
