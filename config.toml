@@ -8,4 +8,5 @@ pygmentsUseClasses = true
 [params]
   description = "@kyktommy"
   [params.links]
-    Awesomes = "https://github.com/kyktommy/awesomes"
+    "Awesomes" = "https://github.com/kyktommy/awesomes"
+    "Learn source code" = "https://kyktommy.github.io/learn-source-code/"
