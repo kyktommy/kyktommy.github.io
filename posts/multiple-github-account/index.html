@@ -48,7 +48,7 @@
                     </h1>
                     <h2 class="headline">
                     May 10, 2021 14:50
-                    · 85 words
+                    · 124 words
                     · 1 minute read
                       <span class="tags">
                       
@@ -63,31 +63,35 @@
                 </header>
                 
                 <section id="post-body">
-                    <p>Generate new ssh key for github account</p>
+                    <h3 id="target">Target</h3>
+<ol>
+<li>Setup multiple github accounts</li>
+<li>Push to different account&rsquo;s remote repo automatically</li>
+</ol>
+<h3 id="setup">Setup</h3>
+<p>First, generate new ssh key for new github account.</p>
 <pre><code>$ ssh-keygen -t rsa -C &quot;kyktommy@gmail.com&quot; -f &quot;id_rsa_kyktommy&quot;
 $ ssh-add ~/.ssh/id_rsa_kyktommy
-</code></pre><p>Edit <code>.ssh/config</code></p>
+</code></pre><p>Second, edit <code>.ssh/config</code>, there are 2 github account, which has different <code>Host</code>, they uses different rsa key for github.com.</p>
 <pre><code># Account 1
 Host github.com
    HostName github.com
    User git
    IdentityFile ~/.ssh/id_rsa
    
-# New Account 2
+# Account 2
 Host github.com-kyktommy
    HostName github.com
    User git
    IdentityFile ~/.ssh/id_rsa_kyktommy
-</code></pre><p>Add to ssh-agent</p>
-<pre><code>$ ssh-add ~/.ssh/id_rsa_kyktommy
-</code></pre><p>Set public key in github setting</p>
-<p>Clone github repo</p>
+</code></pre><h3 id="github-operation">Github operation</h3>
+<p>Remember clone github repo with self-defined <code>Host</code> instead of just <code>github.com</code>.</p>
 <pre><code>$ git clone git@github.com-kyktommy:kyktommy/&lt;repo_name&gt;.git
-</code></pre><p>Change local repo setting</p>
+</code></pre><p>or, update remote url in existing project.</p>
+<pre><code>$ git remote set-url origin git@github.com-kyktommy:kyktommy/&lt;repo_name&gt;.git
+</code></pre><p>Besides, you can update the gitconfig for git commit author.</p>
 <pre><code>$ git config user.name &quot;kyktommy&quot;
 $ git config user.email &quot;kyktommy@gmail.com&quot;
-</code></pre><p>Update remote url</p>
-<pre><code>$ git remote set-url origin git@github.com-kyktommy:kyktommy/&lt;repo_name&gt;.git
 </code></pre>
                 </section>
             </article>

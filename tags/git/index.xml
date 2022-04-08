@@ -13,13 +13,9 @@
       <pubDate>Mon, 10 May 2021 14:50:58 +0800</pubDate>
       
       <guid>https://kyktommy.github.io/posts/multiple-github-account/</guid>
-      <description>Generate new ssh key for github account
-$ ssh-keygen -t rsa -C &amp;quot;kyktommy@gmail.com&amp;quot; -f &amp;quot;id_rsa_kyktommy&amp;quot; $ ssh-add ~/.ssh/id_rsa_kyktommy Edit .ssh/config
-# Account 1 Host github.com HostName github.com User git IdentityFile ~/.ssh/id_rsa # New Account 2 Host github.com-kyktommy HostName github.com User git IdentityFile ~/.ssh/id_rsa_kyktommy Add to ssh-agent
-$ ssh-add ~/.ssh/id_rsa_kyktommy Set public key in github setting
-Clone github repo
-$ git clone git@github.com-kyktommy:kyktommy/&amp;lt;repo_name&amp;gt;.git Change local repo setting
-$ git config user.name &amp;quot;kyktommy&amp;quot; $ git config user.</description>
+      <description>Target  Setup multiple github accounts Push to different account&amp;rsquo;s remote repo automatically  Setup First, generate new ssh key for new github account.
+$ ssh-keygen -t rsa -C &amp;quot;kyktommy@gmail.com&amp;quot; -f &amp;quot;id_rsa_kyktommy&amp;quot; $ ssh-add ~/.ssh/id_rsa_kyktommy Second, edit .ssh/config, there are 2 github account, which has different Host, they uses different rsa key for github.com.
+# Account 1 Host github.com HostName github.com User git IdentityFile ~/.ssh/id_rsa # Account 2 Host github.com-kyktommy HostName github.</description>
     </item>
     
     <item>
