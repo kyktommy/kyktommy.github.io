@@ -6,7 +6,17 @@
     <description>Recent content on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jun 2022 00:10:42 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Dec 2022 20:02:35 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Halfwidth Fullwidth Conversion</title>
+      <link>https://kyktommy.github.io/posts/halfwidth-fullwidth-conversion/</link>
+      <pubDate>Fri, 30 Dec 2022 20:02:35 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/posts/halfwidth-fullwidth-conversion/</guid>
+      <description>全形半形轉換
+function half2full(str) { let len = str.length; let res = []; for (let i = 0; i &amp;lt; len; i++) { let c = str.charCodeAt(i); if (c &amp;gt;= 0x21 &amp;amp;&amp;amp; c &amp;lt;= 0x7e) { res.push(String.fromCharCode(c + 65248)); } else { res.push(str[i]); } } return res.join(&amp;#39;&amp;#39;); } function full2half(str) { let len = str.length; let res = []; for (let i = 0; i &amp;lt; len; i++) { let c = str.</description>
+    </item>
+    
     <item>
       <title>Photo Recovery Using Mac</title>
       <link>https://kyktommy.github.io/posts/photo-recovery-using-mac/</link>
@@ -14,7 +24,7 @@
       
       <guid>https://kyktommy.github.io/posts/photo-recovery-using-mac/</guid>
       <description>Today my colleagues&#39; SD card is corrupted. All photos are gone. Here is my steps to recover photos, videos using mac.
- Plug the SD card in your mac, and choose ignore the corrupted sd card instead of eject when it prompt. Download testdisk using command brew install testdisk Use command sudo photorec, must use sudo as administrator for detecting all disks. Select the broken SD card disk, you can unplug and plug it back in to see which disk is the SD card.</description>
+ Plug the SD card in your mac, and choose ignore the corrupted sd card instead of eject when it prompt. Download testdisk using command brew install testdisk Restart your mac. Use command sudo photorec, must use sudo as administrator for detecting all disks. Select the broken SD card disk, you can unplug and plug it back in to see which disk is the SD card.</description>
     </item>
     
     <item>

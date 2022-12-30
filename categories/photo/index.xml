@@ -14,7 +14,7 @@
       
       <guid>https://kyktommy.github.io/posts/photo-recovery-using-mac/</guid>
       <description>Today my colleagues&#39; SD card is corrupted. All photos are gone. Here is my steps to recover photos, videos using mac.
- Plug the SD card in your mac, and choose ignore the corrupted sd card instead of eject when it prompt. Download testdisk using command brew install testdisk Use command sudo photorec, must use sudo as administrator for detecting all disks. Select the broken SD card disk, you can unplug and plug it back in to see which disk is the SD card.</description>
+ Plug the SD card in your mac, and choose ignore the corrupted sd card instead of eject when it prompt. Download testdisk using command brew install testdisk Restart your mac. Use command sudo photorec, must use sudo as administrator for detecting all disks. Select the broken SD card disk, you can unplug and plug it back in to see which disk is the SD card.</description>
     </item>
     
   </channel>
