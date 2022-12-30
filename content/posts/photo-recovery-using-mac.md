@@ -10,6 +10,7 @@ Today my colleagues' SD card is corrupted. All photos are gone. Here is my steps
 
 1. Plug the SD card in your mac, and choose `ignore` the corrupted sd card instead of `eject` when it prompt.
 1. Download [testdisk](https://www.cgsecurity.org/wiki/TestDisk) using command `brew install testdisk`
+1. Restart your mac.
 1. Use command `sudo photorec`, must use `sudo` as administrator for detecting all disks.
 1. Select the broken SD card disk, you can unplug and plug it back in to see which disk is the SD card.
 1. Choose a distination folder, eg: `~/Desktop/recovery`
