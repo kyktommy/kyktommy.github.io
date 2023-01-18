@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<meta name="description" content="@kyktommy">
+		<meta name="generator" content="Hugo 0.83.1" />
+		<title>Golang Version Switch &middot; Kyk&#39;s Blog</title>
+		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
+		<link rel="stylesheet" href="https://kyktommy.github.io/css/highlight.css">
+
+		
+		<link rel="stylesheet" href="https://kyktommy.github.io/css/monosocialiconsfont.css">
+		
+
+		
+
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
+	
+	
+	
+	
+
+	
+		<a href="https://github.com/kyktommy/awesomes">awesomes</a>
+	
+		<a href="https://kyktommy.github.io/learn-source-code/">learn source code</a>
+	
+
+	
+</nav>
+
+
+        <section id="wrapper" class="post">
+            <article>
+                <header>
+                    <h1>
+                        Golang Version Switch
+                    </h1>
+                    <h2 class="headline">
+                    Jan 18, 2023 10:09
+                    · 54 words
+                    · 1 minute read
+                      <span class="tags">
+                      
+                      
+                          
+                              <a href="https://kyktommy.github.io/tags/golang">golang</a>
+                          
+                      
+                      
+                      </span>
+                    </h2>
+                </header>
+                
+                <section id="post-body">
+                    <ol>
+<li>remove /usr/local/go if you install golang using pkg installer</li>
+</ol>
+<pre><code>sudo rm -rf /usr/local/go
+sudo rm /etc/paths.d/go
+</code></pre><ol start="2">
+<li>use homebrew to install golang</li>
+</ol>
+<pre><code>brew install go
+</code></pre><ol start="3">
+<li>use homebrew to install golang different versions</li>
+</ol>
+<pre><code>brew install go@1.19
+brew install go@1.18
+</code></pre><ol start="4">
+<li>switch between golang version, for example: switch from 1.18 to 1.19</li>
+</ol>
+<pre><code>brew unlink go
+brew link go@1.19
+</code></pre>
+                </section>
+            </article>
+
+            
+
+            
+
+            
+
+            <footer id="footer">
+    
+    <p class="small">
+    
+       © Copyright 2023 <i class="fa fa-heart" aria-hidden="true"></i> 
+    
+    </p>
+    <p class="small">
+        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
+    </p>
+</footer>
+
+        </section>
+
+        <script src="https://kyktommy.github.io/js/jquery-3.3.1.min.js"></script>
+<script src="https://kyktommy.github.io/js/main.js"></script>
+<script src="https://kyktommy.github.io/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+
+    </body>
+</html>
