@@ -8,7 +8,7 @@
 		
 		<meta name="description" content="@kyktommy">
 		<meta name="generator" content="Hugo 0.83.1" />
-		<title>Setup https for react development &middot; Kyk&#39;s Blog</title>
+		<title>Golang Version Switch &middot; Kyk&#39;s Blog</title>
 		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/highlight.css">
@@ -46,17 +46,17 @@
             <article>
                 <header>
                     <h1>
-                        Setup https for react development
+                        Golang Version Switch
                     </h1>
                     <h2 class="headline">
-                    Apr 1, 2022 11:58
-                    · 36 words
+                    Jan 18, 2023 10:09
+                    · 54 words
                     · 1 minute read
                       <span class="tags">
                       
                       
                           
-                              <a href="https://kyktommy.github.io/tags/react">react</a>
+                              <a href="https://kyktommy.github.io/tags/golang">golang</a>
                           
                       
                       
@@ -65,21 +65,25 @@
                 </header>
                 
                 <section id="post-body">
-                    <h3 id="installation">Installation</h3>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ brew install mkcert
-$ brew install nss
-</code></pre></div><h3 id="generate-cert">Generate cert</h3>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">
-$ <span class="nb">cd</span> ~
-$ mkcert -install
-$ mkcert localhost 127.0.0.1
-
-</code></pre></div><h3 id="use-cert">Use cert</h3>
-<p>in .bashrc define</p>
-<pre><code>export SSL_CRT_FILE=~/localhost+1.pem
-export SSL_KEY_FILE=~/localhost+1-key.pem
-</code></pre><p>start react with</p>
-<pre><code>HTTPS=true yarn start
+                    <ol>
+<li>remove /usr/local/go if you install golang using pkg installer</li>
+</ol>
+<pre><code>sudo rm -rf /usr/local/go
+sudo rm /etc/paths.d/go
+</code></pre><ol start="2">
+<li>use homebrew to install golang</li>
+</ol>
+<pre><code>brew install go
+</code></pre><ol start="3">
+<li>use homebrew to install golang different versions</li>
+</ol>
+<pre><code>brew install go@1.19
+brew install go@1.18
+</code></pre><ol start="4">
+<li>switch between golang version, for example: switch from 1.18 to 1.19</li>
+</ol>
+<pre><code>brew unlink go
+brew link go@1.19
 </code></pre>
                 </section>
             </article>

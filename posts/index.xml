@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2022 20:02:35 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Jan 2023 10:09:43 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang Version Switch</title>
+      <link>https://kyktommy.github.io/posts/golang-version-switch.md/</link>
+      <pubDate>Wed, 18 Jan 2023 10:09:43 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/posts/golang-version-switch.md/</guid>
+      <description> remove /usr/local/go if you install golang using pkg installer  sudo rm -rf /usr/local/go sudo rm /etc/paths.d/go use homebrew to install golang  brew install go use homebrew to install golang different versions  brew install go@1.19 brew install go@1.18 switch between golang version, for example: switch from 1.18 to 1.19  brew unlink go brew link go@1.19 </description>
+    </item>
+    
     <item>
       <title>Halfwidth Fullwidth Conversion</title>
       <link>https://kyktommy.github.io/posts/halfwidth-fullwidth-conversion/</link>

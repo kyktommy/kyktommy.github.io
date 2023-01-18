@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Kyk&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jun 2022 00:10:42 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Jan 2023 10:09:43 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang</title>
+      <link>https://kyktommy.github.io/categories/golang/</link>
+      <pubDate>Wed, 18 Jan 2023 10:09:43 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/categories/golang/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>photo</title>
       <link>https://kyktommy.github.io/categories/photo/</link>
