@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Jan 2023 10:09:43 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>setup</title>
+      <link>https://kyktommy.github.io/setup/</link>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://kyktommy.github.io/setup/</guid>
+      <description>mac setup  brew iterm2 oh-my-zsh vscode cd-to ngrok copy clip xcode android studio brave the silver searcher sourcetree insomnia / postman protonvpn slack uTorrent rectangle teamviewer / anydesk vlc via filezilla skitch vox ltsycal calibre telegram skype whatsapp  </description>
+    </item>
+    
+    <item>
       <title>Golang Version Switch</title>
       <link>https://kyktommy.github.io/posts/golang-version-switch/</link>
       <pubDate>Wed, 18 Jan 2023 10:09:43 +0800</pubDate>
