@@ -8,7 +8,7 @@
 		
 		<meta name="description" content="@kyktommy">
 		<meta name="generator" content="Hugo 0.83.1" />
-		<title>Git Move Repo &middot; Kyk&#39;s Blog</title>
+		<title>My setup &middot; Kyk&#39;s Blog</title>
 		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
 		<link rel="stylesheet" href="https://kyktommy.github.io/css/highlight.css">
@@ -48,46 +48,62 @@
             <article>
                 <header>
                     <h1>
-                        Git Move Repo
+                        My setup
                     </h1>
                     <h2 class="headline">
-                    Feb 13, 2020 17:38
-                    · 60 words
+                    Apr 11, 2023 00:00
+                    · 54 words
                     · 1 minute read
                       <span class="tags">
-                      
-                      
-                          
-                              <a href="https://kyktommy.github.io/tags/git">git</a>
-                          
-                      
                       
                       </span>
                     </h2>
                 </header>
                 
                 <section id="post-body">
-                    <ol>
-<li>
-<p>Clone the project from old repo url</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git clone &lt;old_repo_url&gt;
-</code></pre></div></li>
-<li>
-<p>Pull all branches</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git branch -r <span class="p">|</span> grep -v <span class="s1">&#39;\-&gt;&#39;</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> remote<span class="p">;</span> <span class="k">do</span> git branch --track <span class="s2">&#34;</span><span class="si">${</span><span class="nv">remote</span><span class="p">#origin/</span><span class="si">}</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="nv">$remote</span><span class="s2">&#34;</span><span class="p">;</span> <span class="k">done</span>
-git fetch --all
-git pull --all
-</code></pre></div></li>
-<li>
-<p>Change remote to new repo url</p>
-<pre><code>git remote set-url origin &lt;new_repo&gt;
-</code></pre></li>
-<li>
-<p>Push all to new repo url</p>
-<pre><code>git push --all
-git push --tags
-</code></pre></li>
-</ol>
+                    <h1 id="mac-setup">mac setup</h1>
+<ul>
+<li>brew</li>
+<li>iterm2</li>
+<li>oh-my-zsh</li>
+<li>vscode</li>
+<li>cd-to</li>
+<li>ngrok</li>
+<li>copy clip</li>
+<li>xcode</li>
+<li>android studio</li>
+<li>brave</li>
+<li>the silver searcher</li>
+<li>sourcetree</li>
+<li>insomnia / postman</li>
+<li>protonvpn</li>
+<li>slack</li>
+<li>uTorrent</li>
+<li>rectangle</li>
+<li>teamviewer / anydesk</li>
+<li>vlc</li>
+<li>via</li>
+<li>filezilla</li>
+<li>skitch</li>
+<li>vox</li>
+<li>ltsycal</li>
+<li>calibre</li>
+<li>telegram</li>
+<li>skype</li>
+<li>whatsapp</li>
+</ul>
+<h1 id="vscode-setup">vscode setup</h1>
+<ul>
+<li>Fira Code</li>
+<li>vim</li>
+<li>gitlens</li>
+<li>ESLint</li>
+<li>Prettier</li>
+<li>Prettify JSON</li>
+<li>Better Solarized</li>
+<li>Auto Rename Tag</li>
+<li>MDX</li>
+</ul>
 
                 </section>
             </article>
