@@ -1,5 +1,5 @@
 ---
-title: "setup"
+title: "My setup"
 date: 2023-04-11T00:00:00+08:00
 ---
 
@@ -33,3 +33,17 @@ date: 2023-04-11T00:00:00+08:00
 - telegram
 - skype
 - whatsapp
+
+# vscode setup
+
+- Fira Code
+- vim
+- gitlens
+- ESLint
+- Prettier
+- Prettify JSON
+- Better Solarized
+- Auto Rename Tag
+- MDX
+
+
