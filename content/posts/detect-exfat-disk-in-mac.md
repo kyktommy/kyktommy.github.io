@@ -2,7 +2,7 @@
 title = "Detect exfat disk in mac"
 date = 2023-05-07T17:30:34+08:00
 tags = ["mac", "exfat"]
-categories = [""]
+categories = ["mac"]
 draft = false
 +++
 
