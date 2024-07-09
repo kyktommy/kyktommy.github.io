@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Find Go Project | Kyk&#39;s Blog</title>
 <meta name="keywords" content="go">
 <meta name="description" content="I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to $GOPATH and cd to that package name.
 Here is my script for current solution. Assume your target project is in 3 depth of src.
 function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &#34;{}&#34; \; | grep $1 | awk &#39;{ print $9 }&#39; | nl } ➜ ~ findgo proto 1	/Users/tommy/go-workspace/src/google.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/find-go-project/">
+<link rel="canonical" href="https://kyktommy.github.io/posts/find-go-project/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://kyktommy.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kyktommy.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kyktommy.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://kyktommy.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://kyktommy.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/find-go-project/">
+<link rel="alternate" hreflang="en" href="https://kyktommy.github.io/posts/find-go-project/">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,6 +58,73 @@ function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -l
 
     </style>
 </noscript>
+  
+
+<meta property="og:title" content="Find Go Project" />
+<meta property="og:description" content="I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to $GOPATH and cd to that package name.
+Here is my script for current solution. Assume your target project is in 3 depth of src.
+function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &#34;{}&#34; \; | grep $1 | awk &#39;{ print $9 }&#39; | nl } ➜ ~ findgo proto 1	/Users/tommy/go-workspace/src/google." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kyktommy.github.io/posts/find-go-project/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-12-22T18:41:34+08:00" />
+<meta property="article:modified_time" content="2019-12-22T18:41:34+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Find Go Project"/>
+<meta name="twitter:description" content="I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to $GOPATH and cd to that package name.
+Here is my script for current solution. Assume your target project is in 3 depth of src.
+function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &#34;{}&#34; \; | grep $1 | awk &#39;{ print $9 }&#39; | nl } ➜ ~ findgo proto 1	/Users/tommy/go-workspace/src/google."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://kyktommy.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Find Go Project",
+      "item": "https://kyktommy.github.io/posts/find-go-project/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Find Go Project",
+  "name": "Find Go Project",
+  "description": "I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to $GOPATH and cd to that package name.\nHere is my script for current solution. Assume your target project is in 3 depth of src.\nfunction findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld \u0026#34;{}\u0026#34; \\; | grep $1 | awk \u0026#39;{ print $9 }\u0026#39; | nl } ➜ ~ findgo proto 1\t/Users/tommy/go-workspace/src/google.",
+  "keywords": [
+    "go"
+  ],
+  "articleBody": "I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to $GOPATH and cd to that package name.\nHere is my script for current solution. Assume your target project is in 3 depth of src.\nfunction findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld \"{}\" \\; | grep $1 | awk '{ print $9 }' | nl } ➜ ~ findgo proto 1\t/Users/tommy/go-workspace/src/google.golang.org/genproto/internal 2\t/Users/tommy/go-workspace/src/google.golang.org/genproto/googleapis 3\t/Users/tommy/go-workspace/src/google.golang.org/genproto/.git 4\t/Users/tommy/go-workspace/src/google.golang.org/genproto/protobuf 5\t/Users/tommy/go-workspace/src/github.com/golang/protobuf 6\t/Users/tommy/go-workspace/src/github.com/gogo/protobuf And also, you can cd to that directory by choosing line number\nfunction cdgo() { r=$(findgo $1) echo $r printf 'cd to ? \u003e ' read cdto p=$(echo $r | sed -n \"${cdto}p\" | awk '{ print $2 }') cd $p } ➜ protobuf git:(master) cdgo proto 1\t/Users/tommy/go-workspace/src/google.golang.org/genproto/internal 2\t/Users/tommy/go-workspace/src/google.golang.org/genproto/googleapis 3\t/Users/tommy/go-workspace/src/google.golang.org/genproto/.git 4\t/Users/tommy/go-workspace/src/google.golang.org/genproto/protobuf 5\t/Users/tommy/go-workspace/src/github.com/golang/protobuf 6\t/Users/tommy/go-workspace/src/github.com/gogo/protobuf cd to ? \u003e 1 ➜ internal git:(master) ",
+  "wordCount" : "158",
+  "inLanguage": "en",
+  "datePublished": "2019-12-22T18:41:34+08:00",
+  "dateModified": "2019-12-22T18:41:34+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://kyktommy.github.io/posts/find-go-project/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kyk's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kyktommy.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -75,7 +142,7 @@ function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -l
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Kyk&#39;s Blog (Alt + H)">Kyk&#39;s Blog</a>
+            <a href="https://kyktommy.github.io/" accesskey="h" title="Kyk&#39;s Blog (Alt + H)">Kyk&#39;s Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -151,14 +218,14 @@ function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -l
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/go/">Go</a></li>
+      <li><a href="https://kyktommy.github.io/tags/go/">Go</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2024 <a href="http://localhost:1313/">Kyk&#39;s Blog</a></span> · 
+        <span>&copy; 2024 <a href="https://kyktommy.github.io/">Kyk&#39;s Blog</a></span> · 
 
     <span>
         Powered by

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Js on Kyk&#39;s Blog</title>
-    <link>http://localhost:1313/tags/js/</link>
+    <link>https://kyktommy.github.io/tags/js/</link>
     <description>Recent content in Js on Kyk&#39;s Blog</description>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 31 Jan 2021 21:08:24 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kyktommy.github.io/tags/js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Expressjs Multer File Upload</title>
-      <link>http://localhost:1313/posts/expressjs-multer-file-upload/</link>
+      <link>https://kyktommy.github.io/posts/expressjs-multer-file-upload/</link>
       <pubDate>Sun, 31 Jan 2021 21:08:24 +0800</pubDate>
-      <guid>http://localhost:1313/posts/expressjs-multer-file-upload/</guid>
+      <guid>https://kyktommy.github.io/posts/expressjs-multer-file-upload/</guid>
       <description>Expressjs + Multer for file upload.
 Usages: multer({ limits, fileFilter, storage }) creates Multer object for reusable in different requset handlers.
 limits limit fileSize, fieldName, etc&amp;hellip; fileFilter custom file validation storage disk / memory / custom storage transform ([s3) multer().array(&#39;photos&#39;, 2) creates request handler for different routes.
@@ -20,9 +20,9 @@ single one file upload, get by req.file array multiple files upload, get by req.
     </item>
     <item>
       <title>Aes Cbc Pkcs7</title>
-      <link>http://localhost:1313/posts/aes-cbc-pkcs7/</link>
+      <link>https://kyktommy.github.io/posts/aes-cbc-pkcs7/</link>
       <pubDate>Wed, 20 Jan 2021 22:24:28 +0800</pubDate>
-      <guid>http://localhost:1313/posts/aes-cbc-pkcs7/</guid>
+      <guid>https://kyktommy.github.io/posts/aes-cbc-pkcs7/</guid>
       <description>Logic:
 sha256 key and iv AES encryption CBC mode PKCS7 padding Versions:
 golang version javascript version golang version package main import ( &amp;#34;bytes&amp;#34; &amp;#34;crypto/aes&amp;#34; &amp;#34;crypto/cipher&amp;#34; &amp;#34;crypto/sha256&amp;#34; &amp;#34;fmt&amp;#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.</description>

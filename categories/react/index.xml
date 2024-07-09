@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>React on Kyk&#39;s Blog</title>
-    <link>http://localhost:1313/categories/react/</link>
+    <link>https://kyktommy.github.io/categories/react/</link>
     <description>Recent content in React on Kyk&#39;s Blog</description>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Apr 2022 11:58:58 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/react/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kyktommy.github.io/categories/react/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setup https for react development</title>
-      <link>http://localhost:1313/posts/setup-https-for-react-dev/</link>
+      <link>https://kyktommy.github.io/posts/setup-https-for-react-dev/</link>
       <pubDate>Fri, 01 Apr 2022 11:58:58 +0800</pubDate>
-      <guid>http://localhost:1313/posts/setup-https-for-react-dev/</guid>
+      <guid>https://kyktommy.github.io/posts/setup-https-for-react-dev/</guid>
       <description>Installation $ brew install mkcert $ brew install nss Generate cert $ cd ~ $ mkcert -install $ mkcert localhost 127.0.0.1 Use cert in .bashrc define
 export SSL_CRT_FILE=~/localhost+1.pem export SSL_KEY_FILE=~/localhost+1-key.pem start react with
 HTTPS=true yarn start </description>
     </item>
     <item>
       <title>Cra Import Sort</title>
-      <link>http://localhost:1313/posts/cra-import-sort/</link>
+      <link>https://kyktommy.github.io/posts/cra-import-sort/</link>
       <pubDate>Sat, 31 Jul 2021 15:33:29 +0800</pubDate>
-      <guid>http://localhost:1313/posts/cra-import-sort/</guid>
+      <guid>https://kyktommy.github.io/posts/cra-import-sort/</guid>
       <description>Target import path alias, relative path is not good for refactoring import sorting across the team, everyone got same import order eslint fix, vscode intelligence fix Result // sort import import React, { useEffect, useState } from &amp;#39;react&amp;#39; // alias import path import MyButton from &amp;#39;@/components/MyButton&amp;#39; Install craco eslint-plugin-simple-import-sort eslint-import-resolver-alias Setup craco.config.js
 map @ to all folder in src const path = require(&amp;#39;path&amp;#39;) module.exports = { webpack: { alias: { &amp;#39;@&amp;#39;: path.</description>
     </item>

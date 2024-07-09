@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>Rust | Kyk&#39;s Blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="@kyktommy">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/tags/rust/">
+<link rel="canonical" href="https://kyktommy.github.io/tags/rust/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://kyktommy.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://kyktommy.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://kyktommy.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://kyktommy.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://kyktommy.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/rust/index.xml">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/rust/">
+<link rel="alternate" type="application/rss+xml" href="https://kyktommy.github.io/tags/rust/index.xml">
+<link rel="alternate" hreflang="en" href="https://kyktommy.github.io/tags/rust/">
 <noscript>
     <style>
         #theme-toggle,
@@ -57,6 +57,17 @@
 
     </style>
 </noscript>
+  
+
+<meta property="og:title" content="Rust" />
+<meta property="og:description" content="@kyktommy" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyktommy.github.io/tags/rust/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Rust"/>
+<meta name="twitter:description" content="@kyktommy"/>
+
 </head>
 
 <body class="list" id="top">
@@ -74,7 +85,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Kyk&#39;s Blog (Alt + H)">Kyk&#39;s Blog</a>
+            <a href="https://kyktommy.github.io/" accesskey="h" title="Kyk&#39;s Blog (Alt + H)">Kyk&#39;s Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -118,7 +129,7 @@
     <p>use std::fs; fn main() { let data = &#34;test data&#34;; // write file let w = fs::write(&#34;tmp.txt&#34;, data); match w { Ok(()) =&gt; println!(&#34;write success&#34;), Err(err) =&gt; panic!(&#34;write fail {:?}&#34;, err), }; // read file let r = fs::read_to_string(&#34;tmp.txt&#34;); let r = match r { Ok(content) =&gt; content, Err(err) =&gt; panic!(&#34;read fail {:?}&#34;, err), }; println!(&#34;{}&#34;, r); } </p>
   </div>
   <footer class="entry-footer"><span title='2019-12-19 23:35:06 +0800 HKT'>December 19, 2019</span></footer>
-  <a class="entry-link" aria-label="post link to Rust Read Write File" href="http://localhost:1313/posts/rust-read-write-file/"></a>
+  <a class="entry-link" aria-label="post link to Rust Read Write File" href="https://kyktommy.github.io/posts/rust-read-write-file/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -133,12 +144,12 @@ cargo.toml
 extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&lt;String&gt;, } fn main() { let data = r#&#34; { &#34;code&#34;: 200, &#34;success&#34;: true, &#34;payload&#34;: { &#34;length&#34;: 123, &#34;items&#34;: [&#34;apple&#34;, &#34;orange&#34;] } } &#34;#; // deserialize let resp: Response = serde_json::from_str(&amp;data)....</p>
   </div>
   <footer class="entry-footer"><span title='2019-12-18 23:29:48 +0800 HKT'>December 18, 2019</span></footer>
-  <a class="entry-link" aria-label="post link to Rust Json" href="http://localhost:1313/posts/rust-json/"></a>
+  <a class="entry-link" aria-label="post link to Rust Json" href="https://kyktommy.github.io/posts/rust-json/"></a>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2024 <a href="http://localhost:1313/">Kyk&#39;s Blog</a></span> · 
+        <span>&copy; 2024 <a href="https://kyktommy.github.io/">Kyk&#39;s Blog</a></span> · 
 
     <span>
         Powered by

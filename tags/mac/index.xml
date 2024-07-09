@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Mac on Kyk&#39;s Blog</title>
-    <link>http://localhost:1313/tags/mac/</link>
+    <link>https://kyktommy.github.io/tags/mac/</link>
     <description>Recent content in Mac on Kyk&#39;s Blog</description>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 07 May 2023 17:30:34 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kyktommy.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Detect exfat disk in mac</title>
-      <link>http://localhost:1313/posts/detect-exfat-disk-in-mac/</link>
+      <link>https://kyktommy.github.io/posts/detect-exfat-disk-in-mac/</link>
       <pubDate>Sun, 07 May 2023 17:30:34 +0800</pubDate>
-      <guid>http://localhost:1313/posts/detect-exfat-disk-in-mac/</guid>
+      <guid>https://kyktommy.github.io/posts/detect-exfat-disk-in-mac/</guid>
       <description>Cannot detect exfat external drive in my macbook. Here the solution,
 diskutil list get the identifer of the disk, eg: disk2s2 ps -ax | grep &amp;lt;identifier&amp;gt; get the proccess id of fsck sudo kill -9 &amp;lt;process id&amp;gt; Alert pops up and I can access the disk in finder.</description>
     </item>
     <item>
       <title>Mac Imageoptim Auto</title>
-      <link>http://localhost:1313/posts/mac-imageoptim-auto/</link>
+      <link>https://kyktommy.github.io/posts/mac-imageoptim-auto/</link>
       <pubDate>Tue, 13 Oct 2020 13:00:39 +0800</pubDate>
-      <guid>http://localhost:1313/posts/mac-imageoptim-auto/</guid>
+      <guid>https://kyktommy.github.io/posts/mac-imageoptim-auto/</guid>
       <description>I want to automatically convert pdf to jpg, and compress jpg.
 First, need to install ImageOptim, and put in Application folder.
 Then install ImageOptim-CLI to run ImageOptim in command line.
