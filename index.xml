@@ -1,241 +1,229 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Kyk&#39;s Blog</title>
-    <link>https://kyktommy.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Kyk&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Jan 2023 10:09:43 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Jul 2024 12:51:21 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Say Hi</title>
+      <link>http://localhost:1313/posts/say-hi/</link>
+      <pubDate>Tue, 09 Jul 2024 12:51:21 +0800</pubDate>
+      <guid>http://localhost:1313/posts/say-hi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fix Exfat Drive in Mac Osx</title>
+      <link>http://localhost:1313/posts/fix-exfat-drive-in-mac-osx/</link>
+      <pubDate>Sat, 09 Mar 2024 13:49:22 +0800</pubDate>
+      <guid>http://localhost:1313/posts/fix-exfat-drive-in-mac-osx/</guid>
+      <description>source: gist - scottopell/fix_exfact_drive.md
+Fix:
+diskutil list get ID (eg: disk1s1) sudo fsck_exfat -d &amp;lt;ID&amp;gt; enter YES for prompt drive will be mounted </description>
+    </item>
+    <item>
+      <title>Javascript library</title>
+      <link>http://localhost:1313/js-lib/</link>
+      <pubDate>Tue, 03 Oct 2023 19:16:33 +0800</pubDate>
+      <guid>http://localhost:1313/js-lib/</guid>
+      <description> react-resize-detector uploadthing simplebar </description>
+    </item>
+    <item>
+      <title>Detect exfat disk in mac</title>
+      <link>http://localhost:1313/posts/detect-exfat-disk-in-mac/</link>
+      <pubDate>Sun, 07 May 2023 17:30:34 +0800</pubDate>
+      <guid>http://localhost:1313/posts/detect-exfat-disk-in-mac/</guid>
+      <description>Cannot detect exfat external drive in my macbook. Here the solution,
+diskutil list get the identifer of the disk, eg: disk2s2 ps -ax | grep &amp;lt;identifier&amp;gt; get the proccess id of fsck sudo kill -9 &amp;lt;process id&amp;gt; Alert pops up and I can access the disk in finder.</description>
+    </item>
     <item>
       <title>My setup</title>
-      <link>https://kyktommy.github.io/my-setup/</link>
+      <link>http://localhost:1313/my-setup/</link>
       <pubDate>Tue, 11 Apr 2023 00:00:00 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/my-setup/</guid>
-      <description>mac setup  brew iterm2 oh-my-zsh vscode cd-to ngrok copy clip xcode android studio brave the silver searcher sourcetree insomnia / postman protonvpn slack uTorrent rectangle teamviewer / anydesk vlc via filezilla skitch vox ltsycal calibre telegram skype whatsapp  vscode setup  Fira Code vim gitlens ESLint Prettier Prettify JSON Better Solarized Auto Rename Tag MDX  </description>
+      <guid>http://localhost:1313/my-setup/</guid>
+      <description>mac setup brew iterm2 oh-my-zsh vscode cd-to ngrok copy clip xcode android studio brave the silver searcher sourcetree insomnia / postman protonvpn slack uTorrent rectangle teamviewer / anydesk vlc via filezilla skitch vox ltsycal calibre telegram skype whatsapp vscode setup Fira Code vim gitlens ESLint Prettier Prettify JSON Better Solarized Auto Rename Tag MDX </description>
     </item>
-    
     <item>
       <title>Golang Version Switch</title>
-      <link>https://kyktommy.github.io/posts/golang-version-switch/</link>
+      <link>http://localhost:1313/posts/golang-version-switch/</link>
       <pubDate>Wed, 18 Jan 2023 10:09:43 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/golang-version-switch/</guid>
-      <description> remove /usr/local/go if you install golang using pkg installer  sudo rm -rf /usr/local/go sudo rm /etc/paths.d/go use homebrew to install golang  brew install go use homebrew to install golang different versions  brew install go@1.19 brew install go@1.18 switch between golang version, for example: switch from 1.18 to 1.19  brew unlink go brew link go@1.19 </description>
+      <guid>http://localhost:1313/posts/golang-version-switch/</guid>
+      <description> remove /usr/local/go if you install golang using pkg installer sudo rm -rf /usr/local/go sudo rm /etc/paths.d/go use homebrew to install golang brew install go use homebrew to install golang different versions brew install go@1.19 brew install go@1.18 switch between golang version, for example: switch from 1.18 to 1.19 brew unlink go brew link go@1.19 </description>
     </item>
-    
     <item>
       <title>Halfwidth Fullwidth Conversion</title>
-      <link>https://kyktommy.github.io/posts/halfwidth-fullwidth-conversion/</link>
+      <link>http://localhost:1313/posts/halfwidth-fullwidth-conversion/</link>
       <pubDate>Fri, 30 Dec 2022 20:02:35 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/halfwidth-fullwidth-conversion/</guid>
+      <guid>http://localhost:1313/posts/halfwidth-fullwidth-conversion/</guid>
       <description>全形半形轉換
 function half2full(str) { let len = str.length; let res = []; for (let i = 0; i &amp;lt; len; i++) { let c = str.charCodeAt(i); if (c &amp;gt;= 0x21 &amp;amp;&amp;amp; c &amp;lt;= 0x7e) { res.push(String.fromCharCode(c + 65248)); } else { res.push(str[i]); } } return res.join(&amp;#39;&amp;#39;); } function full2half(str) { let len = str.length; let res = []; for (let i = 0; i &amp;lt; len; i++) { let c = str.</description>
     </item>
-    
     <item>
       <title>Photo Recovery Using Mac</title>
-      <link>https://kyktommy.github.io/posts/photo-recovery-using-mac/</link>
+      <link>http://localhost:1313/posts/photo-recovery-using-mac/</link>
       <pubDate>Wed, 15 Jun 2022 00:10:42 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/photo-recovery-using-mac/</guid>
-      <description>Today my colleagues&#39; SD card is corrupted. All photos are gone. Here is my steps to recover photos, videos using mac.
- Plug the SD card in your mac, and choose ignore the corrupted sd card instead of eject when it prompt. Download testdisk using command brew install testdisk Restart your mac. Use command sudo photorec, must use sudo as administrator for detecting all disks. Select the broken SD card disk, you can unplug and plug it back in to see which disk is the SD card.</description>
+      <guid>http://localhost:1313/posts/photo-recovery-using-mac/</guid>
+      <description>Today my colleagues&amp;rsquo; SD card is corrupted. All photos are gone. Here is my steps to recover photos, videos using mac.
+Plug the SD card in your mac, and choose ignore the corrupted sd card instead of eject when it prompt. Download testdisk using command brew install testdisk Restart your mac. Use command sudo photorec, must use sudo as administrator for detecting all disks. Select the broken SD card disk, you can unplug and plug it back in to see which disk is the SD card.</description>
     </item>
-    
     <item>
       <title>Setup https for react development</title>
-      <link>https://kyktommy.github.io/posts/setup-https-for-react-dev/</link>
+      <link>http://localhost:1313/posts/setup-https-for-react-dev/</link>
       <pubDate>Fri, 01 Apr 2022 11:58:58 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/setup-https-for-react-dev/</guid>
+      <guid>http://localhost:1313/posts/setup-https-for-react-dev/</guid>
       <description>Installation $ brew install mkcert $ brew install nss Generate cert $ cd ~ $ mkcert -install $ mkcert localhost 127.0.0.1 Use cert in .bashrc define
 export SSL_CRT_FILE=~/localhost+1.pem export SSL_KEY_FILE=~/localhost+1-key.pem start react with
 HTTPS=true yarn start </description>
     </item>
-    
     <item>
       <title>Cra Import Sort</title>
-      <link>https://kyktommy.github.io/posts/cra-import-sort/</link>
+      <link>http://localhost:1313/posts/cra-import-sort/</link>
       <pubDate>Sat, 31 Jul 2021 15:33:29 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/cra-import-sort/</guid>
-      <description>Target  import path alias, relative path is not good for refactoring import sorting across the team, everyone got same import order eslint fix, vscode intelligence fix  Result // sort import import React, { useEffect, useState } from &amp;#39;react&amp;#39; // alias import path import MyButton from &amp;#39;@/components/MyButton&amp;#39; Install  craco eslint-plugin-simple-import-sort eslint-import-resolver-alias  Setup craco.config.js
- map @ to all folder in src  const path = require(&amp;#39;path&amp;#39;) module.exports = { webpack: { alias: { &amp;#39;@&amp;#39;: path.</description>
+      <guid>http://localhost:1313/posts/cra-import-sort/</guid>
+      <description>Target import path alias, relative path is not good for refactoring import sorting across the team, everyone got same import order eslint fix, vscode intelligence fix Result // sort import import React, { useEffect, useState } from &amp;#39;react&amp;#39; // alias import path import MyButton from &amp;#39;@/components/MyButton&amp;#39; Install craco eslint-plugin-simple-import-sort eslint-import-resolver-alias Setup craco.config.js
+map @ to all folder in src const path = require(&amp;#39;path&amp;#39;) module.exports = { webpack: { alias: { &amp;#39;@&amp;#39;: path.</description>
     </item>
-    
     <item>
       <title>Multiple Github Account</title>
-      <link>https://kyktommy.github.io/posts/multiple-github-account/</link>
+      <link>http://localhost:1313/posts/multiple-github-account/</link>
       <pubDate>Mon, 10 May 2021 14:50:58 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/multiple-github-account/</guid>
-      <description>Target  Setup multiple github accounts Push to different account&amp;rsquo;s remote repo automatically  Setup First, generate new ssh key for new github account.
-$ ssh-keygen -t rsa -C &amp;quot;kyktommy@gmail.com&amp;quot; -f &amp;quot;id_rsa_kyktommy&amp;quot; $ ssh-add ~/.ssh/id_rsa_kyktommy Second, edit .ssh/config, there are 2 github account, which has different Host, they uses different rsa key for github.com.
-# Account 1 Host github.com HostName github.com User git IdentityFile ~/.ssh/id_rsa # Account 2 Host github.com-kyktommy HostName github.</description>
+      <guid>http://localhost:1313/posts/multiple-github-account/</guid>
+      <description>Target Setup multiple github accounts Push to different account&amp;rsquo;s remote repo automatically Setup First, generate new ssh key for new github account.
+$ ssh-keygen -t rsa -C &amp;#34;kyktommy@gmail.com&amp;#34; -f &amp;#34;id_rsa_kyktommy&amp;#34; $ ssh-add ~/.ssh/id_rsa_kyktommy Second, edit .ssh/config, there are 2 github account, which has different Host, they uses different rsa key for github.com.
+# Account 1 Host github.com HostName github.com User git IdentityFile ~/.ssh/id_rsa # Account 2 Host github.com-kyktommy HostName github.com User git IdentityFile ~/.</description>
     </item>
-    
     <item>
       <title>Rainbow Border</title>
-      <link>https://kyktommy.github.io/posts/rainbow-border/</link>
+      <link>http://localhost:1313/posts/rainbow-border/</link>
       <pubDate>Thu, 11 Feb 2021 20:32:28 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/rainbow-border/</guid>
+      <guid>http://localhost:1313/posts/rainbow-border/</guid>
       <description>https://codepen.io/kyktommy/pen/bGBBBZL
- Outside box fill with rainbow gradient background Inside box fill with solid background color  /* .box &amp;gt; .inner */ .box { width: 100px; height: 100px; padding: 3px; box-sizing: border-box; background-image: linear-gradient( to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100% ); } .inner { width: 100%; height: 100%; background: black; }  New css version (safari not supporting)
+Outside box fill with rainbow gradient background Inside box fill with solid background color /* .box &amp;gt; .inner */ .box { width: 100px; height: 100px; padding: 3px; box-sizing: border-box; background-image: linear-gradient( to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100% ); } .inner { width: 100%; height: 100%; background: black; } New css version (safari not supporting)
 https://codepen.io/unnegative/pen/dVwYBq</description>
     </item>
-    
     <item>
       <title>Expressjs Multer File Upload</title>
-      <link>https://kyktommy.github.io/posts/expressjs-multer-file-upload/</link>
+      <link>http://localhost:1313/posts/expressjs-multer-file-upload/</link>
       <pubDate>Sun, 31 Jan 2021 21:08:24 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/expressjs-multer-file-upload/</guid>
+      <guid>http://localhost:1313/posts/expressjs-multer-file-upload/</guid>
       <description>Expressjs + Multer for file upload.
 Usages: multer({ limits, fileFilter, storage }) creates Multer object for reusable in different requset handlers.
- limits limit fileSize, fieldName, etc&amp;hellip; fileFilter custom file validation storage disk / memory / custom storage transform ([s3)  multer().array(&#39;photos&#39;, 2) creates request handler for different routes.
- single one file upload, get by req.file array multiple files upload, get by req.files fields multiple field for files upload, get by req.</description>
+limits limit fileSize, fieldName, etc&amp;hellip; fileFilter custom file validation storage disk / memory / custom storage transform ([s3) multer().array(&#39;photos&#39;, 2) creates request handler for different routes.
+single one file upload, get by req.file array multiple files upload, get by req.files fields multiple field for files upload, get by req.files[&amp;lt;fieldName&amp;gt;][0] Example </description>
     </item>
-    
     <item>
       <title>Aes Cbc Pkcs7</title>
-      <link>https://kyktommy.github.io/posts/aes-cbc-pkcs7/</link>
+      <link>http://localhost:1313/posts/aes-cbc-pkcs7/</link>
       <pubDate>Wed, 20 Jan 2021 22:24:28 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/aes-cbc-pkcs7/</guid>
+      <guid>http://localhost:1313/posts/aes-cbc-pkcs7/</guid>
       <description>Logic:
- sha256 key and iv AES encryption CBC mode PKCS7 padding  Versions:
- golang version javascript version  golang version package main import ( &amp;#34;bytes&amp;#34; &amp;#34;crypto/aes&amp;#34; &amp;#34;crypto/cipher&amp;#34; &amp;#34;crypto/sha256&amp;#34; &amp;#34;fmt&amp;#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.</description>
+sha256 key and iv AES encryption CBC mode PKCS7 padding Versions:
+golang version javascript version golang version package main import ( &amp;#34;bytes&amp;#34; &amp;#34;crypto/aes&amp;#34; &amp;#34;crypto/cipher&amp;#34; &amp;#34;crypto/sha256&amp;#34; &amp;#34;fmt&amp;#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.</description>
     </item>
-    
     <item>
       <title>Mac Imageoptim Auto</title>
-      <link>https://kyktommy.github.io/posts/mac-imageoptim-auto/</link>
+      <link>http://localhost:1313/posts/mac-imageoptim-auto/</link>
       <pubDate>Tue, 13 Oct 2020 13:00:39 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/mac-imageoptim-auto/</guid>
+      <guid>http://localhost:1313/posts/mac-imageoptim-auto/</guid>
       <description>I want to automatically convert pdf to jpg, and compress jpg.
 First, need to install ImageOptim, and put in Application folder.
 Then install ImageOptim-CLI to run ImageOptim in command line.
- # convert pdf to jpg sips --resampleWidth 1024 -s format jpeg *.pdf --out dist/ # compress all jpg in dist folder imageoptim dist </description>
+# convert pdf to jpg sips --resampleWidth 1024 -s format jpeg *.pdf --out dist/ # compress all jpg in dist folder imageoptim dist </description>
     </item>
-    
     <item>
       <title>Redux Typescript</title>
-      <link>https://kyktommy.github.io/posts/redux-typescript/</link>
+      <link>http://localhost:1313/posts/redux-typescript/</link>
       <pubDate>Mon, 20 Jul 2020 19:46:45 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/redux-typescript/</guid>
+      <guid>http://localhost:1313/posts/redux-typescript/</guid>
       <description>There are two library for redux,
- redux-toolkit create a slice for reducer, action = reducer key name reduxsauce normal createActions, createReducer  I recommend redux-toolkit, because it has better support for typescript.
+redux-toolkit create a slice for reducer, action = reducer key name reduxsauce normal createActions, createReducer I recommend redux-toolkit, because it has better support for typescript.
 It restrict PayloadAction&amp;lt;SOMETHING&amp;gt; for action creator and reducer.
 But the downside is action must be binded to reducer.
-Must need to create new action for dispatch two actions.
- </description>
+Must need to create new action for dispatch two actions.</description>
     </item>
-    
     <item>
       <title>Youtube Dl Helper</title>
-      <link>https://kyktommy.github.io/posts/youtube-dl-helper/</link>
+      <link>http://localhost:1313/posts/youtube-dl-helper/</link>
       <pubDate>Sun, 12 Apr 2020 00:03:11 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/youtube-dl-helper/</guid>
+      <guid>http://localhost:1313/posts/youtube-dl-helper/</guid>
       <description>youtube-dl is a great tool to download youtube stuff.
 Here is some helper script I used.
 # download as mp4, playlist also function youtube-dl-mp4() { youtube-dl -f &amp;#34;[height &amp;lt;=? 720][tbr&amp;gt;500]&amp;#34; --yes-playlist $1 } # download as mp3 function youtube-dl-mp3() { youtube-dl -x --audio-format mp3 --add-metadata $1 } # download subtitle en function youtube-dl-sub() { youtube-dl --write-sub --sub-lang en --skip-download $1 } </description>
     </item>
-    
     <item>
       <title>Go Defer And Recover</title>
-      <link>https://kyktommy.github.io/posts/go-defer-and-recover/</link>
+      <link>http://localhost:1313/posts/go-defer-and-recover/</link>
       <pubDate>Fri, 21 Feb 2020 21:55:25 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/go-defer-and-recover/</guid>
+      <guid>http://localhost:1313/posts/go-defer-and-recover/</guid>
       <description>Go defer is LIFO. defer function will be executed even after panic. So put recover inside defer.
 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;time&amp;#34; ) func main() { defer func() { fmt.Println(&amp;#34;main defer&amp;#34;) }() go func() { defer func() { if err := recover(); err != nil { fmt.Println(&amp;#34;recover&amp;#34;, err) } }() panic(&amp;#34;panic here&amp;#34;) }() time.Sleep(1 \* time.Second) fmt.Println(&amp;#34;end&amp;#34;) } output:
 recover panic here end main defer </description>
     </item>
-    
     <item>
       <title>Git Move Repo</title>
-      <link>https://kyktommy.github.io/posts/git-move-repo/</link>
+      <link>http://localhost:1313/posts/git-move-repo/</link>
       <pubDate>Thu, 13 Feb 2020 17:38:52 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/git-move-repo/</guid>
-      <description>  Clone the project from old repo url
-git clone &amp;lt;old_repo_url&amp;gt;   Pull all branches
-git branch -r | grep -v &amp;#39;\-&amp;gt;&amp;#39; | while read remote; do git branch --track &amp;#34;${remote#origin/}&amp;#34; &amp;#34;$remote&amp;#34;; done git fetch --all git pull --all   Change remote to new repo url
-git remote set-url origin &amp;lt;new_repo&amp;gt;   Push all to new repo url
-git push --all git push --tags   </description>
+      <guid>http://localhost:1313/posts/git-move-repo/</guid>
+      <description> Clone the project from old repo url
+git clone &amp;lt;old_repo_url&amp;gt; Pull all branches
+git branch -r | grep -v &amp;#39;\-&amp;gt;&amp;#39; | while read remote; do git branch --track &amp;#34;${remote#origin/}&amp;#34; &amp;#34;$remote&amp;#34;; done git fetch --all git pull --all Change remote to new repo url
+git remote set-url origin &amp;lt;new_repo&amp;gt; Push all to new repo url
+git push --all git push --tags </description>
     </item>
-    
     <item>
       <title>Go Cap Problem</title>
-      <link>https://kyktommy.github.io/posts/go-cap-problem/</link>
+      <link>http://localhost:1313/posts/go-cap-problem/</link>
       <pubDate>Thu, 09 Jan 2020 23:59:01 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/go-cap-problem/</guid>
+      <guid>http://localhost:1313/posts/go-cap-problem/</guid>
       <description>golang cap
- The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
- If we append item to a slice that over the capacity, it will return the new array. But if we append item to a slice within capacity, it will change the orginal one.
+The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
+If we append item to a slice that over the capacity, it will return the new array. But if we append item to a slice within capacity, it will change the orginal one.
 The following code shows underCap changes the input array.
- func overCap(a []int) []int { fmt.</description>
+func overCap(a []int) []int { fmt.</description>
     </item>
-    
     <item>
       <title>Go Http Log</title>
-      <link>https://kyktommy.github.io/posts/go-http-log/</link>
+      <link>http://localhost:1313/posts/go-http-log/</link>
       <pubDate>Tue, 31 Dec 2019 19:21:43 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/go-http-log/</guid>
+      <guid>http://localhost:1313/posts/go-http-log/</guid>
       <description>We need a logger for every routes, so made a simple http log middleware. Need to replace writer to custom one, and also take care of reading body.
 package main import ( &amp;#34;bytes&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;io&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;strings&amp;#34; ) type bodyLogWriter struct { http.ResponseWriter body *bytes.Buffer } func (w bodyLogWriter) Write(b []byte) (int, error) { w.body.Write(b) return w.ResponseWriter.Write(b) } func main() { httpLog := func(next http.Handler) http.Handler { return http.HandlerFunc(func(w http.</description>
     </item>
-    
     <item>
       <title>Find Go Project</title>
-      <link>https://kyktommy.github.io/posts/find-go-project/</link>
+      <link>http://localhost:1313/posts/find-go-project/</link>
       <pubDate>Sun, 22 Dec 2019 18:41:34 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/find-go-project/</guid>
+      <guid>http://localhost:1313/posts/find-go-project/</guid>
       <description>I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to $GOPATH and cd to that package name.
 Here is my script for current solution. Assume your target project is in 3 depth of src.
 function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &amp;#34;{}&amp;#34; \; | grep $1 | awk &amp;#39;{ print $9 }&amp;#39; | nl } ➜ ~ findgo proto 1	/Users/tommy/go-workspace/src/google.</description>
     </item>
-    
     <item>
       <title>Rust Read Write File</title>
-      <link>https://kyktommy.github.io/posts/rust-read-write-file/</link>
+      <link>http://localhost:1313/posts/rust-read-write-file/</link>
       <pubDate>Thu, 19 Dec 2019 23:35:06 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/rust-read-write-file/</guid>
-      <description>usestd::fs;fn main(){letdata=&amp;#34;test data&amp;#34;;// write file letw=fs::write(&amp;#34;tmp.txt&amp;#34;,data);matchw{Ok(())=&amp;gt;println!(&amp;#34;write success&amp;#34;),Err(err)=&amp;gt;panic!(&amp;#34;write fail {:?}&amp;#34;,err),};// read file letr=fs::read_to_string(&amp;#34;tmp.txt&amp;#34;);letr=matchr{Ok(content)=&amp;gt;content,Err(err)=&amp;gt;panic!(&amp;#34;read fail {:?</description>
+      <guid>http://localhost:1313/posts/rust-read-write-file/</guid>
+      <description>use std::fs; fn main() { let data = &amp;#34;test data&amp;#34;; // write file let w = fs::write(&amp;#34;tmp.txt&amp;#34;, data); match w { Ok(()) =&amp;gt; println!(&amp;#34;write success&amp;#34;), Err(err) =&amp;gt; panic!(&amp;#34;write fail {:?}&amp;#34;, err), }; // read file let r = fs::read_to_string(&amp;#34;tmp.txt&amp;#34;); let r = match r { Ok(content) =&amp;gt; content, Err(err) =&amp;gt; panic!(&amp;#34;read fail {:?}&amp;#34;, err), }; println!(&amp;#34;{}&amp;#34;, r); } </description>
     </item>
-    
     <item>
       <title>Rust Json</title>
-      <link>https://kyktommy.github.io/posts/rust-json/</link>
+      <link>http://localhost:1313/posts/rust-json/</link>
       <pubDate>Wed, 18 Dec 2019 23:29:48 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/rust-json/</guid>
+      <guid>http://localhost:1313/posts/rust-json/</guid>
       <description>Rust serialize, deserialize json use serde.
- cargo.toml
-[dependencies] serde = &amp;quot;0.9&amp;quot; serde_json = &amp;quot;0.9&amp;quot; serde_derive = &amp;quot;0.9&amp;quot; main.rs
-externcrateserde;externcrateserde_json;#[macro_use]externcrateserde_derive;#[derive(Serialize, Deserialize, Debug)]struct Response{code: u32,success: bool,payload: Payload,}#[derive(Serialize, Deserialize, Debug)]struct Payload{length: u32,items: Vec&amp;lt;String&amp;gt;,}fn main(){letdata=r#&amp;#34; { &amp;#34;code&amp;#34;: 200, &amp;#34;success&amp;#34;: true, &amp;#34;payload&amp;#34;: { &amp;#34;length&amp;#34;: 123, &amp;#34;items&amp;#34;: [&amp;#34;apple&amp;#34;, &amp;#34;orange&amp;#34;] } } &amp;#34;#;// deserialize letresp: Response=serde_json::from_str(&amp;amp;data).unwrap();println!(&amp;#34;resp: {:?}&amp;#34;,resp);// serialize letresp_json=serde_json::to_string(&amp;amp;resp).unwrap();println!(&amp;#34;json: {}&amp;#34;,resp_json);}output
-resp: Response { code: 200, success: true, payload: Payload { length: 123, items: [&amp;quot;apple&amp;quot;, &amp;quot;orange&amp;quot;] } } json: {&amp;quot;code&amp;quot;:200,&amp;quot;success&amp;quot;:true,&amp;quot;payload&amp;quot;:{&amp;quot;length&amp;quot;:123,&amp;quot;items&amp;quot;:[&amp;quot;apple&amp;quot;,&amp;quot;orange&amp;quot;]}} </description>
+cargo.toml
+[dependencies] serde = &amp;#34;0.9&amp;#34; serde_json = &amp;#34;0.9&amp;#34; serde_derive = &amp;#34;0.9&amp;#34; main.rs
+extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&amp;lt;String&amp;gt;, } fn main() { let data = r#&amp;#34; { &amp;#34;code&amp;#34;: 200, &amp;#34;success&amp;#34;: true, &amp;#34;payload&amp;#34;: { &amp;#34;length&amp;#34;: 123, &amp;#34;items&amp;#34;: [&amp;#34;apple&amp;#34;, &amp;#34;orange&amp;#34;] } } &amp;#34;#; // deserialize let resp: Response = serde_json::from_str(&amp;amp;data).</description>
     </item>
-    
     <item>
       <title>about</title>
-      <link>https://kyktommy.github.io/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Sat, 16 Nov 2019 19:16:33 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>kyk&amp;rsquo;s blog is about Programming :)</description>
     </item>
-    
   </channel>
 </rss>

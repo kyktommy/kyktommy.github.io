@@ -1,155 +1,251 @@
 <!DOCTYPE html>
-<html lang="en-us">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		
-		<meta name="description" content="@kyktommy">
-		<meta name="generator" content="Hugo 0.83.1" />
-		<title>Rust Json &middot; Kyk&#39;s Blog</title>
-		<link rel="shortcut icon" href="https://kyktommy.github.io/images/favicon.ico">
-		<link rel="stylesheet" href="https://kyktommy.github.io/css/style.css">
-		<link rel="stylesheet" href="https://kyktommy.github.io/css/highlight.css">
+<html lang="en" dir="auto">
 
-		
-		<link rel="stylesheet" href="https://kyktommy.github.io/css/monosocialiconsfont.css">
-		
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Rust Json | Kyk&#39;s Blog</title>
+<meta name="keywords" content="rust">
+<meta name="description" content="Rust serialize, deserialize json use serde.
+cargo.toml
+[dependencies] serde = &#34;0.9&#34; serde_json = &#34;0.9&#34; serde_derive = &#34;0.9&#34; main.rs
+extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&lt;String&gt;, } fn main() { let data = r#&#34; { &#34;code&#34;: 200, &#34;success&#34;: true, &#34;payload&#34;: { &#34;length&#34;: 123, &#34;items&#34;: [&#34;apple&#34;, &#34;orange&#34;] } } &#34;#; // deserialize let resp: Response = serde_json::from_str(&amp;data).">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/rust-json/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/rust-json/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
-		
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
 
-		
-	</head>
+            .list {
+                background: var(--theme);
+            }
 
-    <body>
-       <nav class="main-nav">
-	
-	
-		<a href='https://kyktommy.github.io/'> <span class="arrow">←</span>Home</a>
-	
-	
-	
-	
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
 
-	
-		<a href="https://github.com/kyktommy/awesomes">awesomes</a>
-	
-		<a href="https://kyktommy.github.io/learn-source-code/">learn source code</a>
-	
-		<a href="/my-setup">my setup</a>
-	
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
 
-	
-</nav>
+    </style>
+</noscript>
+</head>
 
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
 
-        <section id="wrapper" class="post">
-            <article>
-                <header>
-                    <h1>
-                        Rust Json
-                    </h1>
-                    <h2 class="headline">
-                    Dec 18, 2019 23:29
-                    · 72 words
-                    · 1 minute read
-                      <span class="tags">
-                      
-                      
-                          
-                              <a href="https://kyktommy.github.io/tags/rust">rust</a>
-                          
-                      
-                      
-                      </span>
-                    </h2>
-                </header>
-                
-                <section id="post-body">
-                    <p>Rust serialize, deserialize json use <a href="https://serde.rs">serde</a>.</p>
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Kyk&#39;s Blog (Alt + H)">Kyk&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Rust Json
+    </h1>
+    <div class="post-meta"><span title='2019-12-18 23:29:48 +0800 HKT'>December 18, 2019</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Rust serialize, deserialize json use <a href="https://serde.rs">serde</a>.</p>
 <hr>
 <p>cargo.toml</p>
-<pre><code>[dependencies]
-serde = &quot;0.9&quot;
-serde_json = &quot;0.9&quot;
-serde_derive = &quot;0.9&quot;
+<pre tabindex="0"><code>[dependencies]
+serde = &#34;0.9&#34;
+serde_json = &#34;0.9&#34;
+serde_derive = &#34;0.9&#34;
 </code></pre><p>main.rs</p>
-<div class="highlight"><pre class="chroma"><code class="language-rust" data-lang="rust"><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">serde</span><span class="p">;</span><span class="w">
-</span><span class="w"></span><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">serde_json</span><span class="p">;</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="cp">#[macro_use]</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">serde_derive</span><span class="p">;</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="cp">#[derive(Serialize, Deserialize, Debug)]</span><span class="w">
-</span><span class="w"></span><span class="k">struct</span> <span class="nc">Response</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">  </span><span class="n">code</span>: <span class="kt">u32</span><span class="p">,</span><span class="w">
-</span><span class="w">  </span><span class="n">success</span>: <span class="kt">bool</span><span class="p">,</span><span class="w">
-</span><span class="w">  </span><span class="n">payload</span>: <span class="nc">Payload</span><span class="p">,</span><span class="w">
-</span><span class="w"></span><span class="p">}</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="cp">#[derive(Serialize, Deserialize, Debug)]</span><span class="w">
-</span><span class="w"></span><span class="k">struct</span> <span class="nc">Payload</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">  </span><span class="n">length</span>: <span class="kt">u32</span><span class="p">,</span><span class="w">
-</span><span class="w">  </span><span class="n">items</span>: <span class="nb">Vec</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">,</span><span class="w">
-</span><span class="w"></span><span class="p">}</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">r#&#34;
-</span><span class="s">  {
-</span><span class="s">      &#34;code&#34;: 200,
-</span><span class="s">      &#34;success&#34;: true,
-</span><span class="s">      &#34;payload&#34;: {
-</span><span class="s">          &#34;length&#34;: 123,
-</span><span class="s">          &#34;items&#34;: [&#34;apple&#34;, &#34;orange&#34;]
-</span><span class="s">      }
-</span><span class="s">  }
-</span><span class="s">  &#34;#</span><span class="p">;</span><span class="w">
-</span><span class="w">
-</span><span class="w">  </span><span class="c1">// deserialize
-</span><span class="c1"></span><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">resp</span>: <span class="nc">Response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serde_json</span>::<span class="n">from_str</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
-</span><span class="w">  </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;resp: {:?}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p">);</span><span class="w">
-</span><span class="w">
-</span><span class="w">  </span><span class="c1">// serialize
-</span><span class="c1"></span><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">resp_json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serde_json</span>::<span class="n">to_string</span><span class="p">(</span><span class="o">&amp;</span><span class="n">resp</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
-</span><span class="w">  </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&#34;json: {}&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">resp_json</span><span class="p">);</span><span class="w">
-</span><span class="w"></span><span class="p">}</span><span class="w">
-</span></code></pre></div><p>output</p>
-<pre><code>resp: Response { code: 200, success: true, payload: Payload { length: 123, items: [&quot;apple&quot;, &quot;orange&quot;] } }
-json: {&quot;code&quot;:200,&quot;success&quot;:true,&quot;payload&quot;:{&quot;length&quot;:123,&quot;items&quot;:[&quot;apple&quot;,&quot;orange&quot;]}}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">serde</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">serde_json</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cp">#[macro_use]</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">serde_derive</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cp">#[derive(Serialize, Deserialize, Debug)]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">struct</span> <span class="nc">Response</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">code</span>: <span class="kt">u32</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">success</span>: <span class="kt">bool</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">payload</span>: <span class="nc">Payload</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cp">#[derive(Serialize, Deserialize, Debug)]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">struct</span> <span class="nc">Payload</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">length</span>: <span class="kt">u32</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">items</span>: <span class="nb">Vec</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">r</span><span class="s">#&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">  {
+</span></span></span><span class="line"><span class="cl"><span class="s">      &#34;code&#34;: 200,
+</span></span></span><span class="line"><span class="cl"><span class="s">      &#34;success&#34;: true,
+</span></span></span><span class="line"><span class="cl"><span class="s">      &#34;payload&#34;: {
+</span></span></span><span class="line"><span class="cl"><span class="s">          &#34;length&#34;: 123,
+</span></span></span><span class="line"><span class="cl"><span class="s">          &#34;items&#34;: [&#34;apple&#34;, &#34;orange&#34;]
+</span></span></span><span class="line"><span class="cl"><span class="s">      }
+</span></span></span><span class="line"><span class="cl"><span class="s">  }
+</span></span></span><span class="line"><span class="cl"><span class="s">  &#34;#</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// deserialize
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">resp</span>: <span class="nc">Response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serde_json</span>::<span class="n">from_str</span><span class="p">(</span><span class="o">&amp;</span><span class="n">data</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;resp: </span><span class="si">{:?}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">resp</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// serialize
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">resp_json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serde_json</span>::<span class="n">to_string</span><span class="p">(</span><span class="o">&amp;</span><span class="n">resp</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;json: </span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">resp_json</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>output</p>
+<pre tabindex="0"><code>resp: Response { code: 200, success: true, payload: Payload { length: 123, items: [&#34;apple&#34;, &#34;orange&#34;] } }
+json: {&#34;code&#34;:200,&#34;success&#34;:true,&#34;payload&#34;:{&#34;length&#34;:123,&#34;items&#34;:[&#34;apple&#34;,&#34;orange&#34;]}}
 </code></pre>
-                </section>
-            </article>
 
-            
+  </div>
 
-            
-
-            
-
-            <footer id="footer">
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/rust/">Rust</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
     
-    <p class="small">
-    
-       © Copyright 2023 <i class="fa fa-heart" aria-hidden="true"></i> 
-    
-    </p>
-    <p class="small">
-        Powered by <a href="http://www.gohugo.io/">Hugo</a> Theme By <a href="https://github.com/nodejh/hugo-theme-cactus-plus">nodejh</a>
-    </p>
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:1313/">Kyk&#39;s Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
 </footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
 
-        </section>
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
 
-        <script src="https://kyktommy.github.io/js/jquery-3.3.1.min.js"></script>
-<script src="https://kyktommy.github.io/js/main.js"></script>
-<script src="https://kyktommy.github.io/js/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
 
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
 
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
 
+</script>
+</body>
 
-
-
-
-    </body>
 </html>

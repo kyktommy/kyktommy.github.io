@@ -2,160 +2,160 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kyktommy.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-07-09T12:51:21+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-07-09T12:51:21+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/say-hi/</loc>
+    <loc>http://localhost:1313/posts/say-hi/</loc>
     <lastmod>2024-07-09T12:51:21+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/fix-exfat-drive-in-mac-osx/</loc>
+    <loc>http://localhost:1313/posts/fix-exfat-drive-in-mac-osx/</loc>
     <lastmod>2024-03-09T13:49:22+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/js-lib/</loc>
+    <loc>http://localhost:1313/js-lib/</loc>
     <lastmod>2023-10-03T19:16:33+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2023-05-07T17:30:34+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/detect-exfat-disk-in-mac/</loc>
+    <loc>http://localhost:1313/posts/detect-exfat-disk-in-mac/</loc>
     <lastmod>2023-05-07T17:30:34+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/tags/exfat/</loc>
+    <loc>http://localhost:1313/tags/exfat/</loc>
     <lastmod>2023-05-07T17:30:34+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/tags/mac/</loc>
+    <loc>http://localhost:1313/tags/mac/</loc>
     <lastmod>2023-05-07T17:30:34+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/categories/mac/</loc>
+    <loc>http://localhost:1313/categories/mac/</loc>
     <lastmod>2023-05-07T17:30:34+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2023-05-07T17:30:34+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/my-setup/</loc>
+    <loc>http://localhost:1313/my-setup/</loc>
     <lastmod>2023-04-11T00:00:00+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/tags/golang/</loc>
+    <loc>http://localhost:1313/tags/golang/</loc>
     <lastmod>2023-01-18T10:09:43+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/categories/golang/</loc>
+    <loc>http://localhost:1313/categories/golang/</loc>
     <lastmod>2023-01-18T10:09:43+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/golang-version-switch/</loc>
+    <loc>http://localhost:1313/posts/golang-version-switch/</loc>
     <lastmod>2023-01-18T10:09:43+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/halfwidth-fullwidth-conversion/</loc>
+    <loc>http://localhost:1313/posts/halfwidth-fullwidth-conversion/</loc>
     <lastmod>2022-12-30T20:02:35+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/tags/photo/</loc>
+    <loc>http://localhost:1313/tags/photo/</loc>
     <lastmod>2022-06-15T00:10:42+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/categories/photo/</loc>
+    <loc>http://localhost:1313/categories/photo/</loc>
     <lastmod>2022-06-15T00:10:42+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/photo-recovery-using-mac/</loc>
+    <loc>http://localhost:1313/posts/photo-recovery-using-mac/</loc>
     <lastmod>2022-06-15T00:10:42+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/tags/react/</loc>
+    <loc>http://localhost:1313/tags/react/</loc>
     <lastmod>2022-04-01T11:58:58+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/categories/react/</loc>
+    <loc>http://localhost:1313/categories/react/</loc>
     <lastmod>2022-04-01T11:58:58+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/setup-https-for-react-dev/</loc>
+    <loc>http://localhost:1313/posts/setup-https-for-react-dev/</loc>
     <lastmod>2022-04-01T11:58:58+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/cra-import-sort/</loc>
+    <loc>http://localhost:1313/posts/cra-import-sort/</loc>
     <lastmod>2021-07-31T15:33:29+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/tags/git/</loc>
+    <loc>http://localhost:1313/tags/git/</loc>
     <lastmod>2021-05-10T14:50:58+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/categories/git/</loc>
+    <loc>http://localhost:1313/categories/git/</loc>
     <lastmod>2021-05-10T14:50:58+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/multiple-github-account/</loc>
+    <loc>http://localhost:1313/posts/multiple-github-account/</loc>
     <lastmod>2021-05-10T14:50:58+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/tags/css/</loc>
+    <loc>http://localhost:1313/tags/css/</loc>
     <lastmod>2021-02-11T20:32:28+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/categories/css/</loc>
+    <loc>http://localhost:1313/categories/css/</loc>
     <lastmod>2021-02-11T20:32:28+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/rainbow-border/</loc>
+    <loc>http://localhost:1313/posts/rainbow-border/</loc>
     <lastmod>2021-02-11T20:32:28+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/expressjs-multer-file-upload/</loc>
+    <loc>http://localhost:1313/posts/expressjs-multer-file-upload/</loc>
     <lastmod>2021-01-31T21:08:24+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/tags/js/</loc>
+    <loc>http://localhost:1313/tags/js/</loc>
     <lastmod>2021-01-31T21:08:24+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/categories/js/</loc>
+    <loc>http://localhost:1313/categories/js/</loc>
     <lastmod>2021-01-31T21:08:24+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/aes-cbc-pkcs7/</loc>
+    <loc>http://localhost:1313/posts/aes-cbc-pkcs7/</loc>
     <lastmod>2021-01-20T22:24:28+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/mac-imageoptim-auto/</loc>
+    <loc>http://localhost:1313/posts/mac-imageoptim-auto/</loc>
     <lastmod>2020-10-13T13:00:39+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/tags/redux/</loc>
+    <loc>http://localhost:1313/tags/redux/</loc>
     <lastmod>2020-07-20T19:46:45+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/redux-typescript/</loc>
+    <loc>http://localhost:1313/posts/redux-typescript/</loc>
     <lastmod>2020-07-20T19:46:45+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/tags/typescript/</loc>
+    <loc>http://localhost:1313/tags/typescript/</loc>
     <lastmod>2020-07-20T19:46:45+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/categories/script/</loc>
+    <loc>http://localhost:1313/categories/script/</loc>
     <lastmod>2020-04-12T00:03:11+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/youtube-dl-helper/</loc>
+    <loc>http://localhost:1313/posts/youtube-dl-helper/</loc>
     <lastmod>2020-04-12T00:03:11+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/tags/youtube-dl/</loc>
+    <loc>http://localhost:1313/tags/youtube-dl/</loc>
     <lastmod>2020-04-12T00:03:11+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/tags/go/</loc>
+    <loc>http://localhost:1313/tags/go/</loc>
     <lastmod>2020-02-21T21:55:25+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/categories/go/</loc>
+    <loc>http://localhost:1313/categories/go/</loc>
     <lastmod>2020-02-21T21:55:25+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/go-defer-and-recover/</loc>
+    <loc>http://localhost:1313/posts/go-defer-and-recover/</loc>
     <lastmod>2020-02-21T21:55:25+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/git-move-repo/</loc>
+    <loc>http://localhost:1313/posts/git-move-repo/</loc>
     <lastmod>2020-02-13T17:38:52+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/go-cap-problem/</loc>
+    <loc>http://localhost:1313/posts/go-cap-problem/</loc>
     <lastmod>2020-01-09T23:59:01+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/go-http-log/</loc>
+    <loc>http://localhost:1313/posts/go-http-log/</loc>
     <lastmod>2019-12-31T19:21:43+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/find-go-project/</loc>
+    <loc>http://localhost:1313/posts/find-go-project/</loc>
     <lastmod>2019-12-22T18:41:34+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/tags/rust/</loc>
+    <loc>http://localhost:1313/tags/rust/</loc>
     <lastmod>2019-12-19T23:35:06+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/categories/rust/</loc>
+    <loc>http://localhost:1313/categories/rust/</loc>
     <lastmod>2019-12-19T23:35:06+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/rust-read-write-file/</loc>
+    <loc>http://localhost:1313/posts/rust-read-write-file/</loc>
     <lastmod>2019-12-19T23:35:06+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/posts/rust-json/</loc>
+    <loc>http://localhost:1313/posts/rust-json/</loc>
     <lastmod>2019-12-18T23:29:48+08:00</lastmod>
   </url><url>
-    <loc>https://kyktommy.github.io/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2019-11-16T19:16:33+08:00</lastmod>
   </url>
 </urlset>

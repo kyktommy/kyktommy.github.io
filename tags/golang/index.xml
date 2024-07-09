@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>golang on Kyk&#39;s Blog</title>
-    <link>https://kyktommy.github.io/tags/golang/</link>
-    <description>Recent content in golang on Kyk&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Golang on Kyk&#39;s Blog</title>
+    <link>http://localhost:1313/tags/golang/</link>
+    <description>Recent content in Golang on Kyk&#39;s Blog</description>
+    <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Jan 2023 10:09:43 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Jan 2023 10:09:43 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang Version Switch</title>
-      <link>https://kyktommy.github.io/posts/golang-version-switch/</link>
+      <link>http://localhost:1313/posts/golang-version-switch/</link>
       <pubDate>Wed, 18 Jan 2023 10:09:43 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/golang-version-switch/</guid>
-      <description> remove /usr/local/go if you install golang using pkg installer  sudo rm -rf /usr/local/go sudo rm /etc/paths.d/go use homebrew to install golang  brew install go use homebrew to install golang different versions  brew install go@1.19 brew install go@1.18 switch between golang version, for example: switch from 1.18 to 1.19  brew unlink go brew link go@1.19 </description>
+      <guid>http://localhost:1313/posts/golang-version-switch/</guid>
+      <description> remove /usr/local/go if you install golang using pkg installer sudo rm -rf /usr/local/go sudo rm /etc/paths.d/go use homebrew to install golang brew install go use homebrew to install golang different versions brew install go@1.19 brew install go@1.18 switch between golang version, for example: switch from 1.18 to 1.19 brew unlink go brew link go@1.19 </description>
     </item>
-    
     <item>
       <title>Aes Cbc Pkcs7</title>
-      <link>https://kyktommy.github.io/posts/aes-cbc-pkcs7/</link>
+      <link>http://localhost:1313/posts/aes-cbc-pkcs7/</link>
       <pubDate>Wed, 20 Jan 2021 22:24:28 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/aes-cbc-pkcs7/</guid>
+      <guid>http://localhost:1313/posts/aes-cbc-pkcs7/</guid>
       <description>Logic:
- sha256 key and iv AES encryption CBC mode PKCS7 padding  Versions:
- golang version javascript version  golang version package main import ( &amp;#34;bytes&amp;#34; &amp;#34;crypto/aes&amp;#34; &amp;#34;crypto/cipher&amp;#34; &amp;#34;crypto/sha256&amp;#34; &amp;#34;fmt&amp;#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.</description>
+sha256 key and iv AES encryption CBC mode PKCS7 padding Versions:
+golang version javascript version golang version package main import ( &amp;#34;bytes&amp;#34; &amp;#34;crypto/aes&amp;#34; &amp;#34;crypto/cipher&amp;#34; &amp;#34;crypto/sha256&amp;#34; &amp;#34;fmt&amp;#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.</description>
     </item>
-    
   </channel>
 </rss>

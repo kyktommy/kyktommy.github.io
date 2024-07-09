@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>redux on Kyk&#39;s Blog</title>
-    <link>https://kyktommy.github.io/tags/redux/</link>
-    <description>Recent content in redux on Kyk&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Redux on Kyk&#39;s Blog</title>
+    <link>http://localhost:1313/tags/redux/</link>
+    <description>Recent content in Redux on Kyk&#39;s Blog</description>
+    <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2020 19:46:45 +0800</lastBuildDate><atom:link href="https://kyktommy.github.io/tags/redux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jul 2020 19:46:45 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/redux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Redux Typescript</title>
-      <link>https://kyktommy.github.io/posts/redux-typescript/</link>
+      <link>http://localhost:1313/posts/redux-typescript/</link>
       <pubDate>Mon, 20 Jul 2020 19:46:45 +0800</pubDate>
-      
-      <guid>https://kyktommy.github.io/posts/redux-typescript/</guid>
+      <guid>http://localhost:1313/posts/redux-typescript/</guid>
       <description>There are two library for redux,
- redux-toolkit create a slice for reducer, action = reducer key name reduxsauce normal createActions, createReducer  I recommend redux-toolkit, because it has better support for typescript.
+redux-toolkit create a slice for reducer, action = reducer key name reduxsauce normal createActions, createReducer I recommend redux-toolkit, because it has better support for typescript.
 It restrict PayloadAction&amp;lt;SOMETHING&amp;gt; for action creator and reducer.
 But the downside is action must be binded to reducer.
-Must need to create new action for dispatch two actions.
- </description>
+Must need to create new action for dispatch two actions.</description>
     </item>
-    
   </channel>
 </rss>
