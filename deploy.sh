@@ -11,7 +11,7 @@ cd public
 git add .
 msg="rebuilding site `date`"
 git commit -m "$msg"
-git push origin HEAD:master
+git push origin HEAD:master -f
 cd ..
 
 # page core
