@@ -131,6 +131,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Find Go Project
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to $GOPATH and cd to that package name.
+Here is my script for current solution. Assume your target project is in 3 depth of src.
+function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &#34;{}&#34; \; | grep $1 | awk &#39;{ print $9 }&#39; | nl } ➜ ~ findgo proto 1	/Users/tommy/go-workspace/src/google....</p>
+  </div>
+  <footer class="entry-footer"><span title='2019-12-22 18:41:34 +0800 HKT'>December 22, 2019</span></footer>
+  <a class="entry-link" aria-label="post link to Find Go Project" href="https://kyktommy.github.io/posts/find-go-project/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Rust Read Write File
     </h2>
   </header>
