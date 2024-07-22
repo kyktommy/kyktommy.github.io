@@ -14,14 +14,7 @@
       <pubDate>Mon, 22 Jul 2024 17:39:43 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/react-query-gctime-staletime/</guid>
       <description>react query gcTime / cacheTime vs staleTime
-when a component use useQuery with key, it start fetching and loading gcTime: start this timer after all components unmount (inactive) staleTime: start this timer after fetch complete, indicate whether makes api call or not case 1: when gcTime=5000, staleTime &amp;lt;= gcTime within 5s, this component re-mount will use the same data as initial, and fetching api in background, and update the cache data after 5s, this component re-mount, it start fetching and loading again cuz cache data has been gc, needs to refetching to get the data case 2: when gcTime=5000, staleTime=Infinity this component use the data and keep data as fresh, will not fetch forever </description>
-    </item>
-    <item>
-      <title>Say Hi</title>
-      <link>https://kyktommy.github.io/posts/say-hi/</link>
-      <pubDate>Tue, 09 Jul 2024 12:51:21 +0800</pubDate>
-      <guid>https://kyktommy.github.io/posts/say-hi/</guid>
-      <description></description>
+when a component use useQuery with key, it start fetching and loading gcTime: start this timer after all components unmount (inactive) staleTime: start this timer after fetch complete, indicate whether makes api call or not case 1: when gcTime=5000, staleTime &amp;lt;= gcTime within 5s, this component re-mount will use the same data as initial, and fetch api in background, then update the cache data this component unmount, after 5s then re-mount, it start fetching and loading again cuz cache data has been gc, needs to refetching to get the data case 2: when gcTime=5000, staleTime=Infinity this component use the data and keep data as fresh, will not fetch forever </description>
     </item>
     <item>
       <title>Fix Exfat Drive in Mac Osx</title>

@@ -136,22 +136,10 @@
   </header>
   <div class="entry-content">
     <p>react query gcTime / cacheTime vs staleTime
-when a component use useQuery with key, it start fetching and loading gcTime: start this timer after all components unmount (inactive) staleTime: start this timer after fetch complete, indicate whether makes api call or not case 1: when gcTime=5000, staleTime &lt;= gcTime within 5s, this component re-mount will use the same data as initial, and fetching api in background, and update the cache data after 5s, this component re-mount, it start fetching and loading again cuz cache data has been gc, needs to refetching to get the data case 2: when gcTime=5000, staleTime=Infinity this component use the data and keep data as fresh, will not fetch forever </p>
+when a component use useQuery with key, it start fetching and loading gcTime: start this timer after all components unmount (inactive) staleTime: start this timer after fetch complete, indicate whether makes api call or not case 1: when gcTime=5000, staleTime &lt;= gcTime within 5s, this component re-mount will use the same data as initial, and fetch api in background, then update the cache data this component unmount, after 5s then re-mount, it start fetching and loading again cuz cache data has been gc, needs to refetching to get the data case 2: when gcTime=5000, staleTime=Infinity this component use the data and keep data as fresh, will not fetch forever </p>
   </div>
   <footer class="entry-footer"><span title='2024-07-22 17:39:43 +0800 HKT'>July 22, 2024</span></footer>
   <a class="entry-link" aria-label="post link to React Query GcTime StaleTime" href="https://kyktommy.github.io/posts/react-query-gctime-staletime/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Say Hi
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p></p>
-  </div>
-  <footer class="entry-footer"><span title='2024-07-09 12:51:21 +0800 HKT'>July 9, 2024</span></footer>
-  <a class="entry-link" aria-label="post link to Say Hi" href="https://kyktommy.github.io/posts/say-hi/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -258,6 +246,20 @@ $ ssh-keygen -t rsa -C &#34;kyktommy@gmail.com&#34; -f &#34;id_rsa_kyktommy&#34;
   </div>
   <footer class="entry-footer"><span title='2021-05-10 14:50:58 +0800 HKT'>May 10, 2021</span></footer>
   <a class="entry-link" aria-label="post link to Multiple Github Account" href="https://kyktommy.github.io/posts/multiple-github-account/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Rainbow Border
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>https://codepen.io/kyktommy/pen/bGBBBZL
+Outside box fill with rainbow gradient background Inside box fill with solid background color /* .box &gt; .inner */ .box { width: 100px; height: 100px; padding: 3px; box-sizing: border-box; background-image: linear-gradient( to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100% ); } .inner { width: 100%; height: 100%; background: black; } New css version (safari not supporting)
+https://codepen.io/unnegative/pen/dVwYBq</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-02-11 20:32:28 +0800 HKT'>February 11, 2021</span></footer>
+  <a class="entry-link" aria-label="post link to Rainbow Border" href="https://kyktommy.github.io/posts/rainbow-border/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
