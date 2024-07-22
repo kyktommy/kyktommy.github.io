@@ -3,7 +3,7 @@
 git pull --rebase
 
 # build
-hugo -t "PaperMode"
+hugo -t "PaperMod"
 
 # page master
 echo -e "\033[0;32mDeploying posts to GitHub...\033[0m"
