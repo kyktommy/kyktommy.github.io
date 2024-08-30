@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head>
-	<meta name="generator" content="Hugo 0.128.2"><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Kyk&#39;s Blog</title>
-
+<title>Pdf | Kyk&#39;s Blog</title>
+<meta name="keywords" content="">
 <meta name="description" content="@kyktommy">
 <meta name="author" content="">
-<link rel="canonical" href="https://kyktommy.github.io/">
+<link rel="canonical" href="https://kyktommy.github.io/categories/pdf/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://kyktommy.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://kyktommy.github.io/favicon-16x16.png">
@@ -19,8 +18,8 @@
 <link rel="mask-icon" href="https://kyktommy.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://kyktommy.github.io/index.xml">
-<link rel="alternate" hreflang="en" href="https://kyktommy.github.io/">
+<link rel="alternate" type="application/rss+xml" href="https://kyktommy.github.io/categories/pdf/index.xml">
+<link rel="alternate" hreflang="en" href="https://kyktommy.github.io/categories/pdf/">
 <noscript>
     <style>
         #theme-toggle,
@@ -60,28 +59,15 @@
 </noscript>
   
 
-<meta property="og:title" content="Kyk&#39;s Blog" />
+<meta property="og:title" content="Pdf" />
 <meta property="og:description" content="@kyktommy" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://kyktommy.github.io/" />
+<meta property="og:url" content="https://kyktommy.github.io/categories/pdf/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Kyk&#39;s Blog"/>
+<meta name="twitter:title" content="Pdf"/>
 <meta name="twitter:description" content="@kyktommy"/>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Kyk's Blog",
-  "url": "https://kyktommy.github.io/",
-  "description": "@kyktommy",
-  "thumbnailUrl": "https://kyktommy.github.io/favicon.ico",
-  "sameAs": [
-      
-  ]
-}
-</script>
 </head>
 
 <body class="list" id="top">
@@ -128,54 +114,23 @@
     </nav>
 </header>
 <main class="main"> 
+<header class="page-header">
+  <h1>
+    Pdf
+  </h1>
+</header>
 
-<article class="post-entry"> 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Find Go Project
+    <h2 class="entry-hint-parent">Images to pdf
     </h2>
   </header>
   <div class="entry-content">
-    <p>I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to $GOPATH and cd to that package name.
-Here is my script for current solution. Assume your target project is in 3 depth of src.
-function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &#34;{}&#34; \; | grep $1 | awk &#39;{ print $9 }&#39; | nl } ➜ ~ findgo proto 1	/Users/tommy/go-workspace/src/google....</p>
+    <p>brew install img2pdf img2pdf img-*.jpg -o out.pdf </p>
   </div>
-  <footer class="entry-footer"><span title='2019-12-22 18:41:34 +0800 HKT'>December 22, 2019</span></footer>
-  <a class="entry-link" aria-label="post link to Find Go Project" href="https://kyktommy.github.io/posts/find-go-project/"></a>
+  <footer class="entry-footer"><span title='2024-08-25 14:22:36 +0800 HKT'>August 25, 2024</span></footer>
+  <a class="entry-link" aria-label="post link to Images to pdf" href="https://kyktommy.github.io/posts/images-to-pdf/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Rust Read Write File
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>use std::fs; fn main() { let data = &#34;test data&#34;; // write file let w = fs::write(&#34;tmp.txt&#34;, data); match w { Ok(()) =&gt; println!(&#34;write success&#34;), Err(err) =&gt; panic!(&#34;write fail {:?}&#34;, err), }; // read file let r = fs::read_to_string(&#34;tmp.txt&#34;); let r = match r { Ok(content) =&gt; content, Err(err) =&gt; panic!(&#34;read fail {:?}&#34;, err), }; println!(&#34;{}&#34;, r); } </p>
-  </div>
-  <footer class="entry-footer"><span title='2019-12-19 23:35:06 +0800 HKT'>December 19, 2019</span></footer>
-  <a class="entry-link" aria-label="post link to Rust Read Write File" href="https://kyktommy.github.io/posts/rust-read-write-file/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Rust Json
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Rust serialize, deserialize json use serde.
-cargo.toml
-[dependencies] serde = &#34;0.9&#34; serde_json = &#34;0.9&#34; serde_derive = &#34;0.9&#34; main.rs
-extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&lt;String&gt;, } fn main() { let data = r#&#34; { &#34;code&#34;: 200, &#34;success&#34;: true, &#34;payload&#34;: { &#34;length&#34;: 123, &#34;items&#34;: [&#34;apple&#34;, &#34;orange&#34;] } } &#34;#; // deserialize let resp: Response = serde_json::from_str(&amp;data)....</p>
-  </div>
-  <footer class="entry-footer"><span title='2019-12-18 23:29:48 +0800 HKT'>December 18, 2019</span></footer>
-  <a class="entry-link" aria-label="post link to Rust Json" href="https://kyktommy.github.io/posts/rust-json/"></a>
-</article>
-<footer class="page-footer">
-  <nav class="pagination">
-    <a class="prev" href="https://kyktommy.github.io/page/2/">
-      «&nbsp;Prev&nbsp;
-    </a>
-  </nav>
-</footer>
     </main>
     
 <footer class="footer">

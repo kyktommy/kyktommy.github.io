@@ -6,8 +6,15 @@
     <description>Recent content on Kyk&#39;s Blog</description>
     <generator>Hugo -- 0.128.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Jul 2024 17:39:43 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 25 Aug 2024 14:22:36 +0800</lastBuildDate>
     <atom:link href="https://kyktommy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Images to pdf</title>
+      <link>https://kyktommy.github.io/posts/images-to-pdf/</link>
+      <pubDate>Sun, 25 Aug 2024 14:22:36 +0800</pubDate>
+      <guid>https://kyktommy.github.io/posts/images-to-pdf/</guid>
+      <description>brew install img2pdf img2pdf img-*.jpg -o out.pdf </description>
+    </item>
     <item>
       <title>React Query GcTime StaleTime</title>
       <link>https://kyktommy.github.io/posts/react-query-gctime-staletime/</link>
