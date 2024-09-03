@@ -1,12 +1,16 @@
 baseURL = "https://kyktommy.github.io/"
 languageCode = "en-us"
-title = "Kyk's Blog"
-theme = "PaperMod"
+title = "kyk's blog"
+theme = "paper"
 
 pygmentsUseClasses = true
 
 [params]
-  description = "@kyktommy"
+  color = "light"
+  github = "kyktommy"
+  name = "kyktommy"
+  avatar = "https://avatars.githubusercontent.com/u/508813?v=4"
+  bio = "不要輕易放過自己, 就是對今天責負的態度"
   [params.links]
     "My setup" = "/my-setup"
     "Awesomes" = "https://github.com/kyktommy/awesomes"
