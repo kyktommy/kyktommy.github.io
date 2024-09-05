@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Photo on Kyk&#39;s Blog</title>
+    <title>Photo on kyk&#39;s blog</title>
     <link>https://kyktommy.github.io/tags/photo/</link>
-    <description>Recent content in Photo on Kyk&#39;s Blog</description>
-    <generator>Hugo -- 0.128.2</generator>
+    <description>Recent content in Photo on kyk&#39;s blog</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 15 Jun 2022 00:10:42 +0800</lastBuildDate>
     <atom:link href="https://kyktommy.github.io/tags/photo/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,7 @@
       <link>https://kyktommy.github.io/posts/photo-recovery-using-mac/</link>
       <pubDate>Wed, 15 Jun 2022 00:10:42 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/photo-recovery-using-mac/</guid>
-      <description>Today my colleagues&amp;rsquo; SD card is corrupted. All photos are gone. Here is my steps to recover photos, videos using mac.
-Plug the SD card in your mac, and choose ignore the corrupted sd card instead of eject when it prompt. Download testdisk using command brew install testdisk Restart your mac. Use command sudo photorec, must use sudo as administrator for detecting all disks. Select the broken SD card disk, you can unplug and plug it back in to see which disk is the SD card.</description>
+      <description>Today my colleagues&amp;rsquo; SD card is corrupted. All photos are gone. Here is my steps to recover photos, videos using mac.&#xA;Plug the SD card in your mac, and choose ignore the corrupted sd card instead of eject when it prompt. Download testdisk using command brew install testdisk Restart your mac. Use command sudo photorec, must use sudo as administrator for detecting all disks. Select the broken SD card disk, you can unplug and plug it back in to see which disk is the SD card.</description>
     </item>
   </channel>
 </rss>

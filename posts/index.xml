@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Kyk&#39;s Blog</title>
+    <title>Posts on kyk&#39;s blog</title>
     <link>https://kyktommy.github.io/posts/</link>
-    <description>Recent content in Posts on Kyk&#39;s Blog</description>
-    <generator>Hugo -- 0.128.2</generator>
+    <description>Recent content in Posts on kyk&#39;s blog</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 25 Aug 2024 14:22:36 +0800</lastBuildDate>
     <atom:link href="https://kyktommy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -20,25 +20,21 @@
       <link>https://kyktommy.github.io/posts/react-query-gctime-staletime/</link>
       <pubDate>Mon, 22 Jul 2024 17:39:43 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/react-query-gctime-staletime/</guid>
-      <description>react query gcTime / cacheTime vs staleTime
-when a component use useQuery with key, it start fetching and loading gcTime: start this timer after all components unmount (inactive) staleTime: start this timer after fetch complete, indicate whether makes api call or not case 1: when gcTime=5000, staleTime &amp;lt;= gcTime within 5s, this component re-mount will use the same data as initial, and fetch api in background, then update the cache data this component unmount, after 5s then re-mount, it start fetching and loading again cuz cache data has been gc, needs to refetching to get the data case 2: when gcTime=5000, staleTime=Infinity this component use the data and keep data as fresh, will not fetch forever </description>
+      <description>react query gcTime / cacheTime vs staleTime&#xA;when a component use useQuery with key, it start fetching and loading gcTime: start this timer after all components unmount (inactive) staleTime: start this timer after fetch complete, indicate whether makes api call or not case 1: when gcTime=5000, staleTime &amp;lt;= gcTime within 5s, this component re-mount will use the same data as initial, and fetch api in background, then update the cache data this component unmount, after 5s then re-mount, it start fetching and loading again cuz cache data has been gc, needs to refetching to get the data case 2: when gcTime=5000, staleTime=Infinity this component use the data and keep data as fresh, will not fetch forever </description>
     </item>
     <item>
       <title>Fix Exfat Drive in Mac Osx</title>
       <link>https://kyktommy.github.io/posts/fix-exfat-drive-in-mac-osx/</link>
       <pubDate>Sat, 09 Mar 2024 13:49:22 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/fix-exfat-drive-in-mac-osx/</guid>
-      <description>source: gist - scottopell/fix_exfact_drive.md
-Fix:
-diskutil list get ID (eg: disk1s1) sudo fsck_exfat -d &amp;lt;ID&amp;gt; enter YES for prompt drive will be mounted </description>
+      <description>source: gist - scottopell/fix_exfact_drive.md&#xA;Fix:&#xA;diskutil list get ID (eg: disk1s1) sudo fsck_exfat -d &amp;lt;ID&amp;gt; enter YES for prompt drive will be mounted </description>
     </item>
     <item>
       <title>Detect exfat disk in mac</title>
       <link>https://kyktommy.github.io/posts/detect-exfat-disk-in-mac/</link>
       <pubDate>Sun, 07 May 2023 17:30:34 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/detect-exfat-disk-in-mac/</guid>
-      <description>Cannot detect exfat external drive in my macbook. Here the solution,
-diskutil list get the identifer of the disk, eg: disk2s2 ps -ax | grep &amp;lt;identifier&amp;gt; get the proccess id of fsck sudo kill -9 &amp;lt;process id&amp;gt; Alert pops up and I can access the disk in finder.</description>
+      <description>Cannot detect exfat external drive in my macbook. Here the solution,&#xA;diskutil list get the identifer of the disk, eg: disk2s2 ps -ax | grep &amp;lt;identifier&amp;gt; get the proccess id of fsck sudo kill -9 &amp;lt;process id&amp;gt; Alert pops up and I can access the disk in finder.</description>
     </item>
     <item>
       <title>Golang Version Switch</title>
@@ -52,148 +48,112 @@ diskutil list get the identifer of the disk, eg: disk2s2 ps -ax | grep &amp;lt;i
       <link>https://kyktommy.github.io/posts/halfwidth-fullwidth-conversion/</link>
       <pubDate>Fri, 30 Dec 2022 20:02:35 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/halfwidth-fullwidth-conversion/</guid>
-      <description>全形半形轉換
-function half2full(str) { let len = str.length; let res = []; for (let i = 0; i &amp;lt; len; i++) { let c = str.charCodeAt(i); if (c &amp;gt;= 0x21 &amp;amp;&amp;amp; c &amp;lt;= 0x7e) { res.push(String.fromCharCode(c + 65248)); } else { res.push(str[i]); } } return res.join(&amp;#39;&amp;#39;); } function full2half(str) { let len = str.length; let res = []; for (let i = 0; i &amp;lt; len; i++) { let c = str.</description>
+      <description>全形半形轉換&#xA;function half2full(str) { let len = str.length; let res = []; for (let i = 0; i &amp;lt; len; i++) { let c = str.charCodeAt(i); if (c &amp;gt;= 0x21 &amp;amp;&amp;amp; c &amp;lt;= 0x7e) { res.push(String.fromCharCode(c + 65248)); } else { res.push(str[i]); } } return res.join(&amp;#39;&amp;#39;); } function full2half(str) { let len = str.length; let res = []; for (let i = 0; i &amp;lt; len; i++) { let c = str.</description>
     </item>
     <item>
       <title>Photo Recovery Using Mac</title>
       <link>https://kyktommy.github.io/posts/photo-recovery-using-mac/</link>
       <pubDate>Wed, 15 Jun 2022 00:10:42 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/photo-recovery-using-mac/</guid>
-      <description>Today my colleagues&amp;rsquo; SD card is corrupted. All photos are gone. Here is my steps to recover photos, videos using mac.
-Plug the SD card in your mac, and choose ignore the corrupted sd card instead of eject when it prompt. Download testdisk using command brew install testdisk Restart your mac. Use command sudo photorec, must use sudo as administrator for detecting all disks. Select the broken SD card disk, you can unplug and plug it back in to see which disk is the SD card.</description>
+      <description>Today my colleagues&amp;rsquo; SD card is corrupted. All photos are gone. Here is my steps to recover photos, videos using mac.&#xA;Plug the SD card in your mac, and choose ignore the corrupted sd card instead of eject when it prompt. Download testdisk using command brew install testdisk Restart your mac. Use command sudo photorec, must use sudo as administrator for detecting all disks. Select the broken SD card disk, you can unplug and plug it back in to see which disk is the SD card.</description>
     </item>
     <item>
       <title>Setup https for react development</title>
       <link>https://kyktommy.github.io/posts/setup-https-for-react-dev/</link>
       <pubDate>Fri, 01 Apr 2022 11:58:58 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/setup-https-for-react-dev/</guid>
-      <description>Installation $ brew install mkcert $ brew install nss Generate cert $ cd ~ $ mkcert -install $ mkcert localhost 127.0.0.1 Use cert in .bashrc define
-export SSL_CRT_FILE=~/localhost+1.pem export SSL_KEY_FILE=~/localhost+1-key.pem start react with
-HTTPS=true yarn start </description>
+      <description>Installation $ brew install mkcert $ brew install nss Generate cert $ cd ~ $ mkcert -install $ mkcert localhost 127.0.0.1 Use cert in .bashrc define&#xA;export SSL_CRT_FILE=~/localhost+1.pem export SSL_KEY_FILE=~/localhost+1-key.pem start react with&#xA;HTTPS=true yarn start </description>
     </item>
     <item>
       <title>Cra Import Sort</title>
       <link>https://kyktommy.github.io/posts/cra-import-sort/</link>
       <pubDate>Sat, 31 Jul 2021 15:33:29 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/cra-import-sort/</guid>
-      <description>Target import path alias, relative path is not good for refactoring import sorting across the team, everyone got same import order eslint fix, vscode intelligence fix Result // sort import import React, { useEffect, useState } from &amp;#39;react&amp;#39; // alias import path import MyButton from &amp;#39;@/components/MyButton&amp;#39; Install craco eslint-plugin-simple-import-sort eslint-import-resolver-alias Setup craco.config.js
-map @ to all folder in src const path = require(&amp;#39;path&amp;#39;) module.exports = { webpack: { alias: { &amp;#39;@&amp;#39;: path.</description>
+      <description>Target import path alias, relative path is not good for refactoring import sorting across the team, everyone got same import order eslint fix, vscode intelligence fix Result // sort import import React, { useEffect, useState } from &amp;#39;react&amp;#39; // alias import path import MyButton from &amp;#39;@/components/MyButton&amp;#39; Install craco eslint-plugin-simple-import-sort eslint-import-resolver-alias Setup craco.config.js&#xA;map @ to all folder in src const path = require(&amp;#39;path&amp;#39;) module.exports = { webpack: { alias: { &amp;#39;@&amp;#39;: path.</description>
     </item>
     <item>
       <title>Multiple Github Account</title>
       <link>https://kyktommy.github.io/posts/multiple-github-account/</link>
       <pubDate>Mon, 10 May 2021 14:50:58 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/multiple-github-account/</guid>
-      <description>Target Setup multiple github accounts Push to different account&amp;rsquo;s remote repo automatically Setup First, generate new ssh key for new github account.
-$ ssh-keygen -t rsa -C &amp;#34;kyktommy@gmail.com&amp;#34; -f &amp;#34;id_rsa_kyktommy&amp;#34; $ ssh-add ~/.ssh/id_rsa_kyktommy Second, edit .ssh/config, there are 2 github account, which has different Host, they uses different rsa key for github.com.
-# Account 1 Host github.com HostName github.com User git IdentityFile ~/.ssh/id_rsa # Account 2 Host github.com-kyktommy HostName github.com User git IdentityFile ~/.</description>
+      <description>Target Setup multiple github accounts Push to different account&amp;rsquo;s remote repo automatically Setup First, generate new ssh key for new github account.&#xA;$ ssh-keygen -t rsa -C &amp;#34;kyktommy@gmail.com&amp;#34; -f &amp;#34;id_rsa_kyktommy&amp;#34; $ ssh-add ~/.ssh/id_rsa_kyktommy Second, edit .ssh/config, there are 2 github account, which has different Host, they uses different rsa key for github.com.&#xA;# Account 1 Host github.com HostName github.com User git IdentityFile ~/.ssh/id_rsa # Account 2 Host github.com-kyktommy HostName github.com User git IdentityFile ~/.</description>
     </item>
     <item>
       <title>Rainbow Border</title>
       <link>https://kyktommy.github.io/posts/rainbow-border/</link>
       <pubDate>Thu, 11 Feb 2021 20:32:28 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/rainbow-border/</guid>
-      <description>https://codepen.io/kyktommy/pen/bGBBBZL
-Outside box fill with rainbow gradient background Inside box fill with solid background color /* .box &amp;gt; .inner */ .box { width: 100px; height: 100px; padding: 3px; box-sizing: border-box; background-image: linear-gradient( to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100% ); } .inner { width: 100%; height: 100%; background: black; } New css version (safari not supporting)
-https://codepen.io/unnegative/pen/dVwYBq</description>
+      <description>https://codepen.io/kyktommy/pen/bGBBBZL&#xA;Outside box fill with rainbow gradient background Inside box fill with solid background color /* .box &amp;gt; .inner */ .box { width: 100px; height: 100px; padding: 3px; box-sizing: border-box; background-image: linear-gradient( to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100% ); } .inner { width: 100%; height: 100%; background: black; } New css version (safari not supporting)&#xA;https://codepen.io/unnegative/pen/dVwYBq</description>
     </item>
     <item>
       <title>Expressjs Multer File Upload</title>
       <link>https://kyktommy.github.io/posts/expressjs-multer-file-upload/</link>
       <pubDate>Sun, 31 Jan 2021 21:08:24 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/expressjs-multer-file-upload/</guid>
-      <description>Expressjs + Multer for file upload.
-Usages: multer({ limits, fileFilter, storage }) creates Multer object for reusable in different requset handlers.
-limits limit fileSize, fieldName, etc&amp;hellip; fileFilter custom file validation storage disk / memory / custom storage transform ([s3) multer().array(&#39;photos&#39;, 2) creates request handler for different routes.
-single one file upload, get by req.file array multiple files upload, get by req.files fields multiple field for files upload, get by req.files[&amp;lt;fieldName&amp;gt;][0] Example </description>
+      <description>Expressjs + Multer for file upload.&#xA;Usages: multer({ limits, fileFilter, storage }) creates Multer object for reusable in different requset handlers.&#xA;limits limit fileSize, fieldName, etc&amp;hellip; fileFilter custom file validation storage disk / memory / custom storage transform ([s3) multer().array(&#39;photos&#39;, 2) creates request handler for different routes.&#xA;single one file upload, get by req.file array multiple files upload, get by req.files fields multiple field for files upload, get by req.files[&amp;lt;fieldName&amp;gt;][0] Example </description>
     </item>
     <item>
       <title>Aes Cbc Pkcs7</title>
       <link>https://kyktommy.github.io/posts/aes-cbc-pkcs7/</link>
       <pubDate>Wed, 20 Jan 2021 22:24:28 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/aes-cbc-pkcs7/</guid>
-      <description>Logic:
-sha256 key and iv AES encryption CBC mode PKCS7 padding Versions:
-golang version javascript version golang version package main import ( &amp;#34;bytes&amp;#34; &amp;#34;crypto/aes&amp;#34; &amp;#34;crypto/cipher&amp;#34; &amp;#34;crypto/sha256&amp;#34; &amp;#34;fmt&amp;#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.</description>
+      <description>Logic:&#xA;sha256 key and iv AES encryption CBC mode PKCS7 padding Versions:&#xA;golang version javascript version golang version package main import ( &amp;#34;bytes&amp;#34; &amp;#34;crypto/aes&amp;#34; &amp;#34;crypto/cipher&amp;#34; &amp;#34;crypto/sha256&amp;#34; &amp;#34;fmt&amp;#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.</description>
     </item>
     <item>
       <title>Mac Imageoptim Auto</title>
       <link>https://kyktommy.github.io/posts/mac-imageoptim-auto/</link>
       <pubDate>Tue, 13 Oct 2020 13:00:39 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/mac-imageoptim-auto/</guid>
-      <description>I want to automatically convert pdf to jpg, and compress jpg.
-First, need to install ImageOptim, and put in Application folder.
-Then install ImageOptim-CLI to run ImageOptim in command line.
-# convert pdf to jpg sips --resampleWidth 1024 -s format jpeg *.pdf --out dist/ # compress all jpg in dist folder imageoptim dist </description>
+      <description>I want to automatically convert pdf to jpg, and compress jpg.&#xA;First, need to install ImageOptim, and put in Application folder.&#xA;Then install ImageOptim-CLI to run ImageOptim in command line.&#xA;# convert pdf to jpg sips --resampleWidth 1024 -s format jpeg *.pdf --out dist/ # compress all jpg in dist folder imageoptim dist </description>
     </item>
     <item>
       <title>Redux Typescript</title>
       <link>https://kyktommy.github.io/posts/redux-typescript/</link>
       <pubDate>Mon, 20 Jul 2020 19:46:45 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/redux-typescript/</guid>
-      <description>There are two library for redux,
-redux-toolkit create a slice for reducer, action = reducer key name reduxsauce normal createActions, createReducer I recommend redux-toolkit, because it has better support for typescript.
-It restrict PayloadAction&amp;lt;SOMETHING&amp;gt; for action creator and reducer.
-But the downside is action must be binded to reducer.
-Must need to create new action for dispatch two actions.</description>
+      <description>There are two library for redux,&#xA;redux-toolkit create a slice for reducer, action = reducer key name reduxsauce normal createActions, createReducer I recommend redux-toolkit, because it has better support for typescript.&#xA;It restrict PayloadAction&amp;lt;SOMETHING&amp;gt; for action creator and reducer.&#xA;But the downside is action must be binded to reducer.&#xA;Must need to create new action for dispatch two actions.</description>
     </item>
     <item>
       <title>Youtube Dl Helper</title>
       <link>https://kyktommy.github.io/posts/youtube-dl-helper/</link>
       <pubDate>Sun, 12 Apr 2020 00:03:11 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/youtube-dl-helper/</guid>
-      <description>youtube-dl is a great tool to download youtube stuff.
-Here is some helper script I used.
-# download as mp4, playlist also function youtube-dl-mp4() { youtube-dl -f &amp;#34;[height &amp;lt;=? 720][tbr&amp;gt;500]&amp;#34; --yes-playlist $1 } # download as mp3 function youtube-dl-mp3() { youtube-dl -x --audio-format mp3 --add-metadata $1 } # download subtitle en function youtube-dl-sub() { youtube-dl --write-sub --sub-lang en --skip-download $1 } </description>
+      <description>youtube-dl is a great tool to download youtube stuff.&#xA;Here is some helper script I used.&#xA;# download as mp4, playlist also function youtube-dl-mp4() { youtube-dl -f &amp;#34;[height &amp;lt;=? 720][tbr&amp;gt;500]&amp;#34; --yes-playlist $1 } # download as mp3 function youtube-dl-mp3() { youtube-dl -x --audio-format mp3 --add-metadata $1 } # download subtitle en function youtube-dl-sub() { youtube-dl --write-sub --sub-lang en --skip-download $1 } </description>
     </item>
     <item>
       <title>Go Defer And Recover</title>
       <link>https://kyktommy.github.io/posts/go-defer-and-recover/</link>
       <pubDate>Fri, 21 Feb 2020 21:55:25 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/go-defer-and-recover/</guid>
-      <description>Go defer is LIFO. defer function will be executed even after panic. So put recover inside defer.
-package main import ( &amp;#34;fmt&amp;#34; &amp;#34;time&amp;#34; ) func main() { defer func() { fmt.Println(&amp;#34;main defer&amp;#34;) }() go func() { defer func() { if err := recover(); err != nil { fmt.Println(&amp;#34;recover&amp;#34;, err) } }() panic(&amp;#34;panic here&amp;#34;) }() time.Sleep(1 \* time.Second) fmt.Println(&amp;#34;end&amp;#34;) } output:
-recover panic here end main defer </description>
+      <description>Go defer is LIFO. defer function will be executed even after panic. So put recover inside defer.&#xA;package main import ( &amp;#34;fmt&amp;#34; &amp;#34;time&amp;#34; ) func main() { defer func() { fmt.Println(&amp;#34;main defer&amp;#34;) }() go func() { defer func() { if err := recover(); err != nil { fmt.Println(&amp;#34;recover&amp;#34;, err) } }() panic(&amp;#34;panic here&amp;#34;) }() time.Sleep(1 \* time.Second) fmt.Println(&amp;#34;end&amp;#34;) } output:&#xA;recover panic here end main defer </description>
     </item>
     <item>
       <title>Git Move Repo</title>
       <link>https://kyktommy.github.io/posts/git-move-repo/</link>
       <pubDate>Thu, 13 Feb 2020 17:38:52 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/git-move-repo/</guid>
-      <description> Clone the project from old repo url
-git clone &amp;lt;old_repo_url&amp;gt; Pull all branches
-git branch -r | grep -v &amp;#39;\-&amp;gt;&amp;#39; | while read remote; do git branch --track &amp;#34;${remote#origin/}&amp;#34; &amp;#34;$remote&amp;#34;; done git fetch --all git pull --all Change remote to new repo url
-git remote set-url origin &amp;lt;new_repo&amp;gt; Push all to new repo url
-git push --all git push --tags </description>
+      <description> Clone the project from old repo url&#xA;git clone &amp;lt;old_repo_url&amp;gt; Pull all branches&#xA;git branch -r | grep -v &amp;#39;\-&amp;gt;&amp;#39; | while read remote; do git branch --track &amp;#34;${remote#origin/}&amp;#34; &amp;#34;$remote&amp;#34;; done git fetch --all git pull --all Change remote to new repo url&#xA;git remote set-url origin &amp;lt;new_repo&amp;gt; Push all to new repo url&#xA;git push --all git push --tags </description>
     </item>
     <item>
       <title>Go Cap Problem</title>
       <link>https://kyktommy.github.io/posts/go-cap-problem/</link>
       <pubDate>Thu, 09 Jan 2020 23:59:01 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/go-cap-problem/</guid>
-      <description>golang cap
-The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
-If we append item to a slice that over the capacity, it will return the new array. But if we append item to a slice within capacity, it will change the orginal one.
-The following code shows underCap changes the input array.
-func overCap(a []int) []int { fmt.</description>
+      <description>golang cap&#xA;The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.&#xA;If we append item to a slice that over the capacity, it will return the new array. But if we append item to a slice within capacity, it will change the orginal one.&#xA;The following code shows underCap changes the input array.&#xA;func overCap(a []int) []int { fmt.</description>
     </item>
     <item>
       <title>Go Http Log</title>
       <link>https://kyktommy.github.io/posts/go-http-log/</link>
       <pubDate>Tue, 31 Dec 2019 19:21:43 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/go-http-log/</guid>
-      <description>We need a logger for every routes, so made a simple http log middleware. Need to replace writer to custom one, and also take care of reading body.
-package main import ( &amp;#34;bytes&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;io&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;strings&amp;#34; ) type bodyLogWriter struct { http.ResponseWriter body *bytes.Buffer } func (w bodyLogWriter) Write(b []byte) (int, error) { w.body.Write(b) return w.ResponseWriter.Write(b) } func main() { httpLog := func(next http.Handler) http.Handler { return http.HandlerFunc(func(w http.</description>
+      <description>We need a logger for every routes, so made a simple http log middleware. Need to replace writer to custom one, and also take care of reading body.&#xA;package main import ( &amp;#34;bytes&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;io&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;strings&amp;#34; ) type bodyLogWriter struct { http.ResponseWriter body *bytes.Buffer } func (w bodyLogWriter) Write(b []byte) (int, error) { w.body.Write(b) return w.ResponseWriter.Write(b) } func main() { httpLog := func(next http.Handler) http.Handler { return http.HandlerFunc(func(w http.</description>
     </item>
     <item>
       <title>Find Go Project</title>
       <link>https://kyktommy.github.io/posts/find-go-project/</link>
       <pubDate>Sun, 22 Dec 2019 18:41:34 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/find-go-project/</guid>
-      <description>I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to $GOPATH and cd to that package name.
-Here is my script for current solution. Assume your target project is in 3 depth of src.
-function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &amp;#34;{}&amp;#34; \; | grep $1 | awk &amp;#39;{ print $9 }&amp;#39; | nl } ➜ ~ findgo proto 1	/Users/tommy/go-workspace/src/google.</description>
+      <description>I have so many go projects in go path. Since i didnt bookmarked all projects, so each time i need to go to $GOPATH and cd to that package name.&#xA;Here is my script for current solution. Assume your target project is in 3 depth of src.&#xA;function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -ld &amp;#34;{}&amp;#34; \; | grep $1 | awk &amp;#39;{ print $9 }&amp;#39; | nl } ➜ ~ findgo proto 1&#x9;/Users/tommy/go-workspace/src/google.</description>
     </item>
     <item>
       <title>Rust Read Write File</title>
@@ -207,10 +167,7 @@ function findgo() { find $GOPATH/src -mindepth 3 -maxdepth 3 -type d -exec ls -l
       <link>https://kyktommy.github.io/posts/rust-json/</link>
       <pubDate>Wed, 18 Dec 2019 23:29:48 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/rust-json/</guid>
-      <description>Rust serialize, deserialize json use serde.
-cargo.toml
-[dependencies] serde = &amp;#34;0.9&amp;#34; serde_json = &amp;#34;0.9&amp;#34; serde_derive = &amp;#34;0.9&amp;#34; main.rs
-extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&amp;lt;String&amp;gt;, } fn main() { let data = r#&amp;#34; { &amp;#34;code&amp;#34;: 200, &amp;#34;success&amp;#34;: true, &amp;#34;payload&amp;#34;: { &amp;#34;length&amp;#34;: 123, &amp;#34;items&amp;#34;: [&amp;#34;apple&amp;#34;, &amp;#34;orange&amp;#34;] } } &amp;#34;#; // deserialize let resp: Response = serde_json::from_str(&amp;amp;data).</description>
+      <description>Rust serialize, deserialize json use serde.&#xA;cargo.toml&#xA;[dependencies] serde = &amp;#34;0.9&amp;#34; serde_json = &amp;#34;0.9&amp;#34; serde_derive = &amp;#34;0.9&amp;#34; main.rs&#xA;extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&amp;lt;String&amp;gt;, } fn main() { let data = r#&amp;#34; { &amp;#34;code&amp;#34;: 200, &amp;#34;success&amp;#34;: true, &amp;#34;payload&amp;#34;: { &amp;#34;length&amp;#34;: 123, &amp;#34;items&amp;#34;: [&amp;#34;apple&amp;#34;, &amp;#34;orange&amp;#34;] } } &amp;#34;#; // deserialize let resp: Response = serde_json::from_str(&amp;amp;data).</description>
     </item>
   </channel>
 </rss>

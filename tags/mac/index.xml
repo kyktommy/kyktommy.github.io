@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mac on Kyk&#39;s Blog</title>
+    <title>Mac on kyk&#39;s blog</title>
     <link>https://kyktommy.github.io/tags/mac/</link>
-    <description>Recent content in Mac on Kyk&#39;s Blog</description>
-    <generator>Hugo -- 0.128.2</generator>
+    <description>Recent content in Mac on kyk&#39;s blog</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 07 May 2023 17:30:34 +0800</lastBuildDate>
     <atom:link href="https://kyktommy.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
@@ -13,18 +13,14 @@
       <link>https://kyktommy.github.io/posts/detect-exfat-disk-in-mac/</link>
       <pubDate>Sun, 07 May 2023 17:30:34 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/detect-exfat-disk-in-mac/</guid>
-      <description>Cannot detect exfat external drive in my macbook. Here the solution,
-diskutil list get the identifer of the disk, eg: disk2s2 ps -ax | grep &amp;lt;identifier&amp;gt; get the proccess id of fsck sudo kill -9 &amp;lt;process id&amp;gt; Alert pops up and I can access the disk in finder.</description>
+      <description>Cannot detect exfat external drive in my macbook. Here the solution,&#xA;diskutil list get the identifer of the disk, eg: disk2s2 ps -ax | grep &amp;lt;identifier&amp;gt; get the proccess id of fsck sudo kill -9 &amp;lt;process id&amp;gt; Alert pops up and I can access the disk in finder.</description>
     </item>
     <item>
       <title>Mac Imageoptim Auto</title>
       <link>https://kyktommy.github.io/posts/mac-imageoptim-auto/</link>
       <pubDate>Tue, 13 Oct 2020 13:00:39 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/mac-imageoptim-auto/</guid>
-      <description>I want to automatically convert pdf to jpg, and compress jpg.
-First, need to install ImageOptim, and put in Application folder.
-Then install ImageOptim-CLI to run ImageOptim in command line.
-# convert pdf to jpg sips --resampleWidth 1024 -s format jpeg *.pdf --out dist/ # compress all jpg in dist folder imageoptim dist </description>
+      <description>I want to automatically convert pdf to jpg, and compress jpg.&#xA;First, need to install ImageOptim, and put in Application folder.&#xA;Then install ImageOptim-CLI to run ImageOptim in command line.&#xA;# convert pdf to jpg sips --resampleWidth 1024 -s format jpeg *.pdf --out dist/ # compress all jpg in dist folder imageoptim dist </description>
     </item>
   </channel>
 </rss>
