@@ -23,9 +23,9 @@ const imageBuffer = await (await request.get(url)).body()
 const jpgBuffer = await sharp(imageBuffer).jpeg({ mozjpeg: true }).toBuffer()
 fs.writeFileSync(imagePath, jpgBuffer)
 
-const images = [imagePath]
 const size = imageSize(imagePath)
-imgToPDF(files, [size.width, size.height]).pipe(
+const images = [imagePath]
+imgToPDF(images, [size.width, size.height]).pipe(
   fs.createWriteStream(pdfPath)
 );
 ```
