@@ -120,49 +120,39 @@ extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_der
   />
 
   
-  <meta name="generator" content="Hugo 0.128.2">
+  <meta name="generator" content="Hugo 0.111.3">
 
   
   
   
-  
-  
-
-
   
   
   <meta itemprop="name" content="Rust Json">
-  <meta itemprop="description" content="Rust serialize, deserialize json use serde.
+<meta itemprop="description" content="Rust serialize, deserialize json use serde.
 cargo.toml
 [dependencies] serde = &#34;0.9&#34; serde_json = &#34;0.9&#34; serde_derive = &#34;0.9&#34; main.rs
-extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&lt;String&gt;, } fn main() { let data = r#&#34; { &#34;code&#34;: 200, &#34;success&#34;: true, &#34;payload&#34;: { &#34;length&#34;: 123, &#34;items&#34;: [&#34;apple&#34;, &#34;orange&#34;] } } &#34;#; // deserialize let resp: Response = serde_json::from_str(&amp;data).">
-  <meta itemprop="datePublished" content="2019-12-18T23:29:48+08:00">
-  <meta itemprop="dateModified" content="2019-12-18T23:29:48+08:00">
-  <meta itemprop="wordCount" content="114">
-  <meta itemprop="keywords" content="Rust">
+extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&lt;String&gt;, } fn main() { let data = r#&#34; { &#34;code&#34;: 200, &#34;success&#34;: true, &#34;payload&#34;: { &#34;length&#34;: 123, &#34;items&#34;: [&#34;apple&#34;, &#34;orange&#34;] } } &#34;#; // deserialize let resp: Response = serde_json::from_str(&amp;data)."><meta itemprop="datePublished" content="2019-12-18T23:29:48+08:00" />
+<meta itemprop="dateModified" content="2019-12-18T23:29:48+08:00" />
+<meta itemprop="wordCount" content="114">
+<meta itemprop="keywords" content="rust," />
   
-  <meta property="og:url" content="https://kyktommy.github.io/posts/rust-json/">
-  <meta property="og:site_name" content="kyk&#39;s blog">
-  <meta property="og:title" content="Rust Json">
-  <meta property="og:description" content="Rust serialize, deserialize json use serde.
+  <meta property="og:title" content="Rust Json" />
+<meta property="og:description" content="Rust serialize, deserialize json use serde.
 cargo.toml
 [dependencies] serde = &#34;0.9&#34; serde_json = &#34;0.9&#34; serde_derive = &#34;0.9&#34; main.rs
-extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&lt;String&gt;, } fn main() { let data = r#&#34; { &#34;code&#34;: 200, &#34;success&#34;: true, &#34;payload&#34;: { &#34;length&#34;: 123, &#34;items&#34;: [&#34;apple&#34;, &#34;orange&#34;] } } &#34;#; // deserialize let resp: Response = serde_json::from_str(&amp;data).">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2019-12-18T23:29:48+08:00">
-    <meta property="article:modified_time" content="2019-12-18T23:29:48+08:00">
-    <meta property="article:tag" content="Rust">
+extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&lt;String&gt;, } fn main() { let data = r#&#34; { &#34;code&#34;: 200, &#34;success&#34;: true, &#34;payload&#34;: { &#34;length&#34;: 123, &#34;items&#34;: [&#34;apple&#34;, &#34;orange&#34;] } } &#34;#; // deserialize let resp: Response = serde_json::from_str(&amp;data)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kyktommy.github.io/posts/rust-json/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-12-18T23:29:48+08:00" />
+<meta property="article:modified_time" content="2019-12-18T23:29:48+08:00" />
 
   
-  
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Rust Json">
-  <meta name="twitter:description" content="Rust serialize, deserialize json use serde.
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Rust Json"/>
+<meta name="twitter:description" content="Rust serialize, deserialize json use serde.
 cargo.toml
 [dependencies] serde = &#34;0.9&#34; serde_json = &#34;0.9&#34; serde_derive = &#34;0.9&#34; main.rs
-extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&lt;String&gt;, } fn main() { let data = r#&#34; { &#34;code&#34;: 200, &#34;success&#34;: true, &#34;payload&#34;: { &#34;length&#34;: 123, &#34;items&#34;: [&#34;apple&#34;, &#34;orange&#34;] } } &#34;#; // deserialize let resp: Response = serde_json::from_str(&amp;data).">
+extern crate serde; extern crate serde_json; #[macro_use] extern crate serde_derive; #[derive(Serialize, Deserialize, Debug)] struct Response { code: u32, success: bool, payload: Payload, } #[derive(Serialize, Deserialize, Debug)] struct Payload { length: u32, items: Vec&lt;String&gt;, } fn main() { let data = r#&#34; { &#34;code&#34;: 200, &#34;success&#34;: true, &#34;payload&#34;: { &#34;length&#34;: 123, &#34;items&#34;: [&#34;apple&#34;, &#34;orange&#34;] } } &#34;#; // deserialize let resp: Response = serde_json::from_str(&amp;data)."/>
 
   
   

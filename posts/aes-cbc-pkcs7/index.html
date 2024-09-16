@@ -119,47 +119,36 @@ golang version javascript version golang version package main import ( &#34;byte
   />
 
   
-  <meta name="generator" content="Hugo 0.128.2">
+  <meta name="generator" content="Hugo 0.111.3">
 
   
   
   
-  
-  
-
-
   
   
   <meta itemprop="name" content="Aes Cbc Pkcs7">
-  <meta itemprop="description" content="Logic:
+<meta itemprop="description" content="Logic:
 sha256 key and iv AES encryption CBC mode PKCS7 padding Versions:
-golang version javascript version golang version package main import ( &#34;bytes&#34; &#34;crypto/aes&#34; &#34;crypto/cipher&#34; &#34;crypto/sha256&#34; &#34;fmt&#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.">
-  <meta itemprop="datePublished" content="2021-01-20T22:24:28+08:00">
-  <meta itemprop="dateModified" content="2021-01-20T22:24:28+08:00">
-  <meta itemprop="wordCount" content="232">
-  <meta itemprop="keywords" content="Golang,Js">
+golang version javascript version golang version package main import ( &#34;bytes&#34; &#34;crypto/aes&#34; &#34;crypto/cipher&#34; &#34;crypto/sha256&#34; &#34;fmt&#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes."><meta itemprop="datePublished" content="2021-01-20T22:24:28+08:00" />
+<meta itemprop="dateModified" content="2021-01-20T22:24:28+08:00" />
+<meta itemprop="wordCount" content="232">
+<meta itemprop="keywords" content="golang,js," />
   
-  <meta property="og:url" content="https://kyktommy.github.io/posts/aes-cbc-pkcs7/">
-  <meta property="og:site_name" content="kyk&#39;s blog">
-  <meta property="og:title" content="Aes Cbc Pkcs7">
-  <meta property="og:description" content="Logic:
+  <meta property="og:title" content="Aes Cbc Pkcs7" />
+<meta property="og:description" content="Logic:
 sha256 key and iv AES encryption CBC mode PKCS7 padding Versions:
-golang version javascript version golang version package main import ( &#34;bytes&#34; &#34;crypto/aes&#34; &#34;crypto/cipher&#34; &#34;crypto/sha256&#34; &#34;fmt&#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.">
-  <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2021-01-20T22:24:28+08:00">
-    <meta property="article:modified_time" content="2021-01-20T22:24:28+08:00">
-    <meta property="article:tag" content="Golang">
-    <meta property="article:tag" content="Js">
+golang version javascript version golang version package main import ( &#34;bytes&#34; &#34;crypto/aes&#34; &#34;crypto/cipher&#34; &#34;crypto/sha256&#34; &#34;fmt&#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kyktommy.github.io/posts/aes-cbc-pkcs7/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-20T22:24:28+08:00" />
+<meta property="article:modified_time" content="2021-01-20T22:24:28+08:00" />
 
   
-  
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Aes Cbc Pkcs7">
-  <meta name="twitter:description" content="Logic:
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Aes Cbc Pkcs7"/>
+<meta name="twitter:description" content="Logic:
 sha256 key and iv AES encryption CBC mode PKCS7 padding Versions:
-golang version javascript version golang version package main import ( &#34;bytes&#34; &#34;crypto/aes&#34; &#34;crypto/cipher&#34; &#34;crypto/sha256&#34; &#34;fmt&#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.">
+golang version javascript version golang version package main import ( &#34;bytes&#34; &#34;crypto/aes&#34; &#34;crypto/cipher&#34; &#34;crypto/sha256&#34; &#34;fmt&#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes."/>
 
   
   
