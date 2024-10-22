@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Typescript on kyk&#39;s blog</title>
-    <link>https://kyktommy.github.io/tags/typescript/</link>
-    <description>Recent content in Typescript on kyk&#39;s blog</description>
+    <title>Javascript on kyk&#39;s blog</title>
+    <link>https://kyktommy.github.io/categories/javascript/</link>
+    <description>Recent content in Javascript on kyk&#39;s blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 22 Oct 2024 11:33:35 +0800</lastBuildDate>
-    <atom:link href="https://kyktommy.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://kyktommy.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tsup Config</title>
       <link>https://kyktommy.github.io/posts/tsup-config/</link>
       <pubDate>Tue, 22 Oct 2024 11:33:35 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/tsup-config/</guid>
       <description>Configure tsup to build typescript library&#xA;// package.json { &amp;#34;script&amp;#34;: { &amp;#34;build&amp;#34;: &amp;#34;tsup --out-dir dist&amp;#34; }, &amp;#34;tsup&amp;#34;: { &amp;#34;clean&amp;#34;: true, &amp;#34;sourcemap&amp;#34;: false, &amp;#34;dts&amp;#34;: true, &amp;#34;minify&amp;#34;: true, &amp;#34;target&amp;#34;: &amp;#34;ES2020&amp;#34;, &amp;#34;format&amp;#34;: [ &amp;#34;esm&amp;#34;, &amp;#34;cjs&amp;#34; ], &amp;#34;entry&amp;#34;: [ &amp;#34;src/index.ts&amp;#34; ] }, } </description>
-    </item>
-    <item>
-      <title>Redux Typescript</title>
-      <link>https://kyktommy.github.io/posts/redux-typescript/</link>
-      <pubDate>Mon, 20 Jul 2020 19:46:45 +0800</pubDate>
-      <guid>https://kyktommy.github.io/posts/redux-typescript/</guid>
-      <description>There are two library for redux,&#xA;redux-toolkit create a slice for reducer, action = reducer key name reduxsauce normal createActions, createReducer I recommend redux-toolkit, because it has better support for typescript.&#xA;It restrict PayloadAction&amp;lt;SOMETHING&amp;gt; for action creator and reducer.&#xA;But the downside is action must be binded to reducer.&#xA;Must need to create new action for dispatch two actions.</description>
     </item>
   </channel>
 </rss>

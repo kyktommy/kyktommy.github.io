@@ -1,0 +1,378 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #fff"
+  lang="en-us"
+  dir="ltr"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Js Remote Jpeg to Pdf - kyk&#39;s blog</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="installation sharp image-to-pdf image-size import sharp from &#39;sharp&#39; import imgToPDF from &#34;image-to-pdf&#34; import imageSize from &#34;image-size&#34; const imagePath = &#39;./1.jpg&#39; const pdfPath = &#39;./1.pdf&#39; const imageBuffer = await (await request.get(url)).body() const jpgBuffer = await sharp(imageBuffer).jpeg({ mozjpeg: true }).toBuffer() fs.writeFileSync(imagePath, jpgBuffer) const size = imageSize(imagePath) const images = [imagePath] imgToPDF(images, [size.width, size.height]).pipe( fs.createWriteStream(pdfPath) ); " />
+  <meta name="author" content="kyktommy" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://kyktommy.github.io/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://kyktommy.github.io/theme.png" />
+
+  
+  
+  
+  
+  <link rel="preload" as="image" href="https://avatars.githubusercontent.com/u/508813?v=4" />
+  
+  
+
+  
+  
+  <link rel="preload" as="image" href="https://kyktommy.github.io/github.svg" />
+  
+  
+
+  
+  
+  <script
+    defer
+    src="https://kyktommy.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="https://kyktommy.github.io/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="https://kyktommy.github.io/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.128.2">
+
+  
+  
+  
+  
+  
+
+
+  
+  
+  <meta itemprop="name" content="Js Remote Jpeg to Pdf">
+  <meta itemprop="description" content="installation sharp image-to-pdf image-size import sharp from &#39;sharp&#39; import imgToPDF from &#34;image-to-pdf&#34; import imageSize from &#34;image-size&#34; const imagePath = &#39;./1.jpg&#39; const pdfPath = &#39;./1.pdf&#39; const imageBuffer = await (await request.get(url)).body() const jpgBuffer = await sharp(imageBuffer).jpeg({ mozjpeg: true }).toBuffer() fs.writeFileSync(imagePath, jpgBuffer) const size = imageSize(imagePath) const images = [imagePath] imgToPDF(images, [size.width, size.height]).pipe( fs.createWriteStream(pdfPath) ); ">
+  <meta itemprop="datePublished" content="2024-09-16T18:46:49+08:00">
+  <meta itemprop="dateModified" content="2024-09-16T18:46:49+08:00">
+  <meta itemprop="wordCount" content="53">
+  <meta itemprop="keywords" content="Js,Nodejs">
+  
+  <meta property="og:url" content="https://kyktommy.github.io/posts/js-remote-jpeg-to-pdf/">
+  <meta property="og:site_name" content="kyk&#39;s blog">
+  <meta property="og:title" content="Js Remote Jpeg to Pdf">
+  <meta property="og:description" content="installation sharp image-to-pdf image-size import sharp from &#39;sharp&#39; import imgToPDF from &#34;image-to-pdf&#34; import imageSize from &#34;image-size&#34; const imagePath = &#39;./1.jpg&#39; const pdfPath = &#39;./1.pdf&#39; const imageBuffer = await (await request.get(url)).body() const jpgBuffer = await sharp(imageBuffer).jpeg({ mozjpeg: true }).toBuffer() fs.writeFileSync(imagePath, jpgBuffer) const size = imageSize(imagePath) const images = [imagePath] imgToPDF(images, [size.width, size.height]).pipe( fs.createWriteStream(pdfPath) ); ">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-16T18:46:49+08:00">
+    <meta property="article:modified_time" content="2024-09-16T18:46:49+08:00">
+    <meta property="article:tag" content="Js">
+    <meta property="article:tag" content="Nodejs">
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Js Remote Jpeg to Pdf">
+  <meta name="twitter:description" content="installation sharp image-to-pdf image-size import sharp from &#39;sharp&#39; import imgToPDF from &#34;image-to-pdf&#34; import imageSize from &#34;image-size&#34; const imagePath = &#39;./1.jpg&#39; const pdfPath = &#39;./1.pdf&#39; const imageBuffer = await (await request.get(url)).body() const jpgBuffer = await sharp(imageBuffer).jpeg({ mozjpeg: true }).toBuffer() fs.writeFileSync(imagePath, jpgBuffer) const size = imageSize(imagePath) const images = [imagePath] imgToPDF(images, [size.width, size.height]).pipe( fs.createWriteStream(pdfPath) ); ">
+
+  
+  
+
+  
+  <link rel="canonical" href="https://kyktommy.github.io/posts/js-remote-jpeg-to-pdf/" />
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="https://kyktommy.github.io/"
+      >kyk&#39;s blog</a
+    >
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#fff'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 rtl:space-x-reverse dark:invert ltr:lg:ml-14 rtl:lg:mr-14 lg:mt-0 lg:items-center"
+    >
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/kyktommy"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">Js Remote Jpeg to Pdf</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>Sep 16, 2024</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><h3 id="installation">installation</h3>
+<ol>
+<li>sharp</li>
+<li>image-to-pdf</li>
+<li>image-size</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">sharp</span> <span class="kr">from</span> <span class="s1">&#39;sharp&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">imgToPDF</span> <span class="kr">from</span> <span class="s2">&#34;image-to-pdf&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">imageSize</span> <span class="kr">from</span> <span class="s2">&#34;image-size&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">imagePath</span> <span class="o">=</span> <span class="s1">&#39;./1.jpg&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">pdfPath</span> <span class="o">=</span> <span class="s1">&#39;./1.pdf&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">imageBuffer</span> <span class="o">=</span> <span class="k">await</span> <span class="p">(</span><span class="k">await</span> <span class="nx">request</span><span class="p">.</span><span class="kr">get</span><span class="p">(</span><span class="nx">url</span><span class="p">)).</span><span class="nx">body</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">jpgBuffer</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">sharp</span><span class="p">(</span><span class="nx">imageBuffer</span><span class="p">).</span><span class="nx">jpeg</span><span class="p">({</span> <span class="nx">mozjpeg</span>: <span class="kt">true</span> <span class="p">}).</span><span class="nx">toBuffer</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fs</span><span class="p">.</span><span class="nx">writeFileSync</span><span class="p">(</span><span class="nx">imagePath</span><span class="p">,</span> <span class="nx">jpgBuffer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">size</span> <span class="o">=</span> <span class="nx">imageSize</span><span class="p">(</span><span class="nx">imagePath</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">images</span> <span class="o">=</span> <span class="p">[</span><span class="nx">imagePath</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">imgToPDF</span><span class="p">(</span><span class="nx">images</span><span class="p">,</span> <span class="p">[</span><span class="nx">size</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">size</span><span class="p">.</span><span class="nx">height</span><span class="p">]).</span><span class="nx">pipe</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="nx">pdfPath</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span></code></pre></div></section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://kyktommy.github.io/tags/js"
+      >js</a
+    >
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://kyktommy.github.io/tags/nodejs"
+      >nodejs</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  >
+    
+    <a class="ltr:pr-3 rtl:pl-3" href="https://kyktommy.github.io/posts/tsup-config/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>Tsup Config</span></a
+    >
+    
+    
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="https://kyktommy.github.io/posts/images-to-pdf/"
+      ><span>Images to pdf</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+  
+    &copy; 2024
+    <a class="link" href="https://kyktommy.github.io/">kyk&#39;s blog</a>
+  
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+
+  </body>
+</html>

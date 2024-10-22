@@ -6,8 +6,15 @@
     <description>Recent content in Js on kyk&#39;s blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Jan 2021 21:08:24 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 16 Sep 2024 18:46:49 +0800</lastBuildDate>
     <atom:link href="https://kyktommy.github.io/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Js Remote Jpeg to Pdf</title>
+      <link>https://kyktommy.github.io/posts/js-remote-jpeg-to-pdf/</link>
+      <pubDate>Mon, 16 Sep 2024 18:46:49 +0800</pubDate>
+      <guid>https://kyktommy.github.io/posts/js-remote-jpeg-to-pdf/</guid>
+      <description>installation sharp image-to-pdf image-size import sharp from &amp;#39;sharp&amp;#39; import imgToPDF from &amp;#34;image-to-pdf&amp;#34; import imageSize from &amp;#34;image-size&amp;#34; const imagePath = &amp;#39;./1.jpg&amp;#39; const pdfPath = &amp;#39;./1.pdf&amp;#39; const imageBuffer = await (await request.get(url)).body() const jpgBuffer = await sharp(imageBuffer).jpeg({ mozjpeg: true }).toBuffer() fs.writeFileSync(imagePath, jpgBuffer) const size = imageSize(imagePath) const images = [imagePath] imgToPDF(images, [size.width, size.height]).pipe( fs.createWriteStream(pdfPath) ); </description>
+    </item>
     <item>
       <title>Expressjs Multer File Upload</title>
       <link>https://kyktommy.github.io/posts/expressjs-multer-file-upload/</link>
