@@ -6,8 +6,15 @@
     <description>Recent content in Css on kyk&#39;s blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Feb 2021 20:32:28 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 22 Oct 2024 13:08:57 +0800</lastBuildDate>
     <atom:link href="https://kyktommy.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Css Z Index.md</title>
+      <link>https://kyktommy.github.io/posts/css-z-index/</link>
+      <pubDate>Tue, 22 Oct 2024 13:08:57 +0800</pubDate>
+      <guid>https://kyktommy.github.io/posts/css-z-index/</guid>
+      <description>notes:&#xA;z-index need to add position relative or above z-index calculate from its parent that with z-index z-index auto do not measure edge case 1:&#xA;layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: 1), layer 2-1 (z-index: 99999) result: layer 1-1 shows on top edge case 2:&#xA;layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1 (z-index: 99999) result: layer 2-1 shows on top test index.</description>
+    </item>
     <item>
       <title>Rainbow Border</title>
       <link>https://kyktommy.github.io/posts/rainbow-border/</link>

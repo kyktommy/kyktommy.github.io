@@ -51,7 +51,7 @@
   />
 
   
-  <title>Categories - kyk&#39;s blog</title>
+  <title>Css Z Index.md - kyk&#39;s blog</title>
 
   
   <meta name="theme-color" />
@@ -60,11 +60,10 @@
   
   
   
-  
-  <meta
-    name="description"
-    content="A personal blog"
-  />
+  <meta name="description" content="notes:
+z-index need to add position relative or above z-index calculate from its parent that with z-index z-index auto do not measure edge case 1:
+layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: 1), layer 2-1 (z-index: 99999) result: layer 1-1 shows on top edge case 2:
+layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1 (z-index: 99999) result: layer 2-1 shows on top test index." />
   <meta name="author" content="kyktommy" />
   
 
@@ -99,6 +98,12 @@
 
   
   
+  <script
+    defer
+    src="https://kyktommy.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
 
   
   
@@ -126,33 +131,44 @@
 
   
   
-  <meta itemprop="name" content="Categories">
+  <meta itemprop="name" content="Css Z Index.md">
+  <meta itemprop="description" content="notes:
+z-index need to add position relative or above z-index calculate from its parent that with z-index z-index auto do not measure edge case 1:
+layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: 1), layer 2-1 (z-index: 99999) result: layer 1-1 shows on top edge case 2:
+layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1 (z-index: 99999) result: layer 2-1 shows on top test index.">
   <meta itemprop="datePublished" content="2024-10-22T13:08:57+08:00">
   <meta itemprop="dateModified" content="2024-10-22T13:08:57+08:00">
+  <meta itemprop="wordCount" content="74">
+  <meta itemprop="keywords" content="Css">
   
-  <meta property="og:url" content="https://kyktommy.github.io/categories/">
+  <meta property="og:url" content="https://kyktommy.github.io/posts/css-z-index/">
   <meta property="og:site_name" content="kyk&#39;s blog">
-  <meta property="og:title" content="Categories">
+  <meta property="og:title" content="Css Z Index.md">
+  <meta property="og:description" content="notes:
+z-index need to add position relative or above z-index calculate from its parent that with z-index z-index auto do not measure edge case 1:
+layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: 1), layer 2-1 (z-index: 99999) result: layer 1-1 shows on top edge case 2:
+layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1 (z-index: 99999) result: layer 2-1 shows on top test index.">
   <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-10-22T13:08:57+08:00">
+    <meta property="article:modified_time" content="2024-10-22T13:08:57+08:00">
+    <meta property="article:tag" content="Css">
 
   
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Categories">
+  <meta name="twitter:title" content="Css Z Index.md">
+  <meta name="twitter:description" content="notes:
+z-index need to add position relative or above z-index calculate from its parent that with z-index z-index auto do not measure edge case 1:
+layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: 1), layer 2-1 (z-index: 99999) result: layer 1-1 shows on top edge case 2:
+layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1 (z-index: 99999) result: layer 2-1 shows on top test index.">
 
   
   
-  <link
-    rel="alternate"
-    type="application/rss&#43;xml"
-    href="https://kyktommy.github.io/categories/index.xml"
-    title="kyk&#39;s blog"
-  />
-  
 
   
-  <link rel="canonical" href="https://kyktommy.github.io/categories/" />
+  <link rel="canonical" href="https://kyktommy.github.io/posts/css-z-index/" />
   
   
 </head>
@@ -253,18 +269,87 @@
     >
       
 
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">Css Z Index.md</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>Oct 22, 2024</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>notes:</p>
+<ul>
+<li>z-index need to add position <code>relative</code> or above</li>
+<li>z-index calculate from its parent that with <code>z-index</code></li>
+<li>z-index auto do not measure</li>
+</ul>
+<p>edge case 1:</p>
+<ul>
+<li>layer 1 (z-index: 2), layer 1-1 (z-index: 99)</li>
+<li>layer 2 (z-index: 1), layer 2-1 (z-index: 99999)</li>
+<li>result: layer 1-1 shows on top</li>
+</ul>
+<p>edge case 2:</p>
+<ul>
+<li>layer 1 (z-index: 2), layer 1-1 (z-index: 99)</li>
+<li>layer 2 (z-index: auto), layer 2-1 (z-index: 99999)</li>
+<li>result: layer 2-1 shows on top</li>
+</ul>
+<hr>
+<p>test index.html</p>
+<script src="https://gist.github.com/kyktommy/a57a217b8feb712d97b996926fcf7740.js"></script>
+
+</section>
+
+  
+  
+  <footer class="mt-12 flex flex-wrap">
+     
+    <a
+      class="mb-1.5 ltr:mr-1.5 rtl:ml-1.5 rounded-lg bg-black/[3%] px-5 py-1 no-underline hover:bg-black/[6%] dark:bg-white/[8%] dark:hover:bg-white/[12%]"
+      href="https://kyktommy.github.io/tags/css"
+      >css</a
+    >
+    
+  </footer>
+  
+
+  
+  
+  
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  >
+    
+    
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="https://kyktommy.github.io/posts/tsup-config/"
+      ><span>Tsup Config</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
 
 
-
-
-
-
-
-
- 
-
-
-
+  
+</article>
 
 
     </main>
