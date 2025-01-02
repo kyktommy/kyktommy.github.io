@@ -13,7 +13,7 @@
       <link>https://kyktommy.github.io/posts/golang-version-switch/</link>
       <pubDate>Wed, 18 Jan 2023 10:09:43 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/golang-version-switch/</guid>
-      <description> remove /usr/local/go if you install golang using pkg installer sudo rm -rf /usr/local/go sudo rm /etc/paths.d/go use homebrew to install golang brew install go use homebrew to install golang different versions brew install go@1.19 brew install go@1.18 switch between golang version, for example: switch from 1.18 to 1.19 brew unlink go brew link go@1.19 </description>
+      <description>&lt;ol&gt;&#xA;&lt;li&gt;remove /usr/local/go if you install golang using pkg installer&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo rm -rf /usr/local/go&#xA;sudo rm /etc/paths.d/go&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;&#xA;&lt;li&gt;use homebrew to install golang&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install go&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;&#xA;&lt;li&gt;use homebrew to install golang different versions&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install go@1.19&#xA;brew install go@1.18&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;&#xA;&lt;li&gt;switch between golang version, for example: switch from 1.18 to 1.19&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew unlink go&#xA;brew link go@1.19&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
   </channel>
 </rss>

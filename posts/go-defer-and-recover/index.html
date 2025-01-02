@@ -36,6 +36,8 @@
 
 
 
+
+
 <html
   class="not-ready lg:text-base"
   style="--bg: #fff"
@@ -61,8 +63,35 @@
   
   
   <meta name="description" content="Go defer is LIFO. defer function will be executed even after panic. So put recover inside defer.
-package main import ( &#34;fmt&#34; &#34;time&#34; ) func main() { defer func() { fmt.Println(&#34;main defer&#34;) }() go func() { defer func() { if err := recover(); err != nil { fmt.Println(&#34;recover&#34;, err) } }() panic(&#34;panic here&#34;) }() time.Sleep(1 \* time.Second) fmt.Println(&#34;end&#34;) } output:
-recover panic here end main defer " />
+package main
+
+import (
+  &#34;fmt&#34;
+  &#34;time&#34;
+)
+
+func main() {
+  defer func() {
+    fmt.Println(&#34;main defer&#34;)
+  }()
+
+  go func() {
+    defer func() {
+      if err := recover(); err != nil {
+        fmt.Println(&#34;recover&#34;, err)
+      }
+    }()
+    panic(&#34;panic here&#34;)
+  }()
+
+  time.Sleep(1 \* time.Second)
+  fmt.Println(&#34;end&#34;)
+}
+output:
+recover panic here
+end
+main defer
+" />
   <meta name="author" content="kyktommy" />
   
 
@@ -119,21 +148,18 @@ recover panic here end main defer " />
   />
 
   
-  <meta name="generator" content="Hugo 0.128.2">
+  <meta name="generator" content="Hugo 0.140.2">
 
   
   
   
   
-  
-
-
   
   
   <meta itemprop="name" content="Go Defer And Recover">
   <meta itemprop="description" content="Go defer is LIFO. defer function will be executed even after panic. So put recover inside defer.
 package main import ( &#34;fmt&#34; &#34;time&#34; ) func main() { defer func() { fmt.Println(&#34;main defer&#34;) }() go func() { defer func() { if err := recover(); err != nil { fmt.Println(&#34;recover&#34;, err) } }() panic(&#34;panic here&#34;) }() time.Sleep(1 \* time.Second) fmt.Println(&#34;end&#34;) } output:
-recover panic here end main defer ">
+recover panic here end main defer">
   <meta itemprop="datePublished" content="2020-02-21T21:55:25+08:00">
   <meta itemprop="dateModified" content="2020-02-21T21:55:25+08:00">
   <meta itemprop="wordCount" content="66">
@@ -144,7 +170,7 @@ recover panic here end main defer ">
   <meta property="og:title" content="Go Defer And Recover">
   <meta property="og:description" content="Go defer is LIFO. defer function will be executed even after panic. So put recover inside defer.
 package main import ( &#34;fmt&#34; &#34;time&#34; ) func main() { defer func() { fmt.Println(&#34;main defer&#34;) }() go func() { defer func() { if err := recover(); err != nil { fmt.Println(&#34;recover&#34;, err) } }() panic(&#34;panic here&#34;) }() time.Sleep(1 \* time.Second) fmt.Println(&#34;end&#34;) } output:
-recover panic here end main defer ">
+recover panic here end main defer">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -158,7 +184,7 @@ recover panic here end main defer ">
   <meta name="twitter:title" content="Go Defer And Recover">
   <meta name="twitter:description" content="Go defer is LIFO. defer function will be executed even after panic. So put recover inside defer.
 package main import ( &#34;fmt&#34; &#34;time&#34; ) func main() { defer func() { fmt.Println(&#34;main defer&#34;) }() go func() { defer func() { if err := recover(); err != nil { fmt.Println(&#34;recover&#34;, err) } }() panic(&#34;panic here&#34;) }() time.Sleep(1 \* time.Second) fmt.Println(&#34;end&#34;) } output:
-recover panic here end main defer ">
+recover panic here end main defer">
 
   
   
@@ -261,7 +287,7 @@ recover panic here end main defer ">
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
     >
       
 
@@ -366,7 +392,7 @@ main defer
 >
   <div class="mr-auto">
   
-    &copy; 2024
+    &copy; 2025
     <a class="link" href="https://kyktommy.github.io/">kyk&#39;s blog</a>
   
   </div>

@@ -36,6 +36,8 @@
 
 
 
+
+
 <html
   class="not-ready lg:text-base"
   style="--bg: #fff"
@@ -60,7 +62,29 @@
   
   
   
-  <meta name="description" content="installation sharp image-to-pdf image-size import sharp from &#39;sharp&#39; import imgToPDF from &#34;image-to-pdf&#34; import imageSize from &#34;image-size&#34; const imagePath = &#39;./1.jpg&#39; const pdfPath = &#39;./1.pdf&#39; const imageBuffer = await (await request.get(url)).body() const jpgBuffer = await sharp(imageBuffer).jpeg({ mozjpeg: true }).toBuffer() fs.writeFileSync(imagePath, jpgBuffer) const size = imageSize(imagePath) const images = [imagePath] imgToPDF(images, [size.width, size.height]).pipe( fs.createWriteStream(pdfPath) ); " />
+  <meta name="description" content="installation
+
+sharp
+image-to-pdf
+image-size
+
+import sharp from &#39;sharp&#39;
+import imgToPDF from &#34;image-to-pdf&#34;
+import imageSize from &#34;image-size&#34;
+
+const imagePath = &#39;./1.jpg&#39;
+const pdfPath = &#39;./1.pdf&#39;
+
+const imageBuffer = await (await request.get(url)).body()
+const jpgBuffer = await sharp(imageBuffer).jpeg({ mozjpeg: true }).toBuffer()
+fs.writeFileSync(imagePath, jpgBuffer)
+
+const size = imageSize(imagePath)
+const images = [imagePath]
+imgToPDF(images, [size.width, size.height]).pipe(
+  fs.createWriteStream(pdfPath)
+);
+" />
   <meta name="author" content="kyktommy" />
   
 
@@ -117,19 +141,16 @@
   />
 
   
-  <meta name="generator" content="Hugo 0.128.2">
+  <meta name="generator" content="Hugo 0.140.2">
 
   
   
   
   
-  
-
-
   
   
   <meta itemprop="name" content="Js Remote Jpeg to Pdf">
-  <meta itemprop="description" content="installation sharp image-to-pdf image-size import sharp from &#39;sharp&#39; import imgToPDF from &#34;image-to-pdf&#34; import imageSize from &#34;image-size&#34; const imagePath = &#39;./1.jpg&#39; const pdfPath = &#39;./1.pdf&#39; const imageBuffer = await (await request.get(url)).body() const jpgBuffer = await sharp(imageBuffer).jpeg({ mozjpeg: true }).toBuffer() fs.writeFileSync(imagePath, jpgBuffer) const size = imageSize(imagePath) const images = [imagePath] imgToPDF(images, [size.width, size.height]).pipe( fs.createWriteStream(pdfPath) ); ">
+  <meta itemprop="description" content="installation sharp image-to-pdf image-size import sharp from &#39;sharp&#39; import imgToPDF from &#34;image-to-pdf&#34; import imageSize from &#34;image-size&#34; const imagePath = &#39;./1.jpg&#39; const pdfPath = &#39;./1.pdf&#39; const imageBuffer = await (await request.get(url)).body() const jpgBuffer = await sharp(imageBuffer).jpeg({ mozjpeg: true }).toBuffer() fs.writeFileSync(imagePath, jpgBuffer) const size = imageSize(imagePath) const images = [imagePath] imgToPDF(images, [size.width, size.height]).pipe( fs.createWriteStream(pdfPath) );">
   <meta itemprop="datePublished" content="2024-09-16T18:46:49+08:00">
   <meta itemprop="dateModified" content="2024-09-16T18:46:49+08:00">
   <meta itemprop="wordCount" content="53">
@@ -138,7 +159,7 @@
   <meta property="og:url" content="https://kyktommy.github.io/posts/js-remote-jpeg-to-pdf/">
   <meta property="og:site_name" content="kyk&#39;s blog">
   <meta property="og:title" content="Js Remote Jpeg to Pdf">
-  <meta property="og:description" content="installation sharp image-to-pdf image-size import sharp from &#39;sharp&#39; import imgToPDF from &#34;image-to-pdf&#34; import imageSize from &#34;image-size&#34; const imagePath = &#39;./1.jpg&#39; const pdfPath = &#39;./1.pdf&#39; const imageBuffer = await (await request.get(url)).body() const jpgBuffer = await sharp(imageBuffer).jpeg({ mozjpeg: true }).toBuffer() fs.writeFileSync(imagePath, jpgBuffer) const size = imageSize(imagePath) const images = [imagePath] imgToPDF(images, [size.width, size.height]).pipe( fs.createWriteStream(pdfPath) ); ">
+  <meta property="og:description" content="installation sharp image-to-pdf image-size import sharp from &#39;sharp&#39; import imgToPDF from &#34;image-to-pdf&#34; import imageSize from &#34;image-size&#34; const imagePath = &#39;./1.jpg&#39; const pdfPath = &#39;./1.pdf&#39; const imageBuffer = await (await request.get(url)).body() const jpgBuffer = await sharp(imageBuffer).jpeg({ mozjpeg: true }).toBuffer() fs.writeFileSync(imagePath, jpgBuffer) const size = imageSize(imagePath) const images = [imagePath] imgToPDF(images, [size.width, size.height]).pipe( fs.createWriteStream(pdfPath) );">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -151,7 +172,7 @@
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Js Remote Jpeg to Pdf">
-  <meta name="twitter:description" content="installation sharp image-to-pdf image-size import sharp from &#39;sharp&#39; import imgToPDF from &#34;image-to-pdf&#34; import imageSize from &#34;image-size&#34; const imagePath = &#39;./1.jpg&#39; const pdfPath = &#39;./1.pdf&#39; const imageBuffer = await (await request.get(url)).body() const jpgBuffer = await sharp(imageBuffer).jpeg({ mozjpeg: true }).toBuffer() fs.writeFileSync(imagePath, jpgBuffer) const size = imageSize(imagePath) const images = [imagePath] imgToPDF(images, [size.width, size.height]).pipe( fs.createWriteStream(pdfPath) ); ">
+  <meta name="twitter:description" content="installation sharp image-to-pdf image-size import sharp from &#39;sharp&#39; import imgToPDF from &#34;image-to-pdf&#34; import imageSize from &#34;image-size&#34; const imagePath = &#39;./1.jpg&#39; const pdfPath = &#39;./1.pdf&#39; const imageBuffer = await (await request.get(url)).body() const jpgBuffer = await sharp(imageBuffer).jpeg({ mozjpeg: true }).toBuffer() fs.writeFileSync(imagePath, jpgBuffer) const size = imageSize(imagePath) const images = [imagePath] imgToPDF(images, [size.width, size.height]).pipe( fs.createWriteStream(pdfPath) );">
 
   
   
@@ -254,7 +275,7 @@
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
     >
       
 
@@ -358,7 +379,7 @@
 >
   <div class="mr-auto">
   
-    &copy; 2024
+    &copy; 2025
     <a class="link" href="https://kyktommy.github.io/">kyk&#39;s blog</a>
   
   </div>

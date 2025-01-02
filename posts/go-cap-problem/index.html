@@ -36,6 +36,8 @@
 
 
 
+
+
 <html
   class="not-ready lg:text-base"
   style="--bg: #fff"
@@ -61,10 +63,40 @@
   
   
   <meta name="description" content="golang cap
+
 The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
+
 If we append item to a slice that over the capacity, it will return the new array. But if we append item to a slice within capacity, it will change the orginal one.
 The following code shows underCap changes the input array.
-func overCap(a []int) []int { fmt." />
+
+
+func overCap(a []int) []int {
+	fmt.Printf(&#34;before over cap addr: %p\n&#34;, a)
+	a = append(a[:0], 7, 7, 7, 7)
+	fmt.Printf(&#34;after over cap addr: %p\n&#34;, a)
+	return a
+}
+
+func underCap(a []int) []int {
+	fmt.Printf(&#34;before under cap addr: %p\n&#34;, a)
+	a = append(a[:0], 7, 7)
+	fmt.Printf(&#34;after under cap addr: %p\n&#34;, a)
+	return a
+}
+
+func main() {
+	a := []int{1, 2, 3}
+
+	b := overCap(a)
+	fmt.Println(a, &#34;-&gt;&#34;, b)
+
+	fmt.Println(&#34;---&#34;)
+
+
+	c := underCap(a)
+	fmt.Println(a, &#34;-&gt;&#34;, c)
+}
+outputs:" />
   <meta name="author" content="kyktommy" />
   
 
@@ -121,15 +153,12 @@ func overCap(a []int) []int { fmt." />
   />
 
   
-  <meta name="generator" content="Hugo 0.128.2">
+  <meta name="generator" content="Hugo 0.140.2">
 
   
   
   
   
-  
-
-
   
   
   <meta itemprop="name" content="Go Cap Problem">
@@ -137,7 +166,7 @@ func overCap(a []int) []int { fmt." />
 The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
 If we append item to a slice that over the capacity, it will return the new array. But if we append item to a slice within capacity, it will change the orginal one.
 The following code shows underCap changes the input array.
-func overCap(a []int) []int { fmt.">
+func overCap(a []int) []int { fmt.Printf(&#34;before over cap addr: %p\n&#34;, a) a = append(a[:0], 7, 7, 7, 7) fmt.Printf(&#34;after over cap addr: %p\n&#34;, a) return a } func underCap(a []int) []int { fmt.Printf(&#34;before under cap addr: %p\n&#34;, a) a = append(a[:0], 7, 7) fmt.Printf(&#34;after under cap addr: %p\n&#34;, a) return a } func main() { a := []int{1, 2, 3} b := overCap(a) fmt.Println(a, &#34;-&gt;&#34;, b) fmt.Println(&#34;---&#34;) c := underCap(a) fmt.Println(a, &#34;-&gt;&#34;, c) } outputs:">
   <meta itemprop="datePublished" content="2020-01-09T23:59:01+08:00">
   <meta itemprop="dateModified" content="2020-01-09T23:59:01+08:00">
   <meta itemprop="wordCount" content="176">
@@ -150,7 +179,7 @@ func overCap(a []int) []int { fmt.">
 The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
 If we append item to a slice that over the capacity, it will return the new array. But if we append item to a slice within capacity, it will change the orginal one.
 The following code shows underCap changes the input array.
-func overCap(a []int) []int { fmt.">
+func overCap(a []int) []int { fmt.Printf(&#34;before over cap addr: %p\n&#34;, a) a = append(a[:0], 7, 7, 7, 7) fmt.Printf(&#34;after over cap addr: %p\n&#34;, a) return a } func underCap(a []int) []int { fmt.Printf(&#34;before under cap addr: %p\n&#34;, a) a = append(a[:0], 7, 7) fmt.Printf(&#34;after under cap addr: %p\n&#34;, a) return a } func main() { a := []int{1, 2, 3} b := overCap(a) fmt.Println(a, &#34;-&gt;&#34;, b) fmt.Println(&#34;---&#34;) c := underCap(a) fmt.Println(a, &#34;-&gt;&#34;, c) } outputs:">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -166,7 +195,7 @@ func overCap(a []int) []int { fmt.">
 The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
 If we append item to a slice that over the capacity, it will return the new array. But if we append item to a slice within capacity, it will change the orginal one.
 The following code shows underCap changes the input array.
-func overCap(a []int) []int { fmt.">
+func overCap(a []int) []int { fmt.Printf(&#34;before over cap addr: %p\n&#34;, a) a = append(a[:0], 7, 7, 7, 7) fmt.Printf(&#34;after over cap addr: %p\n&#34;, a) return a } func underCap(a []int) []int { fmt.Printf(&#34;before under cap addr: %p\n&#34;, a) a = append(a[:0], 7, 7) fmt.Printf(&#34;after under cap addr: %p\n&#34;, a) return a } func main() { a := []int{1, 2, 3} b := overCap(a) fmt.Println(a, &#34;-&gt;&#34;, b) fmt.Println(&#34;---&#34;) c := underCap(a) fmt.Println(a, &#34;-&gt;&#34;, c) } outputs:">
 
   
   
@@ -269,7 +298,7 @@ func overCap(a []int) []int { fmt.">
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
     >
       
 
@@ -387,7 +416,7 @@ after under cap addr: 0x40e020
 >
   <div class="mr-auto">
   
-    &copy; 2024
+    &copy; 2025
     <a class="link" href="https://kyktommy.github.io/">kyk&#39;s blog</a>
   
   </div>

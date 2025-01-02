@@ -36,6 +36,8 @@
 
 
 
+
+
 <html
   class="not-ready lg:text-base"
   style="--bg: #fff"
@@ -61,7 +63,65 @@
   
   
   <meta name="description" content="We need a logger for every routes, so made a simple http log middleware. Need to replace writer to custom one, and also take care of reading body.
-package main import ( &#34;bytes&#34; &#34;fmt&#34; &#34;io&#34; &#34;io/ioutil&#34; &#34;net/http&#34; &#34;strings&#34; ) type bodyLogWriter struct { http.ResponseWriter body *bytes.Buffer } func (w bodyLogWriter) Write(b []byte) (int, error) { w.body.Write(b) return w.ResponseWriter.Write(b) } func main() { httpLog := func(next http.Handler) http.Handler { return http.HandlerFunc(func(w http." />
+package main
+
+import (
+	&#34;bytes&#34;
+	&#34;fmt&#34;
+	&#34;io&#34;
+	&#34;io/ioutil&#34;
+	&#34;net/http&#34;
+	&#34;strings&#34;
+)
+
+type bodyLogWriter struct {
+	http.ResponseWriter
+	body *bytes.Buffer
+}
+
+func (w bodyLogWriter) Write(b []byte) (int, error) {
+	w.body.Write(b)
+	return w.ResponseWriter.Write(b)
+}
+
+func main() {
+
+	httpLog := func(next http.Handler) http.Handler {
+		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			// copy buffer from request
+			var sb bytes.Buffer
+			io.Copy(&amp;sb, r.Body)
+
+			// assign back to request body
+			r.Body = ioutil.NopCloser(strings.NewReader(sb.String()))
+
+			// create logger writer
+			blw := &amp;bodyLogWriter{
+				body:           bytes.NewBufferString(&#34;&#34;),
+				ResponseWriter: w,
+			}
+
+			// call next route
+			next.ServeHTTP(blw, r)
+
+			// print out
+			fmt.Printf(&#34;url: %s\nrequest params: %s \nresponse data: %s\n\n&#34;, r.URL, sb.String(), blw.body.String())
+		})
+	}
+
+	// route return what body has
+	route := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		var sb bytes.Buffer
+		io.Copy(&amp;sb, r.Body)
+		w.Header().Set(&#34;hello&#34;, &#34;world&#34;)
+		w.Write(sb.Bytes())
+	})
+
+	http.Handle(&#34;/foo&#34;, httpLog(route))
+
+	http.ListenAndServe(&#34;:8080&#34;, nil)
+}
+outputs" />
   <meta name="author" content="kyktommy" />
   
 
@@ -118,20 +178,17 @@ package main import ( &#34;bytes&#34; &#34;fmt&#34; &#34;io&#34; &#34;io/ioutil&
   />
 
   
-  <meta name="generator" content="Hugo 0.128.2">
+  <meta name="generator" content="Hugo 0.140.2">
 
   
   
   
   
-  
-
-
   
   
   <meta itemprop="name" content="Go Http Log">
   <meta itemprop="description" content="We need a logger for every routes, so made a simple http log middleware. Need to replace writer to custom one, and also take care of reading body.
-package main import ( &#34;bytes&#34; &#34;fmt&#34; &#34;io&#34; &#34;io/ioutil&#34; &#34;net/http&#34; &#34;strings&#34; ) type bodyLogWriter struct { http.ResponseWriter body *bytes.Buffer } func (w bodyLogWriter) Write(b []byte) (int, error) { w.body.Write(b) return w.ResponseWriter.Write(b) } func main() { httpLog := func(next http.Handler) http.Handler { return http.HandlerFunc(func(w http.">
+package main import ( &#34;bytes&#34; &#34;fmt&#34; &#34;io&#34; &#34;io/ioutil&#34; &#34;net/http&#34; &#34;strings&#34; ) type bodyLogWriter struct { http.ResponseWriter body *bytes.Buffer } func (w bodyLogWriter) Write(b []byte) (int, error) { w.body.Write(b) return w.ResponseWriter.Write(b) } func main() { httpLog := func(next http.Handler) http.Handler { return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) { // copy buffer from request var sb bytes.Buffer io.Copy(&amp;sb, r.Body) // assign back to request body r.Body = ioutil.NopCloser(strings.NewReader(sb.String())) // create logger writer blw := &amp;bodyLogWriter{ body: bytes.NewBufferString(&#34;&#34;), ResponseWriter: w, } // call next route next.ServeHTTP(blw, r) // print out fmt.Printf(&#34;url: %s\nrequest params: %s \nresponse data: %s\n\n&#34;, r.URL, sb.String(), blw.body.String()) }) } // route return what body has route := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) { var sb bytes.Buffer io.Copy(&amp;sb, r.Body) w.Header().Set(&#34;hello&#34;, &#34;world&#34;) w.Write(sb.Bytes()) }) http.Handle(&#34;/foo&#34;, httpLog(route)) http.ListenAndServe(&#34;:8080&#34;, nil) } outputs">
   <meta itemprop="datePublished" content="2019-12-31T19:21:43+08:00">
   <meta itemprop="dateModified" content="2019-12-31T19:21:43+08:00">
   <meta itemprop="wordCount" content="209">
@@ -141,7 +198,7 @@ package main import ( &#34;bytes&#34; &#34;fmt&#34; &#34;io&#34; &#34;io/ioutil&
   <meta property="og:site_name" content="kyk&#39;s blog">
   <meta property="og:title" content="Go Http Log">
   <meta property="og:description" content="We need a logger for every routes, so made a simple http log middleware. Need to replace writer to custom one, and also take care of reading body.
-package main import ( &#34;bytes&#34; &#34;fmt&#34; &#34;io&#34; &#34;io/ioutil&#34; &#34;net/http&#34; &#34;strings&#34; ) type bodyLogWriter struct { http.ResponseWriter body *bytes.Buffer } func (w bodyLogWriter) Write(b []byte) (int, error) { w.body.Write(b) return w.ResponseWriter.Write(b) } func main() { httpLog := func(next http.Handler) http.Handler { return http.HandlerFunc(func(w http.">
+package main import ( &#34;bytes&#34; &#34;fmt&#34; &#34;io&#34; &#34;io/ioutil&#34; &#34;net/http&#34; &#34;strings&#34; ) type bodyLogWriter struct { http.ResponseWriter body *bytes.Buffer } func (w bodyLogWriter) Write(b []byte) (int, error) { w.body.Write(b) return w.ResponseWriter.Write(b) } func main() { httpLog := func(next http.Handler) http.Handler { return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) { // copy buffer from request var sb bytes.Buffer io.Copy(&amp;sb, r.Body) // assign back to request body r.Body = ioutil.NopCloser(strings.NewReader(sb.String())) // create logger writer blw := &amp;bodyLogWriter{ body: bytes.NewBufferString(&#34;&#34;), ResponseWriter: w, } // call next route next.ServeHTTP(blw, r) // print out fmt.Printf(&#34;url: %s\nrequest params: %s \nresponse data: %s\n\n&#34;, r.URL, sb.String(), blw.body.String()) }) } // route return what body has route := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) { var sb bytes.Buffer io.Copy(&amp;sb, r.Body) w.Header().Set(&#34;hello&#34;, &#34;world&#34;) w.Write(sb.Bytes()) }) http.Handle(&#34;/foo&#34;, httpLog(route)) http.ListenAndServe(&#34;:8080&#34;, nil) } outputs">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -154,7 +211,7 @@ package main import ( &#34;bytes&#34; &#34;fmt&#34; &#34;io&#34; &#34;io/ioutil&
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Go Http Log">
   <meta name="twitter:description" content="We need a logger for every routes, so made a simple http log middleware. Need to replace writer to custom one, and also take care of reading body.
-package main import ( &#34;bytes&#34; &#34;fmt&#34; &#34;io&#34; &#34;io/ioutil&#34; &#34;net/http&#34; &#34;strings&#34; ) type bodyLogWriter struct { http.ResponseWriter body *bytes.Buffer } func (w bodyLogWriter) Write(b []byte) (int, error) { w.body.Write(b) return w.ResponseWriter.Write(b) } func main() { httpLog := func(next http.Handler) http.Handler { return http.HandlerFunc(func(w http.">
+package main import ( &#34;bytes&#34; &#34;fmt&#34; &#34;io&#34; &#34;io/ioutil&#34; &#34;net/http&#34; &#34;strings&#34; ) type bodyLogWriter struct { http.ResponseWriter body *bytes.Buffer } func (w bodyLogWriter) Write(b []byte) (int, error) { w.body.Write(b) return w.ResponseWriter.Write(b) } func main() { httpLog := func(next http.Handler) http.Handler { return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) { // copy buffer from request var sb bytes.Buffer io.Copy(&amp;sb, r.Body) // assign back to request body r.Body = ioutil.NopCloser(strings.NewReader(sb.String())) // create logger writer blw := &amp;bodyLogWriter{ body: bytes.NewBufferString(&#34;&#34;), ResponseWriter: w, } // call next route next.ServeHTTP(blw, r) // print out fmt.Printf(&#34;url: %s\nrequest params: %s \nresponse data: %s\n\n&#34;, r.URL, sb.String(), blw.body.String()) }) } // route return what body has route := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) { var sb bytes.Buffer io.Copy(&amp;sb, r.Body) w.Header().Set(&#34;hello&#34;, &#34;world&#34;) w.Write(sb.Bytes()) }) http.Handle(&#34;/foo&#34;, httpLog(route)) http.ListenAndServe(&#34;:8080&#34;, nil) } outputs">
 
   
   
@@ -257,7 +314,7 @@ package main import ( &#34;bytes&#34; &#34;fmt&#34; &#34;io&#34; &#34;io/ioutil&
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
     >
       
 
@@ -415,7 +472,7 @@ package main import ( &#34;bytes&#34; &#34;fmt&#34; &#34;io&#34; &#34;io/ioutil&
 >
   <div class="mr-auto">
   
-    &copy; 2024
+    &copy; 2025
     <a class="link" href="https://kyktommy.github.io/">kyk&#39;s blog</a>
   
   </div>

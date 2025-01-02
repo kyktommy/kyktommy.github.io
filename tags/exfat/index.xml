@@ -13,7 +13,7 @@
       <link>https://kyktommy.github.io/posts/detect-exfat-disk-in-mac/</link>
       <pubDate>Sun, 07 May 2023 17:30:34 +0800</pubDate>
       <guid>https://kyktommy.github.io/posts/detect-exfat-disk-in-mac/</guid>
-      <description>Cannot detect exfat external drive in my macbook. Here the solution,&#xA;diskutil list get the identifer of the disk, eg: disk2s2 ps -ax | grep &amp;lt;identifier&amp;gt; get the proccess id of fsck sudo kill -9 &amp;lt;process id&amp;gt; Alert pops up and I can access the disk in finder.</description>
+      <description>&lt;p&gt;Cannot detect exfat external drive in my macbook. Here the solution,&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;diskutil list&lt;/code&gt; get the identifer of the disk, eg: &lt;code&gt;disk2s2&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;ps -ax | grep &amp;lt;identifier&amp;gt;&lt;/code&gt; get the proccess id of &lt;code&gt;fsck&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;sudo kill -9 &amp;lt;process id&amp;gt;&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Alert pops up and I can access the disk in finder.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

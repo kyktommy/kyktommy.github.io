@@ -36,6 +36,8 @@
 
 
 
+
+
 <html
   class="not-ready lg:text-base"
   style="--bg: #fff"
@@ -61,9 +63,25 @@
   
   
   <meta name="description" content="notes:
-z-index need to add position relative or above z-index calculate from its parent that with z-index z-index auto do not measure edge case 1:
-layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: 1), layer 2-1 (z-index: 99999) result: layer 1-1 shows on top edge case 2:
-layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1 (z-index: 99999) result: layer 2-1 shows on top test index." />
+
+z-index need to add position relative or above
+z-index calculate from its parent that with z-index
+z-index auto do not measure
+
+edge case 1:
+
+layer 1 (z-index: 2), layer 1-1 (z-index: 99)
+layer 2 (z-index: 1), layer 2-1 (z-index: 99999)
+result: layer 1-1 shows on top
+
+edge case 2:
+
+layer 1 (z-index: 2), layer 1-1 (z-index: 99)
+layer 2 (z-index: auto), layer 2-1 (z-index: 99999)
+result: layer 2-1 shows on top
+
+
+test index.html" />
   <meta name="author" content="kyktommy" />
   
 
@@ -120,22 +138,19 @@ layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1
   />
 
   
-  <meta name="generator" content="Hugo 0.128.2">
+  <meta name="generator" content="Hugo 0.140.2">
 
   
   
   
   
-  
-
-
   
   
   <meta itemprop="name" content="Css Z Index.md">
   <meta itemprop="description" content="notes:
 z-index need to add position relative or above z-index calculate from its parent that with z-index z-index auto do not measure edge case 1:
 layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: 1), layer 2-1 (z-index: 99999) result: layer 1-1 shows on top edge case 2:
-layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1 (z-index: 99999) result: layer 2-1 shows on top test index.">
+layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1 (z-index: 99999) result: layer 2-1 shows on top test index.html">
   <meta itemprop="datePublished" content="2024-10-22T13:08:57+08:00">
   <meta itemprop="dateModified" content="2024-10-22T13:08:57+08:00">
   <meta itemprop="wordCount" content="74">
@@ -147,7 +162,7 @@ layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1
   <meta property="og:description" content="notes:
 z-index need to add position relative or above z-index calculate from its parent that with z-index z-index auto do not measure edge case 1:
 layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: 1), layer 2-1 (z-index: 99999) result: layer 1-1 shows on top edge case 2:
-layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1 (z-index: 99999) result: layer 2-1 shows on top test index.">
+layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1 (z-index: 99999) result: layer 2-1 shows on top test index.html">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -162,7 +177,7 @@ layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1
   <meta name="twitter:description" content="notes:
 z-index need to add position relative or above z-index calculate from its parent that with z-index z-index auto do not measure edge case 1:
 layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: 1), layer 2-1 (z-index: 99999) result: layer 1-1 shows on top edge case 2:
-layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1 (z-index: 99999) result: layer 2-1 shows on top test index.">
+layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1 (z-index: 99999) result: layer 2-1 shows on top test index.html">
 
   
   
@@ -265,7 +280,7 @@ layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
     >
       
 
@@ -330,6 +345,10 @@ layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1
     class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
   >
     
+    <a class="ltr:pr-3 rtl:pl-3" href="https://kyktommy.github.io/posts/gpg-setup/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>Gpg Setup</span></a
+    >
+    
     
     <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="https://kyktommy.github.io/posts/tsup-config/"
       ><span>Tsup Config</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
@@ -359,7 +378,7 @@ layer 1 (z-index: 2), layer 1-1 (z-index: 99) layer 2 (z-index: auto), layer 2-1
 >
   <div class="mr-auto">
   
-    &copy; 2024
+    &copy; 2025
     <a class="link" href="https://kyktommy.github.io/">kyk&#39;s blog</a>
   
   </div>

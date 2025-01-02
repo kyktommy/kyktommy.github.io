@@ -36,6 +36,8 @@
 
 
 
+
+
 <html
   class="not-ready lg:text-base"
   style="--bg: #fff"
@@ -61,7 +63,22 @@
   
   
   <meta name="description" content="react query gcTime / cacheTime vs staleTime
-when a component use useQuery with key, it start fetching and loading gcTime: start this timer after all components unmount (inactive) staleTime: start this timer after fetch complete, indicate whether makes api call or not case 1: when gcTime=5000, staleTime &lt;= gcTime within 5s, this component re-mount will use the same data as initial, and fetch api in background, then update the cache data this component unmount, after 5s then re-mount, it start fetching and loading again cuz cache data has been gc, needs to refetching to get the data case 2: when gcTime=5000, staleTime=Infinity this component use the data and keep data as fresh, will not fetch forever " />
+
+when a component use useQuery with key, it start fetching and loading
+gcTime: start this timer after all components unmount (inactive)
+staleTime: start this timer after fetch complete, indicate whether makes api call or not
+case 1: when gcTime=5000, staleTime &lt;= gcTime
+
+within 5s, this component re-mount will use the same data as initial, and fetch api in background, then update the cache data
+this component unmount, after 5s then re-mount, it start fetching and loading again cuz cache data has been gc, needs to refetching to get the data
+
+
+case 2: when gcTime=5000, staleTime=Infinity
+
+this component use the data and keep data as fresh, will not fetch forever
+
+
+" />
   <meta name="author" content="kyktommy" />
   
 
@@ -118,20 +135,17 @@ when a component use useQuery with key, it start fetching and loading gcTime: st
   />
 
   
-  <meta name="generator" content="Hugo 0.128.2">
+  <meta name="generator" content="Hugo 0.140.2">
 
   
   
   
   
-  
-
-
   
   
   <meta itemprop="name" content="React Query GcTime StaleTime">
   <meta itemprop="description" content="react query gcTime / cacheTime vs staleTime
-when a component use useQuery with key, it start fetching and loading gcTime: start this timer after all components unmount (inactive) staleTime: start this timer after fetch complete, indicate whether makes api call or not case 1: when gcTime=5000, staleTime &lt;= gcTime within 5s, this component re-mount will use the same data as initial, and fetch api in background, then update the cache data this component unmount, after 5s then re-mount, it start fetching and loading again cuz cache data has been gc, needs to refetching to get the data case 2: when gcTime=5000, staleTime=Infinity this component use the data and keep data as fresh, will not fetch forever ">
+when a component use useQuery with key, it start fetching and loading gcTime: start this timer after all components unmount (inactive) staleTime: start this timer after fetch complete, indicate whether makes api call or not case 1: when gcTime=5000, staleTime &lt;= gcTime within 5s, this component re-mount will use the same data as initial, and fetch api in background, then update the cache data this component unmount, after 5s then re-mount, it start fetching and loading again cuz cache data has been gc, needs to refetching to get the data case 2: when gcTime=5000, staleTime=Infinity this component use the data and keep data as fresh, will not fetch forever">
   <meta itemprop="datePublished" content="2024-07-22T17:39:43+08:00">
   <meta itemprop="dateModified" content="2024-07-22T17:39:43+08:00">
   <meta itemprop="wordCount" content="116">
@@ -141,7 +155,7 @@ when a component use useQuery with key, it start fetching and loading gcTime: st
   <meta property="og:site_name" content="kyk&#39;s blog">
   <meta property="og:title" content="React Query GcTime StaleTime">
   <meta property="og:description" content="react query gcTime / cacheTime vs staleTime
-when a component use useQuery with key, it start fetching and loading gcTime: start this timer after all components unmount (inactive) staleTime: start this timer after fetch complete, indicate whether makes api call or not case 1: when gcTime=5000, staleTime &lt;= gcTime within 5s, this component re-mount will use the same data as initial, and fetch api in background, then update the cache data this component unmount, after 5s then re-mount, it start fetching and loading again cuz cache data has been gc, needs to refetching to get the data case 2: when gcTime=5000, staleTime=Infinity this component use the data and keep data as fresh, will not fetch forever ">
+when a component use useQuery with key, it start fetching and loading gcTime: start this timer after all components unmount (inactive) staleTime: start this timer after fetch complete, indicate whether makes api call or not case 1: when gcTime=5000, staleTime &lt;= gcTime within 5s, this component re-mount will use the same data as initial, and fetch api in background, then update the cache data this component unmount, after 5s then re-mount, it start fetching and loading again cuz cache data has been gc, needs to refetching to get the data case 2: when gcTime=5000, staleTime=Infinity this component use the data and keep data as fresh, will not fetch forever">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -155,7 +169,7 @@ when a component use useQuery with key, it start fetching and loading gcTime: st
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="React Query GcTime StaleTime">
   <meta name="twitter:description" content="react query gcTime / cacheTime vs staleTime
-when a component use useQuery with key, it start fetching and loading gcTime: start this timer after all components unmount (inactive) staleTime: start this timer after fetch complete, indicate whether makes api call or not case 1: when gcTime=5000, staleTime &lt;= gcTime within 5s, this component re-mount will use the same data as initial, and fetch api in background, then update the cache data this component unmount, after 5s then re-mount, it start fetching and loading again cuz cache data has been gc, needs to refetching to get the data case 2: when gcTime=5000, staleTime=Infinity this component use the data and keep data as fresh, will not fetch forever ">
+when a component use useQuery with key, it start fetching and loading gcTime: start this timer after all components unmount (inactive) staleTime: start this timer after fetch complete, indicate whether makes api call or not case 1: when gcTime=5000, staleTime &lt;= gcTime within 5s, this component re-mount will use the same data as initial, and fetch api in background, then update the cache data this component unmount, after 5s then re-mount, it start fetching and loading again cuz cache data has been gc, needs to refetching to get the data case 2: when gcTime=5000, staleTime=Infinity this component use the data and keep data as fresh, will not fetch forever">
 
   
   
@@ -258,7 +272,7 @@ when a component use useQuery with key, it start fetching and loading gcTime: st
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
     >
       
 
@@ -357,7 +371,7 @@ when a component use useQuery with key, it start fetching and loading gcTime: st
 >
   <div class="mr-auto">
   
-    &copy; 2024
+    &copy; 2025
     <a class="link" href="https://kyktommy.github.io/">kyk&#39;s blog</a>
   
   </div>

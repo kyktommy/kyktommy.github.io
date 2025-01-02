@@ -36,6 +36,8 @@
 
 
 
+
+
 <html
   class="not-ready lg:text-base"
   style="--bg: #fff"
@@ -60,8 +62,58 @@
   
   
   
-  <meta name="description" content="Target import path alias, relative path is not good for refactoring import sorting across the team, everyone got same import order eslint fix, vscode intelligence fix Result // sort import import React, { useEffect, useState } from &#39;react&#39; // alias import path import MyButton from &#39;@/components/MyButton&#39; Install craco eslint-plugin-simple-import-sort eslint-import-resolver-alias Setup craco.config.js
-map @ to all folder in src const path = require(&#39;path&#39;) module.exports = { webpack: { alias: { &#39;@&#39;: path." />
+  <meta name="description" content="Target
+
+import path alias, relative path is not good for refactoring
+import sorting across the team, everyone got same import order
+eslint fix, vscode intelligence fix
+
+Result
+// sort import
+import React, { useEffect, useState } from &#39;react&#39;
+
+// alias import path
+import MyButton from &#39;@/components/MyButton&#39;
+Install
+
+craco
+eslint-plugin-simple-import-sort
+eslint-import-resolver-alias
+
+Setup
+craco.config.js
+
+map @ to all folder in src
+
+const path = require(&#39;path&#39;)
+
+module.exports = {
+  webpack: {
+    alias: {
+      &#39;@&#39;: path.resolve(__dirname, &#39;src&#39;),
+    },
+  }
+}
+eslintrc.js
+
+import plugin
+the rule is used for auto fix and error highlight in editor
+
+{
+  plugins: [&#39;simple-import-sort&#39;, &#39;react&#39;, &#39;prettier&#39;],
+  rules: {
+    &#39;simple-import-sort/imports&#39;: &#39;error&#39;
+  },
+  settings: {
+    &#39;import/resolver&#39;: {
+      alias: {
+        map: [[&#39;@&#39;, &#39;./src&#39;]],
+        extensions: [&#39;.ts&#39;, &#39;.js&#39;, &#39;.jsx&#39;, &#39;.json&#39;],
+      },
+    },
+  }
+}
+jsonconfig.json" />
   <meta name="author" content="kyktommy" />
   
 
@@ -118,20 +170,18 @@ map @ to all folder in src const path = require(&#39;path&#39;) module.exports =
   />
 
   
-  <meta name="generator" content="Hugo 0.128.2">
+  <meta name="generator" content="Hugo 0.140.2">
 
   
   
   
   
-  
-
-
   
   
   <meta itemprop="name" content="Cra Import Sort">
   <meta itemprop="description" content="Target import path alias, relative path is not good for refactoring import sorting across the team, everyone got same import order eslint fix, vscode intelligence fix Result // sort import import React, { useEffect, useState } from &#39;react&#39; // alias import path import MyButton from &#39;@/components/MyButton&#39; Install craco eslint-plugin-simple-import-sort eslint-import-resolver-alias Setup craco.config.js
-map @ to all folder in src const path = require(&#39;path&#39;) module.exports = { webpack: { alias: { &#39;@&#39;: path.">
+map @ to all folder in src const path = require(&#39;path&#39;) module.exports = { webpack: { alias: { &#39;@&#39;: path.resolve(__dirname, &#39;src&#39;), }, } } eslintrc.js
+import plugin the rule is used for auto fix and error highlight in editor { plugins: [&#39;simple-import-sort&#39;, &#39;react&#39;, &#39;prettier&#39;], rules: { &#39;simple-import-sort/imports&#39;: &#39;error&#39; }, settings: { &#39;import/resolver&#39;: { alias: { map: [[&#39;@&#39;, &#39;./src&#39;]], extensions: [&#39;.ts&#39;, &#39;.js&#39;, &#39;.jsx&#39;, &#39;.json&#39;], }, }, } } jsonconfig.json">
   <meta itemprop="datePublished" content="2021-07-31T15:33:29+08:00">
   <meta itemprop="dateModified" content="2021-07-31T15:33:29+08:00">
   <meta itemprop="wordCount" content="157">
@@ -141,7 +191,8 @@ map @ to all folder in src const path = require(&#39;path&#39;) module.exports =
   <meta property="og:site_name" content="kyk&#39;s blog">
   <meta property="og:title" content="Cra Import Sort">
   <meta property="og:description" content="Target import path alias, relative path is not good for refactoring import sorting across the team, everyone got same import order eslint fix, vscode intelligence fix Result // sort import import React, { useEffect, useState } from &#39;react&#39; // alias import path import MyButton from &#39;@/components/MyButton&#39; Install craco eslint-plugin-simple-import-sort eslint-import-resolver-alias Setup craco.config.js
-map @ to all folder in src const path = require(&#39;path&#39;) module.exports = { webpack: { alias: { &#39;@&#39;: path.">
+map @ to all folder in src const path = require(&#39;path&#39;) module.exports = { webpack: { alias: { &#39;@&#39;: path.resolve(__dirname, &#39;src&#39;), }, } } eslintrc.js
+import plugin the rule is used for auto fix and error highlight in editor { plugins: [&#39;simple-import-sort&#39;, &#39;react&#39;, &#39;prettier&#39;], rules: { &#39;simple-import-sort/imports&#39;: &#39;error&#39; }, settings: { &#39;import/resolver&#39;: { alias: { map: [[&#39;@&#39;, &#39;./src&#39;]], extensions: [&#39;.ts&#39;, &#39;.js&#39;, &#39;.jsx&#39;, &#39;.json&#39;], }, }, } } jsonconfig.json">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -154,7 +205,8 @@ map @ to all folder in src const path = require(&#39;path&#39;) module.exports =
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Cra Import Sort">
   <meta name="twitter:description" content="Target import path alias, relative path is not good for refactoring import sorting across the team, everyone got same import order eslint fix, vscode intelligence fix Result // sort import import React, { useEffect, useState } from &#39;react&#39; // alias import path import MyButton from &#39;@/components/MyButton&#39; Install craco eslint-plugin-simple-import-sort eslint-import-resolver-alias Setup craco.config.js
-map @ to all folder in src const path = require(&#39;path&#39;) module.exports = { webpack: { alias: { &#39;@&#39;: path.">
+map @ to all folder in src const path = require(&#39;path&#39;) module.exports = { webpack: { alias: { &#39;@&#39;: path.resolve(__dirname, &#39;src&#39;), }, } } eslintrc.js
+import plugin the rule is used for auto fix and error highlight in editor { plugins: [&#39;simple-import-sort&#39;, &#39;react&#39;, &#39;prettier&#39;], rules: { &#39;simple-import-sort/imports&#39;: &#39;error&#39; }, settings: { &#39;import/resolver&#39;: { alias: { map: [[&#39;@&#39;, &#39;./src&#39;]], extensions: [&#39;.ts&#39;, &#39;.js&#39;, &#39;.jsx&#39;, &#39;.json&#39;], }, }, } } jsonconfig.json">
 
   
   
@@ -257,7 +309,7 @@ map @ to all folder in src const path = require(&#39;path&#39;) module.exports =
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
     >
       
 
@@ -400,7 +452,7 @@ map @ to all folder in src const path = require(&#39;path&#39;) module.exports =
 >
   <div class="mr-auto">
   
-    &copy; 2024
+    &copy; 2025
     <a class="link" href="https://kyktommy.github.io/">kyk&#39;s blog</a>
   
   </div>

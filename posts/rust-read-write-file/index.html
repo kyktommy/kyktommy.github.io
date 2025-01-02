@@ -36,6 +36,8 @@
 
 
 
+
+
 <html
   class="not-ready lg:text-base"
   style="--bg: #fff"
@@ -60,7 +62,27 @@
   
   
   
-  <meta name="description" content="use std::fs; fn main() { let data = &#34;test data&#34;; // write file let w = fs::write(&#34;tmp.txt&#34;, data); match w { Ok(()) =&gt; println!(&#34;write success&#34;), Err(err) =&gt; panic!(&#34;write fail {:?}&#34;, err), }; // read file let r = fs::read_to_string(&#34;tmp.txt&#34;); let r = match r { Ok(content) =&gt; content, Err(err) =&gt; panic!(&#34;read fail {:?}&#34;, err), }; println!(&#34;{}&#34;, r); } " />
+  <meta name="description" content="use std::fs;
+
+fn main() {
+  let data = &#34;test data&#34;;
+
+  // write file
+  let w = fs::write(&#34;tmp.txt&#34;, data);
+  match w {
+    Ok(()) =&gt; println!(&#34;write success&#34;),
+    Err(err) =&gt; panic!(&#34;write fail {:?}&#34;, err),
+  };
+
+  // read file
+  let r = fs::read_to_string(&#34;tmp.txt&#34;);
+  let r = match r {
+    Ok(content) =&gt; content,
+    Err(err) =&gt; panic!(&#34;read fail {:?}&#34;, err),
+  };
+  println!(&#34;{}&#34;, r);
+}
+" />
   <meta name="author" content="kyktommy" />
   
 
@@ -117,19 +139,16 @@
   />
 
   
-  <meta name="generator" content="Hugo 0.128.2">
+  <meta name="generator" content="Hugo 0.140.2">
 
   
   
   
   
-  
-
-
   
   
   <meta itemprop="name" content="Rust Read Write File">
-  <meta itemprop="description" content="use std::fs; fn main() { let data = &#34;test data&#34;; // write file let w = fs::write(&#34;tmp.txt&#34;, data); match w { Ok(()) =&gt; println!(&#34;write success&#34;), Err(err) =&gt; panic!(&#34;write fail {:?}&#34;, err), }; // read file let r = fs::read_to_string(&#34;tmp.txt&#34;); let r = match r { Ok(content) =&gt; content, Err(err) =&gt; panic!(&#34;read fail {:?}&#34;, err), }; println!(&#34;{}&#34;, r); } ">
+  <meta itemprop="description" content="use std::fs; fn main() { let data = &#34;test data&#34;; // write file let w = fs::write(&#34;tmp.txt&#34;, data); match w { Ok(()) =&gt; println!(&#34;write success&#34;), Err(err) =&gt; panic!(&#34;write fail {:?}&#34;, err), }; // read file let r = fs::read_to_string(&#34;tmp.txt&#34;); let r = match r { Ok(content) =&gt; content, Err(err) =&gt; panic!(&#34;read fail {:?}&#34;, err), }; println!(&#34;{}&#34;, r); }">
   <meta itemprop="datePublished" content="2019-12-19T23:35:06+08:00">
   <meta itemprop="dateModified" content="2019-12-19T23:35:06+08:00">
   <meta itemprop="wordCount" content="58">
@@ -138,7 +157,7 @@
   <meta property="og:url" content="https://kyktommy.github.io/posts/rust-read-write-file/">
   <meta property="og:site_name" content="kyk&#39;s blog">
   <meta property="og:title" content="Rust Read Write File">
-  <meta property="og:description" content="use std::fs; fn main() { let data = &#34;test data&#34;; // write file let w = fs::write(&#34;tmp.txt&#34;, data); match w { Ok(()) =&gt; println!(&#34;write success&#34;), Err(err) =&gt; panic!(&#34;write fail {:?}&#34;, err), }; // read file let r = fs::read_to_string(&#34;tmp.txt&#34;); let r = match r { Ok(content) =&gt; content, Err(err) =&gt; panic!(&#34;read fail {:?}&#34;, err), }; println!(&#34;{}&#34;, r); } ">
+  <meta property="og:description" content="use std::fs; fn main() { let data = &#34;test data&#34;; // write file let w = fs::write(&#34;tmp.txt&#34;, data); match w { Ok(()) =&gt; println!(&#34;write success&#34;), Err(err) =&gt; panic!(&#34;write fail {:?}&#34;, err), }; // read file let r = fs::read_to_string(&#34;tmp.txt&#34;); let r = match r { Ok(content) =&gt; content, Err(err) =&gt; panic!(&#34;read fail {:?}&#34;, err), }; println!(&#34;{}&#34;, r); }">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -150,7 +169,7 @@
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Rust Read Write File">
-  <meta name="twitter:description" content="use std::fs; fn main() { let data = &#34;test data&#34;; // write file let w = fs::write(&#34;tmp.txt&#34;, data); match w { Ok(()) =&gt; println!(&#34;write success&#34;), Err(err) =&gt; panic!(&#34;write fail {:?}&#34;, err), }; // read file let r = fs::read_to_string(&#34;tmp.txt&#34;); let r = match r { Ok(content) =&gt; content, Err(err) =&gt; panic!(&#34;read fail {:?}&#34;, err), }; println!(&#34;{}&#34;, r); } ">
+  <meta name="twitter:description" content="use std::fs; fn main() { let data = &#34;test data&#34;; // write file let w = fs::write(&#34;tmp.txt&#34;, data); match w { Ok(()) =&gt; println!(&#34;write success&#34;), Err(err) =&gt; panic!(&#34;write fail {:?}&#34;, err), }; // read file let r = fs::read_to_string(&#34;tmp.txt&#34;); let r = match r { Ok(content) =&gt; content, Err(err) =&gt; panic!(&#34;read fail {:?}&#34;, err), }; println!(&#34;{}&#34;, r); }">
 
   
   
@@ -253,7 +272,7 @@
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
     >
       
 
@@ -349,7 +368,7 @@
 >
   <div class="mr-auto">
   
-    &copy; 2024
+    &copy; 2025
     <a class="link" href="https://kyktommy.github.io/">kyk&#39;s blog</a>
   
   </div>

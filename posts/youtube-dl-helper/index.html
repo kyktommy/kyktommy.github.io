@@ -36,6 +36,8 @@
 
 
 
+
+
 <html
   class="not-ready lg:text-base"
   style="--bg: #fff"
@@ -62,7 +64,22 @@
   
   <meta name="description" content="youtube-dl is a great tool to download youtube stuff.
 Here is some helper script I used.
-# download as mp4, playlist also function youtube-dl-mp4() { youtube-dl -f &#34;[height &lt;=? 720][tbr&gt;500]&#34; --yes-playlist $1 } # download as mp3 function youtube-dl-mp3() { youtube-dl -x --audio-format mp3 --add-metadata $1 } # download subtitle en function youtube-dl-sub() { youtube-dl --write-sub --sub-lang en --skip-download $1 } " />
+
+# download as mp4, playlist also
+function youtube-dl-mp4() {
+  youtube-dl -f &#34;[height &lt;=? 720][tbr&gt;500]&#34; --yes-playlist $1
+}
+
+# download as mp3
+function youtube-dl-mp3() {
+  youtube-dl -x --audio-format mp3 --add-metadata $1
+}
+
+# download subtitle en
+function youtube-dl-sub() {
+  youtube-dl --write-sub --sub-lang en --skip-download $1
+}
+" />
   <meta name="author" content="kyktommy" />
   
 
@@ -119,21 +136,18 @@ Here is some helper script I used.
   />
 
   
-  <meta name="generator" content="Hugo 0.128.2">
+  <meta name="generator" content="Hugo 0.140.2">
 
   
   
   
   
-  
-
-
   
   
   <meta itemprop="name" content="Youtube Dl Helper">
   <meta itemprop="description" content="youtube-dl is a great tool to download youtube stuff.
 Here is some helper script I used.
-# download as mp4, playlist also function youtube-dl-mp4() { youtube-dl -f &#34;[height &lt;=? 720][tbr&gt;500]&#34; --yes-playlist $1 } # download as mp3 function youtube-dl-mp3() { youtube-dl -x --audio-format mp3 --add-metadata $1 } # download subtitle en function youtube-dl-sub() { youtube-dl --write-sub --sub-lang en --skip-download $1 } ">
+# download as mp4, playlist also function youtube-dl-mp4() { youtube-dl -f &#34;[height &lt;=? 720][tbr&gt;500]&#34; --yes-playlist $1 } # download as mp3 function youtube-dl-mp3() { youtube-dl -x --audio-format mp3 --add-metadata $1 } # download subtitle en function youtube-dl-sub() { youtube-dl --write-sub --sub-lang en --skip-download $1 }">
   <meta itemprop="datePublished" content="2020-04-12T00:03:11+08:00">
   <meta itemprop="dateModified" content="2020-04-12T00:03:11+08:00">
   <meta itemprop="wordCount" content="61">
@@ -144,7 +158,7 @@ Here is some helper script I used.
   <meta property="og:title" content="Youtube Dl Helper">
   <meta property="og:description" content="youtube-dl is a great tool to download youtube stuff.
 Here is some helper script I used.
-# download as mp4, playlist also function youtube-dl-mp4() { youtube-dl -f &#34;[height &lt;=? 720][tbr&gt;500]&#34; --yes-playlist $1 } # download as mp3 function youtube-dl-mp3() { youtube-dl -x --audio-format mp3 --add-metadata $1 } # download subtitle en function youtube-dl-sub() { youtube-dl --write-sub --sub-lang en --skip-download $1 } ">
+# download as mp4, playlist also function youtube-dl-mp4() { youtube-dl -f &#34;[height &lt;=? 720][tbr&gt;500]&#34; --yes-playlist $1 } # download as mp3 function youtube-dl-mp3() { youtube-dl -x --audio-format mp3 --add-metadata $1 } # download subtitle en function youtube-dl-sub() { youtube-dl --write-sub --sub-lang en --skip-download $1 }">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -158,7 +172,7 @@ Here is some helper script I used.
   <meta name="twitter:title" content="Youtube Dl Helper">
   <meta name="twitter:description" content="youtube-dl is a great tool to download youtube stuff.
 Here is some helper script I used.
-# download as mp4, playlist also function youtube-dl-mp4() { youtube-dl -f &#34;[height &lt;=? 720][tbr&gt;500]&#34; --yes-playlist $1 } # download as mp3 function youtube-dl-mp3() { youtube-dl -x --audio-format mp3 --add-metadata $1 } # download subtitle en function youtube-dl-sub() { youtube-dl --write-sub --sub-lang en --skip-download $1 } ">
+# download as mp4, playlist also function youtube-dl-mp4() { youtube-dl -f &#34;[height &lt;=? 720][tbr&gt;500]&#34; --yes-playlist $1 } # download as mp3 function youtube-dl-mp3() { youtube-dl -x --audio-format mp3 --add-metadata $1 } # download subtitle en function youtube-dl-sub() { youtube-dl --write-sub --sub-lang en --skip-download $1 }">
 
   
   
@@ -261,7 +275,7 @@ Here is some helper script I used.
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
     >
       
 
@@ -354,7 +368,7 @@ Here is some helper script I used.
 >
   <div class="mr-auto">
   
-    &copy; 2024
+    &copy; 2025
     <a class="link" href="https://kyktommy.github.io/">kyk&#39;s blog</a>
   
   </div>

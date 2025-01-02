@@ -36,6 +36,8 @@
 
 
 
+
+
 <html
   class="not-ready lg:text-base"
   style="--bg: #fff"
@@ -61,7 +63,29 @@
   
   
   <meta name="description" content="Configure tsup to build typescript library
-// package.json { &#34;script&#34;: { &#34;build&#34;: &#34;tsup --out-dir dist&#34; }, &#34;tsup&#34;: { &#34;clean&#34;: true, &#34;sourcemap&#34;: false, &#34;dts&#34;: true, &#34;minify&#34;: true, &#34;target&#34;: &#34;ES2020&#34;, &#34;format&#34;: [ &#34;esm&#34;, &#34;cjs&#34; ], &#34;entry&#34;: [ &#34;src/index.ts&#34; ] }, } " />
+
+// package.json
+
+{
+  &#34;script&#34;: {
+    &#34;build&#34;: &#34;tsup --out-dir dist&#34;
+  },
+  &#34;tsup&#34;: {
+    &#34;clean&#34;: true,
+    &#34;sourcemap&#34;: false,
+    &#34;dts&#34;: true,
+    &#34;minify&#34;: true,
+    &#34;target&#34;: &#34;ES2020&#34;,
+    &#34;format&#34;: [
+      &#34;esm&#34;,
+      &#34;cjs&#34;
+    ],
+    &#34;entry&#34;: [
+      &#34;src/index.ts&#34;
+    ]
+  },
+}
+" />
   <meta name="author" content="kyktommy" />
   
 
@@ -118,20 +142,17 @@
   />
 
   
-  <meta name="generator" content="Hugo 0.128.2">
+  <meta name="generator" content="Hugo 0.140.2">
 
   
   
   
   
-  
-
-
   
   
   <meta itemprop="name" content="Tsup Config">
   <meta itemprop="description" content="Configure tsup to build typescript library
-// package.json { &#34;script&#34;: { &#34;build&#34;: &#34;tsup --out-dir dist&#34; }, &#34;tsup&#34;: { &#34;clean&#34;: true, &#34;sourcemap&#34;: false, &#34;dts&#34;: true, &#34;minify&#34;: true, &#34;target&#34;: &#34;ES2020&#34;, &#34;format&#34;: [ &#34;esm&#34;, &#34;cjs&#34; ], &#34;entry&#34;: [ &#34;src/index.ts&#34; ] }, } ">
+// package.json { &#34;script&#34;: { &#34;build&#34;: &#34;tsup --out-dir dist&#34; }, &#34;tsup&#34;: { &#34;clean&#34;: true, &#34;sourcemap&#34;: false, &#34;dts&#34;: true, &#34;minify&#34;: true, &#34;target&#34;: &#34;ES2020&#34;, &#34;format&#34;: [ &#34;esm&#34;, &#34;cjs&#34; ], &#34;entry&#34;: [ &#34;src/index.ts&#34; ] }, }">
   <meta itemprop="datePublished" content="2024-10-22T11:33:35+08:00">
   <meta itemprop="dateModified" content="2024-10-22T11:33:35+08:00">
   <meta itemprop="wordCount" content="39">
@@ -141,7 +162,7 @@
   <meta property="og:site_name" content="kyk&#39;s blog">
   <meta property="og:title" content="Tsup Config">
   <meta property="og:description" content="Configure tsup to build typescript library
-// package.json { &#34;script&#34;: { &#34;build&#34;: &#34;tsup --out-dir dist&#34; }, &#34;tsup&#34;: { &#34;clean&#34;: true, &#34;sourcemap&#34;: false, &#34;dts&#34;: true, &#34;minify&#34;: true, &#34;target&#34;: &#34;ES2020&#34;, &#34;format&#34;: [ &#34;esm&#34;, &#34;cjs&#34; ], &#34;entry&#34;: [ &#34;src/index.ts&#34; ] }, } ">
+// package.json { &#34;script&#34;: { &#34;build&#34;: &#34;tsup --out-dir dist&#34; }, &#34;tsup&#34;: { &#34;clean&#34;: true, &#34;sourcemap&#34;: false, &#34;dts&#34;: true, &#34;minify&#34;: true, &#34;target&#34;: &#34;ES2020&#34;, &#34;format&#34;: [ &#34;esm&#34;, &#34;cjs&#34; ], &#34;entry&#34;: [ &#34;src/index.ts&#34; ] }, }">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -155,7 +176,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tsup Config">
   <meta name="twitter:description" content="Configure tsup to build typescript library
-// package.json { &#34;script&#34;: { &#34;build&#34;: &#34;tsup --out-dir dist&#34; }, &#34;tsup&#34;: { &#34;clean&#34;: true, &#34;sourcemap&#34;: false, &#34;dts&#34;: true, &#34;minify&#34;: true, &#34;target&#34;: &#34;ES2020&#34;, &#34;format&#34;: [ &#34;esm&#34;, &#34;cjs&#34; ], &#34;entry&#34;: [ &#34;src/index.ts&#34; ] }, } ">
+// package.json { &#34;script&#34;: { &#34;build&#34;: &#34;tsup --out-dir dist&#34; }, &#34;tsup&#34;: { &#34;clean&#34;: true, &#34;sourcemap&#34;: false, &#34;dts&#34;: true, &#34;minify&#34;: true, &#34;target&#34;: &#34;ES2020&#34;, &#34;format&#34;: [ &#34;esm&#34;, &#34;cjs&#34; ], &#34;entry&#34;: [ &#34;src/index.ts&#34; ] }, }">
 
   
   
@@ -258,7 +279,7 @@
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
     >
       
 
@@ -363,7 +384,7 @@
 >
   <div class="mr-auto">
   
-    &copy; 2024
+    &copy; 2025
     <a class="link" href="https://kyktommy.github.io/">kyk&#39;s blog</a>
   
   </div>

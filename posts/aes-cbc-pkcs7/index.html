@@ -36,6 +36,8 @@
 
 
 
+
+
 <html
   class="not-ready lg:text-base"
   style="--bg: #fff"
@@ -61,8 +63,117 @@
   
   
   <meta name="description" content="Logic:
-sha256 key and iv AES encryption CBC mode PKCS7 padding Versions:
-golang version javascript version golang version package main import ( &#34;bytes&#34; &#34;crypto/aes&#34; &#34;crypto/cipher&#34; &#34;crypto/sha256&#34; &#34;fmt&#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes." />
+
+sha256 key and iv
+AES encryption
+CBC mode
+PKCS7 padding
+
+Versions:
+
+golang version
+javascript version
+
+golang version
+
+package main
+
+import (
+	&#34;bytes&#34;
+	&#34;crypto/aes&#34;
+	&#34;crypto/cipher&#34;
+	&#34;crypto/sha256&#34;
+	&#34;fmt&#34;
+)
+
+func PKCS7Padding(ciphertext []byte, blockSize int) []byte {
+	padding := blockSize - len(ciphertext)%blockSize
+	padtext := bytes.Repeat([]byte{byte(padding)}, padding)
+	return append(ciphertext, padtext...)
+}
+
+func PKCS7UnPadding(origData []byte) []byte {
+	length := len(origData)
+	unpadding := int(origData[length-1])
+	return origData[:(length - unpadding)]
+}
+
+func encrypt(data, key, iv []byte) []byte {
+	block, err := aes.NewCipher(key)
+	if err != nil {
+		panic(err)
+	}
+	blockSize := block.BlockSize()
+	data = PKCS7Padding(data, blockSize)
+	mode := cipher.NewCBCEncrypter(block, iv)
+	mode.CryptBlocks(data, data)
+	return data
+}
+
+func decrypt(data, key, iv []byte) []byte {
+	block, err := aes.NewCipher(key)
+	if err != nil {
+		panic(err)
+	}
+	mode := cipher.NewCBCDecrypter(block, iv)
+	mode.CryptBlocks(data, data)
+	data = PKCS7UnPadding(data)
+	return data
+}
+
+func main() {
+	data := []byte(&#34;123456&#34;)
+	hash := sha256.New()
+	hash.Write([]byte(&#34;123456&#34;))
+	key := hash.Sum(nil)
+	hash.Reset()
+	hash.Write([]byte(&#34;654321&#34;))
+	iv := hash.Sum(nil)[:16]
+	fmt.Printf(&#34;key: %x, iv: %x\n&#34;, key, iv)
+
+	encrypted := encrypt(data, key, iv)
+	fmt.Printf(&#34;encrypted: %x\n&#34;, encrypted)
+
+	decrypted := decrypt(encrypted, key, iv)
+	fmt.Printf(&#34;decrypted: %s\n&#34;, string(decrypted))
+}
+javascript version
+
+var Cryptojs = require(&#34;crypto-js&#34;);
+
+var key = Cryptojs.SHA256(&#34;123456&#34;).toString();
+var iv = Cryptojs.SHA256(&#34;654321&#34;).toString().substring(0, 32);
+
+console.log({ key, iv });
+
+var encryptCipher = Cryptojs.AES.encrypt(
+  &#34;123456&#34;,
+  Cryptojs.enc.Hex.parse(key),
+  {
+    iv: Cryptojs.enc.Hex.parse(iv),
+    mode: Cryptojs.mode.CBC,
+    padding: Cryptojs.pad.Pkcs7,
+  }
+);
+
+const encrypted = encryptCipher.toString(Cryptojs.format.Hex);
+
+console.log({ encrypted });
+
+var decryptCipher = Cryptojs.AES.decrypt(
+  encryptCipher.toString(),
+  Cryptojs.enc.Hex.parse(key),
+  {
+    iv: Cryptojs.enc.Hex.parse(iv),
+    mode: Cryptojs.mode.CBC,
+    padding: Cryptojs.pad.Pkcs7,
+  }
+);
+
+const decrypted = decryptCipher.toString(Cryptojs.enc.Utf8);
+
+console.log({ decrypted });
+" />
   <meta name="author" content="kyktommy" />
   
 
@@ -119,21 +230,18 @@ golang version javascript version golang version package main import ( &#34;byte
   />
 
   
-  <meta name="generator" content="Hugo 0.128.2">
+  <meta name="generator" content="Hugo 0.140.2">
 
   
   
   
   
-  
-
-
   
   
   <meta itemprop="name" content="Aes Cbc Pkcs7">
   <meta itemprop="description" content="Logic:
 sha256 key and iv AES encryption CBC mode PKCS7 padding Versions:
-golang version javascript version golang version package main import ( &#34;bytes&#34; &#34;crypto/aes&#34; &#34;crypto/cipher&#34; &#34;crypto/sha256&#34; &#34;fmt&#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.">
+golang version javascript version golang version package main import ( &#34;bytes&#34; &#34;crypto/aes&#34; &#34;crypto/cipher&#34; &#34;crypto/sha256&#34; &#34;fmt&#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.NewCipher(key) if err != nil { panic(err) } blockSize := block.BlockSize() data = PKCS7Padding(data, blockSize) mode := cipher.NewCBCEncrypter(block, iv) mode.CryptBlocks(data, data) return data } func decrypt(data, key, iv []byte) []byte { block, err := aes.NewCipher(key) if err != nil { panic(err) } mode := cipher.NewCBCDecrypter(block, iv) mode.CryptBlocks(data, data) data = PKCS7UnPadding(data) return data } func main() { data := []byte(&#34;123456&#34;) hash := sha256.New() hash.Write([]byte(&#34;123456&#34;)) key := hash.Sum(nil) hash.Reset() hash.Write([]byte(&#34;654321&#34;)) iv := hash.Sum(nil)[:16] fmt.Printf(&#34;key: %x, iv: %x\n&#34;, key, iv) encrypted := encrypt(data, key, iv) fmt.Printf(&#34;encrypted: %x\n&#34;, encrypted) decrypted := decrypt(encrypted, key, iv) fmt.Printf(&#34;decrypted: %s\n&#34;, string(decrypted)) } javascript version var Cryptojs = require(&#34;crypto-js&#34;); var key = Cryptojs.SHA256(&#34;123456&#34;).toString(); var iv = Cryptojs.SHA256(&#34;654321&#34;).toString().substring(0, 32); console.log({ key, iv }); var encryptCipher = Cryptojs.AES.encrypt( &#34;123456&#34;, Cryptojs.enc.Hex.parse(key), { iv: Cryptojs.enc.Hex.parse(iv), mode: Cryptojs.mode.CBC, padding: Cryptojs.pad.Pkcs7, } ); const encrypted = encryptCipher.toString(Cryptojs.format.Hex); console.log({ encrypted }); var decryptCipher = Cryptojs.AES.decrypt( encryptCipher.toString(), Cryptojs.enc.Hex.parse(key), { iv: Cryptojs.enc.Hex.parse(iv), mode: Cryptojs.mode.CBC, padding: Cryptojs.pad.Pkcs7, } ); const decrypted = decryptCipher.toString(Cryptojs.enc.Utf8); console.log({ decrypted });">
   <meta itemprop="datePublished" content="2021-01-20T22:24:28+08:00">
   <meta itemprop="dateModified" content="2021-01-20T22:24:28+08:00">
   <meta itemprop="wordCount" content="232">
@@ -144,7 +252,7 @@ golang version javascript version golang version package main import ( &#34;byte
   <meta property="og:title" content="Aes Cbc Pkcs7">
   <meta property="og:description" content="Logic:
 sha256 key and iv AES encryption CBC mode PKCS7 padding Versions:
-golang version javascript version golang version package main import ( &#34;bytes&#34; &#34;crypto/aes&#34; &#34;crypto/cipher&#34; &#34;crypto/sha256&#34; &#34;fmt&#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.">
+golang version javascript version golang version package main import ( &#34;bytes&#34; &#34;crypto/aes&#34; &#34;crypto/cipher&#34; &#34;crypto/sha256&#34; &#34;fmt&#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.NewCipher(key) if err != nil { panic(err) } blockSize := block.BlockSize() data = PKCS7Padding(data, blockSize) mode := cipher.NewCBCEncrypter(block, iv) mode.CryptBlocks(data, data) return data } func decrypt(data, key, iv []byte) []byte { block, err := aes.NewCipher(key) if err != nil { panic(err) } mode := cipher.NewCBCDecrypter(block, iv) mode.CryptBlocks(data, data) data = PKCS7UnPadding(data) return data } func main() { data := []byte(&#34;123456&#34;) hash := sha256.New() hash.Write([]byte(&#34;123456&#34;)) key := hash.Sum(nil) hash.Reset() hash.Write([]byte(&#34;654321&#34;)) iv := hash.Sum(nil)[:16] fmt.Printf(&#34;key: %x, iv: %x\n&#34;, key, iv) encrypted := encrypt(data, key, iv) fmt.Printf(&#34;encrypted: %x\n&#34;, encrypted) decrypted := decrypt(encrypted, key, iv) fmt.Printf(&#34;decrypted: %s\n&#34;, string(decrypted)) } javascript version var Cryptojs = require(&#34;crypto-js&#34;); var key = Cryptojs.SHA256(&#34;123456&#34;).toString(); var iv = Cryptojs.SHA256(&#34;654321&#34;).toString().substring(0, 32); console.log({ key, iv }); var encryptCipher = Cryptojs.AES.encrypt( &#34;123456&#34;, Cryptojs.enc.Hex.parse(key), { iv: Cryptojs.enc.Hex.parse(iv), mode: Cryptojs.mode.CBC, padding: Cryptojs.pad.Pkcs7, } ); const encrypted = encryptCipher.toString(Cryptojs.format.Hex); console.log({ encrypted }); var decryptCipher = Cryptojs.AES.decrypt( encryptCipher.toString(), Cryptojs.enc.Hex.parse(key), { iv: Cryptojs.enc.Hex.parse(iv), mode: Cryptojs.mode.CBC, padding: Cryptojs.pad.Pkcs7, } ); const decrypted = decryptCipher.toString(Cryptojs.enc.Utf8); console.log({ decrypted });">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -159,7 +267,7 @@ golang version javascript version golang version package main import ( &#34;byte
   <meta name="twitter:title" content="Aes Cbc Pkcs7">
   <meta name="twitter:description" content="Logic:
 sha256 key and iv AES encryption CBC mode PKCS7 padding Versions:
-golang version javascript version golang version package main import ( &#34;bytes&#34; &#34;crypto/aes&#34; &#34;crypto/cipher&#34; &#34;crypto/sha256&#34; &#34;fmt&#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.">
+golang version javascript version golang version package main import ( &#34;bytes&#34; &#34;crypto/aes&#34; &#34;crypto/cipher&#34; &#34;crypto/sha256&#34; &#34;fmt&#34; ) func PKCS7Padding(ciphertext []byte, blockSize int) []byte { padding := blockSize - len(ciphertext)%blockSize padtext := bytes.Repeat([]byte{byte(padding)}, padding) return append(ciphertext, padtext...) } func PKCS7UnPadding(origData []byte) []byte { length := len(origData) unpadding := int(origData[length-1]) return origData[:(length - unpadding)] } func encrypt(data, key, iv []byte) []byte { block, err := aes.NewCipher(key) if err != nil { panic(err) } blockSize := block.BlockSize() data = PKCS7Padding(data, blockSize) mode := cipher.NewCBCEncrypter(block, iv) mode.CryptBlocks(data, data) return data } func decrypt(data, key, iv []byte) []byte { block, err := aes.NewCipher(key) if err != nil { panic(err) } mode := cipher.NewCBCDecrypter(block, iv) mode.CryptBlocks(data, data) data = PKCS7UnPadding(data) return data } func main() { data := []byte(&#34;123456&#34;) hash := sha256.New() hash.Write([]byte(&#34;123456&#34;)) key := hash.Sum(nil) hash.Reset() hash.Write([]byte(&#34;654321&#34;)) iv := hash.Sum(nil)[:16] fmt.Printf(&#34;key: %x, iv: %x\n&#34;, key, iv) encrypted := encrypt(data, key, iv) fmt.Printf(&#34;encrypted: %x\n&#34;, encrypted) decrypted := decrypt(encrypted, key, iv) fmt.Printf(&#34;decrypted: %s\n&#34;, string(decrypted)) } javascript version var Cryptojs = require(&#34;crypto-js&#34;); var key = Cryptojs.SHA256(&#34;123456&#34;).toString(); var iv = Cryptojs.SHA256(&#34;654321&#34;).toString().substring(0, 32); console.log({ key, iv }); var encryptCipher = Cryptojs.AES.encrypt( &#34;123456&#34;, Cryptojs.enc.Hex.parse(key), { iv: Cryptojs.enc.Hex.parse(iv), mode: Cryptojs.mode.CBC, padding: Cryptojs.pad.Pkcs7, } ); const encrypted = encryptCipher.toString(Cryptojs.format.Hex); console.log({ encrypted }); var decryptCipher = Cryptojs.AES.decrypt( encryptCipher.toString(), Cryptojs.enc.Hex.parse(key), { iv: Cryptojs.enc.Hex.parse(iv), mode: Cryptojs.mode.CBC, padding: Cryptojs.pad.Pkcs7, } ); const decrypted = decryptCipher.toString(Cryptojs.enc.Utf8); console.log({ decrypted });">
 
   
   
@@ -262,7 +370,7 @@ golang version javascript version golang version package main import ( &#34;byte
 
 
     <main
-      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+      class="prose prose-neutral relative mx-auto min-h-[calc(100vh-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
     >
       
 
@@ -455,7 +563,7 @@ golang version javascript version golang version package main import ( &#34;byte
 >
   <div class="mr-auto">
   
-    &copy; 2024
+    &copy; 2025
     <a class="link" href="https://kyktommy.github.io/">kyk&#39;s blog</a>
   
   </div>
