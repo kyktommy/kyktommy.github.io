@@ -12,19 +12,19 @@ date: 2023-04-11T00:00:00+08:00
 - cd-to
 - ngrok
 - copy clip 
+- quick record
 - xcode
 - android studio
 - brave
 - the silver searcher
 - sourcetree
 - insomnia / postman
-- protonvpn
 - slack
 - uTorrent
 - rectangle
-- teamviewer / anydesk
+- teamviewer
+- anydesk
 - vlc
-- via
 - filezilla
 - skitch
 - vox
@@ -34,16 +34,19 @@ date: 2023-04-11T00:00:00+08:00
 - skype
 - whatsapp
 
+# mac screenshot setup
+
+- `Screenshot` save to `Downloads`
+- defaults write com.apple.screencapture type jpg;killall SystemUIServer
+
 # vscode setup
 
+- custom user json
 - Fira Code
 - vim
 - gitlens
 - ESLint
 - Prettier
 - Prettify JSON
-- Better Solarized
 - Auto Rename Tag
 - MDX
-
-
