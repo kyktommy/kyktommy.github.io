@@ -15,6 +15,8 @@ date: 2023-04-11T00:00:00+08:00
 - quick record
 - xcode
 - android studio
+- docker for mac
+- table pluss
 - brave
 - the silver searcher
 - sourcetree
