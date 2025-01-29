@@ -6,8 +6,15 @@
     <description>Recent content in Categories on kyk&#39;s blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Jan 2025 23:01:32 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jan 2025 00:00:00 +0800</lastBuildDate>
     <atom:link href="https://kyktommy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Youtube</title>
+      <link>https://kyktommy.github.io/categories/youtube/</link>
+      <pubDate>Wed, 29 Jan 2025 00:00:00 +0800</pubDate>
+      <guid>https://kyktommy.github.io/categories/youtube/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Gpg</title>
       <link>https://kyktommy.github.io/categories/gpg/</link>
@@ -83,13 +90,6 @@
       <link>https://kyktommy.github.io/categories/git/</link>
       <pubDate>Mon, 10 May 2021 14:50:58 +0800</pubDate>
       <guid>https://kyktommy.github.io/categories/git/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Script</title>
-      <link>https://kyktommy.github.io/categories/script/</link>
-      <pubDate>Sun, 12 Apr 2020 00:03:11 +0800</pubDate>
-      <guid>https://kyktommy.github.io/categories/script/</guid>
       <description></description>
     </item>
     <item>

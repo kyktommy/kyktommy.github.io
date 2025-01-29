@@ -3,7 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://kyktommy.github.io/categories/</loc>
-    <lastmod>2025-01-02T23:01:32+08:00</lastmod>
+    <lastmod>2025-01-29T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://kyktommy.github.io/</loc>
+    <lastmod>2025-01-29T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://kyktommy.github.io/posts/</loc>
+    <lastmod>2025-01-29T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://kyktommy.github.io/tags/</loc>
+    <lastmod>2025-01-29T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://kyktommy.github.io/tags/youtube/</loc>
+    <lastmod>2025-01-29T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://kyktommy.github.io/categories/youtube/</loc>
+    <lastmod>2025-01-29T00:00:00+08:00</lastmod>
+  </url><url>
+    <loc>https://kyktommy.github.io/posts/youtube-helper/</loc>
+    <lastmod>2025-01-29T00:00:00+08:00</lastmod>
   </url><url>
     <loc>https://kyktommy.github.io/tags/ggp/</loc>
     <lastmod>2025-01-02T23:01:32+08:00</lastmod>
@@ -12,15 +30,6 @@
     <lastmod>2025-01-02T23:01:32+08:00</lastmod>
   </url><url>
     <loc>https://kyktommy.github.io/posts/gpg-setup/</loc>
-    <lastmod>2025-01-02T23:01:32+08:00</lastmod>
-  </url><url>
-    <loc>https://kyktommy.github.io/</loc>
-    <lastmod>2025-01-02T23:01:32+08:00</lastmod>
-  </url><url>
-    <loc>https://kyktommy.github.io/posts/</loc>
-    <lastmod>2025-01-02T23:01:32+08:00</lastmod>
-  </url><url>
-    <loc>https://kyktommy.github.io/tags/</loc>
     <lastmod>2025-01-02T23:01:32+08:00</lastmod>
   </url><url>
     <loc>https://kyktommy.github.io/tags/css/</loc>
@@ -154,15 +163,6 @@
   </url><url>
     <loc>https://kyktommy.github.io/posts/redux-typescript/</loc>
     <lastmod>2020-07-20T19:46:45+08:00</lastmod>
-  </url><url>
-    <loc>https://kyktommy.github.io/categories/script/</loc>
-    <lastmod>2020-04-12T00:03:11+08:00</lastmod>
-  </url><url>
-    <loc>https://kyktommy.github.io/posts/youtube-dl-helper/</loc>
-    <lastmod>2020-04-12T00:03:11+08:00</lastmod>
-  </url><url>
-    <loc>https://kyktommy.github.io/tags/youtube-dl/</loc>
-    <lastmod>2020-04-12T00:03:11+08:00</lastmod>
   </url><url>
     <loc>https://kyktommy.github.io/tags/go/</loc>
     <lastmod>2020-02-21T21:55:25+08:00</lastmod>
