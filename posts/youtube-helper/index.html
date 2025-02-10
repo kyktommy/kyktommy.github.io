@@ -72,7 +72,7 @@ Here is some helper script I used.
 
 # download as mp4, playlist also
 function yt-mp4() {
-  yt-dlp -f &#34;[height &lt;=? 720][tbr&gt;500]&#34; --yes-playlist $1
+  yt-dlp -f -f &#34;[height&lt;=720]&#34;/mp4/bestvideo --yes-playlist $1
 }
 
 # download as mp3
@@ -152,10 +152,10 @@ function yt-sub() {
   <meta itemprop="name" content="Youtube Helper">
   <meta itemprop="description" content="yt-dlp is a great tool to download youtube video, audio.
 download mac osx executable from github chmod &#43;x yt-dlp brew install ffmpeg Here is some helper script I used.
-# download as mp4, playlist also function yt-mp4() { yt-dlp -f &#34;[height &lt;=? 720][tbr&gt;500]&#34; --yes-playlist $1 } # download as mp3 function yt-mp3() { yt-dlp -x --audio-format mp3 --add-metadata $1 } # download subtitle en function yt-sub() { yt-dlp --write-sub --sub-lang en --skip-download $1 }">
+# download as mp4, playlist also function yt-mp4() { yt-dlp -f -f &#34;[height&lt;=720]&#34;/mp4/bestvideo --yes-playlist $1 } # download as mp3 function yt-mp3() { yt-dlp -x --audio-format mp3 --add-metadata $1 } # download subtitle en function yt-sub() { yt-dlp --write-sub --sub-lang en --skip-download $1 }">
   <meta itemprop="datePublished" content="2025-01-29T00:00:00+08:00">
   <meta itemprop="dateModified" content="2025-01-29T00:00:00+08:00">
-  <meta itemprop="wordCount" content="74">
+  <meta itemprop="wordCount" content="73">
   <meta itemprop="keywords" content="Youtube">
   
   <meta property="og:url" content="https://kyktommy.github.io/posts/youtube-helper/">
@@ -163,7 +163,7 @@ download mac osx executable from github chmod &#43;x yt-dlp brew install ffmpeg 
   <meta property="og:title" content="Youtube Helper">
   <meta property="og:description" content="yt-dlp is a great tool to download youtube video, audio.
 download mac osx executable from github chmod &#43;x yt-dlp brew install ffmpeg Here is some helper script I used.
-# download as mp4, playlist also function yt-mp4() { yt-dlp -f &#34;[height &lt;=? 720][tbr&gt;500]&#34; --yes-playlist $1 } # download as mp3 function yt-mp3() { yt-dlp -x --audio-format mp3 --add-metadata $1 } # download subtitle en function yt-sub() { yt-dlp --write-sub --sub-lang en --skip-download $1 }">
+# download as mp4, playlist also function yt-mp4() { yt-dlp -f -f &#34;[height&lt;=720]&#34;/mp4/bestvideo --yes-playlist $1 } # download as mp3 function yt-mp3() { yt-dlp -x --audio-format mp3 --add-metadata $1 } # download subtitle en function yt-sub() { yt-dlp --write-sub --sub-lang en --skip-download $1 }">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -177,7 +177,7 @@ download mac osx executable from github chmod &#43;x yt-dlp brew install ffmpeg 
   <meta name="twitter:title" content="Youtube Helper">
   <meta name="twitter:description" content="yt-dlp is a great tool to download youtube video, audio.
 download mac osx executable from github chmod &#43;x yt-dlp brew install ffmpeg Here is some helper script I used.
-# download as mp4, playlist also function yt-mp4() { yt-dlp -f &#34;[height &lt;=? 720][tbr&gt;500]&#34; --yes-playlist $1 } # download as mp3 function yt-mp3() { yt-dlp -x --audio-format mp3 --add-metadata $1 } # download subtitle en function yt-sub() { yt-dlp --write-sub --sub-lang en --skip-download $1 }">
+# download as mp4, playlist also function yt-mp4() { yt-dlp -f -f &#34;[height&lt;=720]&#34;/mp4/bestvideo --yes-playlist $1 } # download as mp3 function yt-mp3() { yt-dlp -x --audio-format mp3 --add-metadata $1 } # download subtitle en function yt-sub() { yt-dlp --write-sub --sub-lang en --skip-download $1 }">
 
   
   
@@ -310,7 +310,7 @@ download mac osx executable from github chmod &#43;x yt-dlp brew install ffmpeg 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># download as mp4, playlist also</span>
 </span></span><span class="line"><span class="cl"><span class="k">function</span> yt-mp4<span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">  yt-dlp -f <span class="s2">&#34;[height &lt;=? 720][tbr&gt;500]&#34;</span> --yes-playlist <span class="nv">$1</span>
+</span></span><span class="line"><span class="cl">  yt-dlp -f -f <span class="s2">&#34;[height&lt;=720]&#34;</span>/mp4/bestvideo --yes-playlist <span class="nv">$1</span>
 </span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># download as mp3</span>
@@ -344,6 +344,10 @@ download mac osx executable from github chmod &#43;x yt-dlp brew install ffmpeg 
   <nav
     class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
   >
+    
+    <a class="ltr:pr-3 rtl:pl-3" href="https://kyktommy.github.io/posts/iterm2-tricks/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>Iterm2 Tricks</span></a
+    >
     
     
     <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="https://kyktommy.github.io/posts/gpg-setup/"

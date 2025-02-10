@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iterm2 on kyk&#39;s blog</title>
+    <link>https://kyktommy.github.io/tags/iterm2/</link>
+    <description>Recent content in Iterm2 on kyk&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Feb 2025 17:27:19 +0800</lastBuildDate>
+    <atom:link href="https://kyktommy.github.io/tags/iterm2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Iterm2 Tricks</title>
+      <link>https://kyktommy.github.io/posts/iterm2-tricks/</link>
+      <pubDate>Fri, 07 Feb 2025 17:27:19 +0800</pubDate>
+      <guid>https://kyktommy.github.io/posts/iterm2-tricks/</guid>
+      <description>&lt;h3 id=&#34;tricks&#34;&gt;Tricks:&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;show timestamp: ⌘+Shift+E&lt;/li&gt;&#xA;&lt;li&gt;clear screen: Ctrl+k / Ctrl+l&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;references&#34;&gt;References:&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://gist.github.com/squarism/ae3613daf5c01a98ba3a&#34;&gt;https://gist.github.com/squarism/ae3613daf5c01a98ba3a&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
+    </item>
+  </channel>
+</rss>
