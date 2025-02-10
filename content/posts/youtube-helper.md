@@ -18,7 +18,7 @@ Here is some helper script I used.
 
 # download as mp4, playlist also
 function yt-mp4() {
-  yt-dlp -f "[height <=? 720][tbr>500]" --yes-playlist $1
+  yt-dlp -f -f "[height<=720]"/mp4/bestvideo --yes-playlist $1
 }
 
 # download as mp3
