@@ -13,6 +13,3 @@ git submodule update --remote --merge
 
 # start test server
 ./start.sh
-
-# deploy
-./deploy.sh
