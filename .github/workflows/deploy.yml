@@ -36,9 +36,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Init theme submodule
-        run: git submodule update --init themes/paper
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
