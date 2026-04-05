@@ -19,12 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: true
+
+      - run: git submodule update --init themes/paper
 
       - uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.157.0"
+          hugo-version: "0.123.8"
           extended: true
 
       - run: hugo --minify
